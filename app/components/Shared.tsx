@@ -90,21 +90,21 @@ export function Accordion({ items }: { items: FAQ[] }) {
         return (
           <div
             key={it.q}
-            className="rounded-2xl border border-slate-200 bg-white"
+            className="rounded-2xl border border-slate-200 bg-[#3D2C28] shadow-sm transition-all hover:shadow-md"
           >
             <button
               type="button"
               onClick={() => setOpenIndex(open ? -1 : idx)}
-              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left "
             >
-              <span className="text-sm font-bold text-slate-900">{it.q}</span>
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-slate-100 text-slate-900">
+              <span className="text-sm font-bold text-white">{it.q}</span>
+              <span className="grid h-8 w-8 place-items-center rounded-lg bg-slate-100 ">
                 {open ? "–" : "+"}
               </span>
             </button>
 
             {open && (
-              <div className="px-5 pb-5 text-sm leading-relaxed text-slate-600">
+              <div className="px-5 pb-5 text-sm leading-relaxed text-white">
                 {it.a}
               </div>
             )}
