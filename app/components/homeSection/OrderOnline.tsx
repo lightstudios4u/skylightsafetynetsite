@@ -91,9 +91,8 @@ export function OrderOnline() {
           </div>
 
           <div
-            className="rounded-3xl border-2 border-orange-600/30 bg-[#3D2C28] p-8 shadow-2xl backdrop-blur-sm transition-all duration-1000 ease-out"
+            className="rounded-3xl border-2 border-orange-600/30 bg-[#3D2C28] p-8 shadow-2xl backdrop-blur-sm transition-opacity duration-1000 ease-out"
             style={{
-              transform: isVisible ? "translateX(0)" : "translateX(-100vw)",
               opacity: isVisible ? 1 : 0,
             }}
           >

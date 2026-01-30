@@ -77,9 +77,8 @@ export function Hero() {
 					<div
 						className='overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl'
 						style={{
-							transform: isLoaded ? 'translateX(0)' : 'translateX(100vw)',
 							opacity: isLoaded ? 1 : 0,
-							transition: 'transform 1500ms cubic-bezier(0.16, 1, 0.3, 1), opacity 1500ms ease-out',
+							transition: 'opacity 1500ms ease-out',
 							transitionDelay: '1000ms',
 						}}
 					>

@@ -94,9 +94,8 @@ export function RiskFraming() {
           </div>
 
           <div
-            className="overflow-hidden rounded-3xl border border-orange-600/30 shadow-sm transition-all duration-2000 ease-out"
+            className="overflow-hidden rounded-3xl border border-orange-600/30 shadow-sm transition-opacity duration-2000 ease-out"
             style={{
-              transform: isVisible ? "translateX(0)" : "translateX(100vw)",
               opacity: isVisible ? 1 : 0,
             }}
           >

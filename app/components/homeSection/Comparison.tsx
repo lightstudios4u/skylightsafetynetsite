@@ -92,7 +92,7 @@ export function Comparison() {
               </h3>
               <ul className="mt-4 space-y-3 text-sm text-gray-200">
                 {col.items.map((item) => (
-                  <li key={item} className="flex gap-2">
+                  <li key={item} className="flex items-end gap-2">
                     <span
                       className={
                         col.highlight

@@ -89,7 +89,14 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
 							</div>
 
 							{idx < steps.length - 1 ? (
-								<div className='hidden items-center justify-center lg:flex lg:px-2'>
+								<div
+									className='hidden items-center justify-center lg:flex lg:px-2'
+									style={{
+										opacity: isVisible ? 1 : 0,
+										transition: 'opacity 700ms ease-out',
+										transitionDelay: `${1000 + idx * 400}ms`,
+									}}
+								>
 									<FaArrowRight className='text-black/30' size={28} />
 								</div>
 							) : null}

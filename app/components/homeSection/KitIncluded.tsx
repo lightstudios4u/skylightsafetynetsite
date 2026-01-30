@@ -196,10 +196,8 @@ export function KitIncluded({
 					{/* RIGHT: Image that changes on hover */}
 					<div
 						style={{
-							transform: isVisible ? 'translateX(0)' : 'translateX(100vw)',
 							opacity: isVisible ? 1 : 0,
-							transition:
-								'transform 1500ms cubic-bezier(0.16, 1, 0.3, 1), opacity 1500ms ease-out',
+							transition: 'opacity 1500ms ease-out',
 							transitionDelay: '1000ms',
 						}}
 					>

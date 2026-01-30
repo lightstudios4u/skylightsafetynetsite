@@ -1,36 +1,6 @@
-"use client";
-
-import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 export function PrivacyPolicy() {
-	const [isHeroLoaded, setIsHeroLoaded] = useState(false);
-	const [isContentVisible, setIsContentVisible] = useState(false);
-	const ctaRef = useRef<HTMLDivElement>(null);
-	const [isCtaVisible, setIsCtaVisible] = useState(false);
-
-	useEffect(() => {
-		setIsHeroLoaded(true);
-		setIsContentVisible(true);
-	}, []);
-
-	useEffect(() => {
-		const ctaObserver = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting && !isCtaVisible) {
-					setIsCtaVisible(true);
-				}
-			},
-			{ threshold: 0.01 }
-		);
-
-		if (ctaRef.current) {
-			ctaObserver.observe(ctaRef.current);
-		}
-
-		return () => ctaObserver.disconnect();
-	}, [isCtaVisible]);
-
 	return (
 		<div>
 			{/* Hero Section */}
@@ -38,36 +8,18 @@ export function PrivacyPolicy() {
 				<div className='absolute inset-0 opacity-40 [background:radial-gradient(80rem_40rem_at_70%_20%,rgba(255,255,255,0.15),transparent_60%)]' />
 				<div className='absolute inset-0 opacity-30 [background:radial-gradient(50rem_30rem_at_20%_10%,rgba(249,115,22,0.30),transparent_60%)]' />
 				<div className='relative mx-auto max-w-6xl px-6 py-16'>
-					<p
-						className='text-sm font-semibold tracking-wide text-orange-500 transition-all duration-500 ease-out'
-						style={{
-							transform: isHeroLoaded ? 'translateY(0)' : 'translateY(-50px)',
-							opacity: isHeroLoaded ? 1 : 0,
-						}}
-					>
+					<p className='text-sm font-semibold tracking-wide text-orange-500'>
 						Data Protection
 					</p>
-					<h1
-						className='mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl transition-opacity duration-500'
-						style={{
-							opacity: isHeroLoaded ? 1 : 0,
-							transitionDelay: '500ms',
-						}}
-					>
+					<h1 className='mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl'>
 						Privacy Policy
 					</h1>
-					<p
-						className='mt-4 max-w-3xl text-base leading-relaxed text-gray-200 transition-opacity duration-700'
-						style={{
-							opacity: isHeroLoaded ? 1 : 0,
-							transitionDelay: '700ms',
-						}}
-					>
+					<p className='mt-4 max-w-3xl text-base leading-relaxed text-gray-200'>
 						We are committed to protecting your privacy and handling your
-					personal information responsibly.
-				</p>
-				<p className='mt-2 text-base text-gray-200'>
-					<b>Last Updated:</b> January 2026
+						personal information responsibly.
+					</p>
+					<p className='mt-2 text-base text-gray-200'>
+						<b>Last Updated:</b> January 2026
 					</p>
 
 					<div className='mt-8 flex flex-wrap gap-3'>
@@ -86,16 +38,7 @@ export function PrivacyPolicy() {
 				<div className='mx-auto max-w-4xl px-6 py-16'>
 					<div className='space-y-12'>
 						{/* Section 1 */}
-						<div
-							className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm ${
-								isContentVisible ? "translate-y-0" : "translate-y-[30px]"
-							}`}
-							style={{
-								opacity: isContentVisible ? 1 : 0,
-								transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-								transitionDelay: '500ms',
-							}}
-						>
+						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>1.</span>Information We
 								Collect
@@ -126,16 +69,7 @@ export function PrivacyPolicy() {
 						</div>
 
 						{/* Section 2 */}
-						<div
-							className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm ${
-								isContentVisible ? "translate-y-0" : "translate-y-[30px]"
-							}`}
-							style={{
-								opacity: isContentVisible ? 1 : 0,
-								transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-								transitionDelay: '1500ms',
-							}}
-						>
+						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>2.</span>How We Use Your
 								Information
@@ -172,16 +106,7 @@ export function PrivacyPolicy() {
 						</div>
 
 						{/* Section 3 */}
-						<div
-							className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm ${
-								isContentVisible ? "translate-y-0" : "translate-y-[30px]"
-							}`}
-							style={{
-								opacity: isContentVisible ? 1 : 0,
-								transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-								transitionDelay: '1600ms',
-							}}
-						>
+						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>3.</span>Information Sharing
 							</h2>
@@ -207,16 +132,7 @@ export function PrivacyPolicy() {
 						</div>
 
 						{/* Section 4 */}
-						<div
-							className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm ${
-								isContentVisible ? "translate-y-0" : "translate-y-[30px]"
-							}`}
-							style={{
-								opacity: isContentVisible ? 1 : 0,
-								transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-								transitionDelay: '1700ms',
-							}}
-						>
+						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>4.</span>Data Security
 							</h2>
@@ -228,16 +144,7 @@ export function PrivacyPolicy() {
 						</div>
 
 						{/* Section 5 */}
-						<div
-							className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm ${
-								isContentVisible ? "translate-y-0" : "translate-y-[30px]"
-							}`}
-							style={{
-								opacity: isContentVisible ? 1 : 0,
-								transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-								transitionDelay: '1800ms',
-							}}
-						>
+						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>5.</span>Your Rights
 							</h2>
@@ -248,16 +155,7 @@ export function PrivacyPolicy() {
 						</div>
 
 						{/* Section 6 */}
-						<div
-							className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm ${
-								isContentVisible ? "translate-y-0" : "translate-y-[30px]"
-							}`}
-							style={{
-								opacity: isContentVisible ? 1 : 0,
-								transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-								transitionDelay: '1900ms',
-							}}
-						>
+						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>6.</span>Cookies
 							</h2>
@@ -272,18 +170,9 @@ export function PrivacyPolicy() {
 			</section>
 
 			{/* CTA Section */}
-			<section ref={ctaRef} className='bg-black'>
+			<section className='bg-black'>
 				<div className='mx-auto max-w-6xl px-6 py-16'>
-					<div
-						className={`rounded-3xl border border-white/10 bg-white/5 p-8 ${
-							isCtaVisible ? "translate-y-0" : "translate-y-[30px]"
-						}`}
-						style={{
-							opacity: isCtaVisible ? 1 : 0,
-							transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-							transitionDelay: '500ms',
-						}}
-					>
+					<div className='rounded-3xl border border-white/10 bg-white/5 p-8'>
 						<h2 className='text-2xl font-extrabold tracking-tight text-white sm:text-3xl'>
 							Privacy questions?
 						</h2>
