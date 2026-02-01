@@ -1,7 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { FaArrowRight, FaPlay, FaBolt, FaShieldAlt, FaQrcode } from "react-icons/fa";
+import Image from "next/image";
+import {
+  FaArrowRight,
+  FaPlay,
+  FaBolt,
+  FaShieldAlt,
+  FaQrcode,
+} from "react-icons/fa";
 import { TrustItem } from "../Shared";
 import { useState, useEffect } from "react";
 

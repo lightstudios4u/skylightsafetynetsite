@@ -3,6 +3,7 @@
 import { FaShieldAlt } from "react-icons/fa";
 import { useTypewriter } from "@/app/utils/typewriter";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export function RiskFraming() {
   const sectionRef = useRef<HTMLDivElement>(null);

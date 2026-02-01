@@ -19,7 +19,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               alt="SkylightSafety.Net"
               width={36}
               height={36}
-              className="h-24 w-24"
+              className="h-9 w-9"
             /> */}
             <div className="leading-tight">
               <div className="text-sm font-extrabold tracking-tight">

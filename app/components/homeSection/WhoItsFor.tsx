@@ -94,19 +94,15 @@ export function WhoItsFor() {
                 transitionDelay: `${1400 + index * 100}ms, ${1400 + index * 100}ms, 0ms, 0ms, 0ms`,
               }}
             >
-              <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-orange-500/10 ">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-3xl bg-orange-500/10">
                   {t.icon}
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-white">
-                    {t.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/80">
-                    {t.desc}
-                  </p>
-                </div>
+                <h3 className="text-base font-bold text-white">{t.title}</h3>
               </div>
+              <p className="mt-4 text-sm leading-relaxed text-white/80">
+                {t.desc}
+              </p>
             </div>
           ))}
         </div>
