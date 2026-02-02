@@ -99,10 +99,6 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
                 </div>
               ))}
             </div>
-
-            <p className="mt-3 text-xs text-white/60">
-              Note: export/share formats (CSV/PDF) can be a phase 2 feature.
-            </p>
           </div>
 
           <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
