@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { FaArrowRight, FaCheckCircle, FaQrcode, FaBolt, FaShieldAlt } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaCheckCircle,
+  FaQrcode,
+  FaBolt,
+  FaShieldAlt,
+} from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 
 export function OrderOnline() {
@@ -15,7 +21,7 @@ export function OrderOnline() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15, rootMargin: "50px" },
     );
 
     if (sectionRef.current) {
@@ -26,7 +32,11 @@ export function OrderOnline() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="relative" style={{ backgroundColor: "#c0652c" }}>
+    <section
+      ref={sectionRef}
+      className="relative"
+      style={{ backgroundColor: "#c0652c" }}
+    >
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-white/30 blur-3xl" />
@@ -37,50 +47,29 @@ export function OrderOnline() {
         <div className="mx-auto max-w-3xl">
           {/* Attention badge */}
           <div
-            className="mb-4 flex justify-center transition-all duration-500 ease-out"
-            style={{
-              transform: isVisible ? "translateY(0)" : "translateY(-50px)",
-              opacity: isVisible ? 1 : 0,
-            }}
+            className={`mb-4 flex justify-center animate-fade-down ${isVisible ? "visible" : ""}`}
           >
             <div
-              className="inline-flex items-center gap-2 rounded-full border-2 border-orange-600/40 bg-black/20 px-5 py-1.5 shadow-lg backdrop-blur-sm"
-              style={{
-                animation: isVisible ? 'wiggle-grow 1s ease-in-out 0.5s' : 'none',
-              }}
+              className={`inline-flex items-center gap-2 rounded-full border-2 border-orange-600/40 bg-black/20 px-5 py-1.5 shadow-lg backdrop-blur-sm ${isVisible ? "animate-badge-wiggle" : ""}`}
             >
               <style jsx>{`
-                @keyframes wiggle-grow {
-                  0%, 100% {
+                @keyframes badge-wiggle {
+                  0%,
+                  100% {
                     transform: scale(1) rotate(0deg);
                   }
-                  10% {
-                    transform: scale(1.05) rotate(-2deg);
-                  }
-                  20% {
-                    transform: scale(1.1) rotate(2deg);
-                  }
-                  30% {
-                    transform: scale(1.05) rotate(-2deg);
-                  }
-                  40% {
-                    transform: scale(1.1) rotate(2deg);
+                  25% {
+                    transform: scale(1.05) rotate(-1deg);
                   }
                   50% {
-                    transform: scale(1.05) rotate(-1deg);
-                  }
-                  60% {
                     transform: scale(1.08) rotate(1deg);
                   }
-                  70% {
+                  75% {
                     transform: scale(1.05) rotate(-1deg);
                   }
-                  80% {
-                    transform: scale(1.03) rotate(1deg);
-                  }
-                  90% {
-                    transform: scale(1.01) rotate(0deg);
-                  }
+                }
+                .animate-badge-wiggle {
+                  animation: badge-wiggle 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
                 }
               `}</style>
               <div className="h-2 w-2 animate-pulse rounded-full bg-orange-600" />
@@ -91,10 +80,7 @@ export function OrderOnline() {
           </div>
 
           <div
-            className="rounded-3xl border-2 border-orange-600/30 bg-[#3D2C28] p-8 shadow-2xl backdrop-blur-sm transition-opacity duration-1000 ease-out"
-            style={{
-              opacity: isVisible ? 1 : 0,
-            }}
+            className={`rounded-3xl border-2 border-orange-600/30 bg-[#3D2C28] p-8 shadow-2xl backdrop-blur-sm animate-fade-up delay-200 ${isVisible ? "visible" : ""}`}
           >
             <div className="text-center">
               <div className="mb-3 flex justify-center">
@@ -114,9 +100,7 @@ export function OrderOnline() {
 
               {/* Price highlight */}
               <div className="mx-auto mt-6 inline-flex items-baseline gap-3 rounded-2xl border border-orange-600/50 bg-orange-500/20 px-6 py-3 shadow-lg">
-                <span className="text-2xl font-extrabold text-white">
-                  $299
-                </span>
+                <span className="text-2xl font-extrabold text-white">$299</span>
                 <span className="text-sm text-white/80">per kit</span>
                 <span className="ml-2 rounded-full bg-orange-600/30 px-2.5 py-0.5 text-xs font-bold text-white">
                   Volume discounts
@@ -126,10 +110,10 @@ export function OrderOnline() {
               <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link
                   href="/products-and-services"
-                  className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-3.5 text-base font-bold text-white shadow-2xl shadow-black/50 transition hover:scale-105 hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-400"
+                  className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-3.5 text-base font-bold text-white shadow-2xl shadow-black/50 transition-all duration-200 hover:scale-105 hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-400"
                 >
                   <FaArrowRight
-                    className="mr-2 transition group-hover:translate-x-1"
+                    className="mr-2 transition-transform duration-200 group-hover:translate-x-1"
                     size={18}
                   />
                   Order Now
@@ -137,7 +121,7 @@ export function OrderOnline() {
 
                 <a
                   href="#bulk"
-                  className="inline-flex items-center justify-center rounded-xl border-2 border-orange-600/40 bg-black/20 px-8 py-3.5 text-base font-bold text-white backdrop-blur-sm transition hover:bg-black/30"
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-orange-600/40 bg-black/20 px-8 py-3.5 text-base font-bold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-black/30"
                 >
                   View Bulk Pricing
                 </a>

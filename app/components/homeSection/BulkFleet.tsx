@@ -16,7 +16,7 @@ export function BulkFleet() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15, rootMargin: "50px" },
     );
 
     if (sectionRef.current) {
@@ -32,29 +32,17 @@ export function BulkFleet() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <p
-              className="text-sm font-semibold tracking-wide text-orange-500 transition-all duration-500 ease-out"
-              style={{
-                transform: isVisible ? "translateY(0)" : "translateY(-50px)",
-                opacity: isVisible ? 1 : 0,
-              }}
+              className={`text-sm font-semibold tracking-wide text-orange-500 animate-fade-down ${isVisible ? "visible" : ""}`}
             >
               Outfitting your fleet?
             </p>
             <h2
-              className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl transition-opacity duration-500"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transitionDelay: "500ms",
-              }}
+              className={`mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
             >
               Standardize Protection Across Crews
             </h2>
             <p
-              className="mt-3 max-w-xl text-sm leading-relaxed text-gray-200 transition-opacity duration-700"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transitionDelay: "700ms",
-              }}
+              className={`mt-3 max-w-xl text-sm leading-relaxed text-gray-200 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
             >
               We work with safety companies and large contractors to deploy
               standardized protection across multiple crews and projects. Get
@@ -62,12 +50,7 @@ export function BulkFleet() {
             </p>
 
             <div
-              className="mt-8 grid grid-cols-2 gap-4 rounded-3xl border border-gray-700 bg-black/40 p-6 transition-all duration-700"
-              style={{
-                transform: isVisible ? "translateY(0)" : "translateY(30px)",
-                opacity: isVisible ? 1 : 0,
-                transitionDelay: "1400ms",
-              }}
+              className={`mt-8 grid grid-cols-2 gap-4 rounded-3xl border border-gray-700 bg-black/40 p-6 animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
             >
               <Stat label="Standard size" value="4' × 8'" />
               <Stat label="Typical install" value="< 5 min" />
@@ -77,12 +60,7 @@ export function BulkFleet() {
           </div>
 
           <div
-            className="rounded-3xl border border-gray-700 bg-black/40 p-6 shadow-xl transition-all duration-700"
-            style={{
-              transform: isVisible ? "translateY(0)" : "translateY(30px)",
-              opacity: isVisible ? 1 : 0,
-              transitionDelay: "1500ms",
-            }}
+            className={`rounded-3xl border border-gray-700 bg-black/40 p-6 shadow-xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
           >
             <h3 className="text-lg font-extrabold text-white">
               Talk to us about fleet rollouts
@@ -95,7 +73,7 @@ export function BulkFleet() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#request"
-                className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
+                className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
               >
                 <FaEnvelope className="mr-2" size={16} />
                 Request Bulk Pricing
@@ -103,7 +81,7 @@ export function BulkFleet() {
 
               <Link
                 href="/products-and-specs.pdf"
-                className="inline-flex items-center justify-center rounded-xl border border-gray-700 bg-black/60 px-6 py-3 text-sm font-semibold text-white transition hover:bg-black/80"
+                className="inline-flex items-center justify-center rounded-xl border border-gray-700 bg-black/60 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
               >
                 View Spec Sheet <span className="ml-2">→</span>
               </Link>

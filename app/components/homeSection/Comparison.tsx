@@ -13,7 +13,7 @@ export function Comparison() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15, rootMargin: "50px" },
     );
 
     if (sectionRef.current) {
@@ -52,20 +52,12 @@ export function Comparison() {
     <section ref={sectionRef} className="bg-black">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <p
-          className="text-center text-sm font-semibold tracking-wide text-orange-500 transition-all duration-500 ease-out"
-          style={{
-            transform: isVisible ? "translateY(0)" : "translateY(-50px)",
-            opacity: isVisible ? 1 : 0,
-          }}
+          className={`text-center text-sm font-semibold tracking-wide text-orange-500 animate-fade-down ${isVisible ? "visible" : ""}`}
         >
           Stop improvising. Start protecting.
         </p>
         <h2
-          className="mt-3 text-center text-3xl font-extrabold tracking-tight text-white sm:text-4xl transition-opacity duration-500"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transitionDelay: "700ms",
-          }}
+          className={`mt-3 text-center text-3xl font-extrabold tracking-tight text-white sm:text-4xl animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
         >
           Proof Beats Promises
         </h2>
@@ -75,21 +67,15 @@ export function Comparison() {
             <div
               key={col.title}
               className={[
-                "rounded-3xl border p-6 shadow-sm",
+                "rounded-3xl border p-6 shadow-sm animate-fade-up",
                 col.highlight
                   ? "border-orange-600/30 bg-[#3D2C28]"
                   : "border-gray-700 bg-black/40",
-                isVisible ? "translate-y-0" : "translate-y-[30px]",
+                isVisible ? "visible" : "",
               ].join(" ")}
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-                transitionDelay: `${1400 + index * 100}ms`,
-              }}
+              style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <h3 className="text-lg font-extrabold text-white">
-                {col.title}
-              </h3>
+              <h3 className="text-lg font-extrabold text-white">{col.title}</h3>
               <ul className="mt-4 space-y-3 text-sm text-gray-200">
                 {col.items.map((item) => (
                   <li key={item} className="flex items-end gap-2">
@@ -110,8 +96,7 @@ export function Comparison() {
               {col.highlight ? (
                 <div className="mt-6 rounded-2xl border border-orange-600/30 bg-orange-500/20 p-4">
                   <p className="text-sm font-semibold text-white">
-                    Purpose-built sizing. Rapid install. Documented
-                    compliance.
+                    Purpose-built sizing. Rapid install. Documented compliance.
                   </p>
                   <p className="mt-1 text-xs text-white/70">
                     The system is designed to be obvious on the roof and
@@ -125,8 +110,8 @@ export function Comparison() {
                     documentation.
                   </p>
                   <p className="mt-1 text-xs text-gray-400">
-                    Without standardized sizing and tracking, compliance
-                    becomes guesswork.
+                    Without standardized sizing and tracking, compliance becomes
+                    guesswork.
                   </p>
                 </div>
               )}

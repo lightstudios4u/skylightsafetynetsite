@@ -16,7 +16,7 @@ export function WhoItsFor() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.15, rootMargin: "50px" },
     );
 
     if (sectionRef.current) {
@@ -49,32 +49,24 @@ export function WhoItsFor() {
   ];
 
   return (
-    <section id="who-its-for" ref={sectionRef} style={{ backgroundColor: "#c0652c" }}>
+    <section
+      id="who-its-for"
+      ref={sectionRef}
+      style={{ backgroundColor: "#c0652c" }}
+    >
       <div className="mx-auto max-w-6xl px-6 py-16">
         <p
-          className="text-center text-sm font-semibold tracking-wide text-black transition-all duration-500 ease-out"
-          style={{
-            transform: isVisible ? "translateY(0)" : "translateY(-50px)",
-            opacity: isVisible ? 1 : 0,
-          }}
+          className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
         >
           Designed for the trades that work above
         </p>
         <h2
-          className="mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl transition-opacity duration-700"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transitionDelay: "700ms",
-          }}
+          className={`mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
         >
           Trusted Across the Commercial Trades
         </h2>
         <p
-          className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-black/90 transition-opacity duration-700"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transitionDelay: "700ms",
-          }}
+          className={`mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-black/90 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
         >
           Built for crews facing elevated hazards on real rooftops—roofing,
           solar, HVAC, and safety operations that need speed, strength, and
@@ -85,14 +77,8 @@ export function WhoItsFor() {
           {trades.map((t, index) => (
             <div
               key={t.title}
-              className={`rounded-3xl bg-[#3D2C28] p-6 shadow-sm ease-out hover:scale-105 hover:shadow-xl hover:bg-[#4D3C38] cursor-pointer ${
-                isVisible ? "translate-y-0" : "translate-y-[30px]"
-              }`}
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transition: 'opacity 700ms ease-out, transform 700ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out, scale 200ms ease-out',
-                transitionDelay: `${1400 + index * 100}ms, ${1400 + index * 100}ms, 0ms, 0ms, 0ms`,
-              }}
+              className={`rounded-3xl bg-[#3D2C28] p-6 shadow-sm card-hover cursor-pointer animate-fade-up ${isVisible ? "visible" : ""}`}
+              style={{ transitionDelay: `${400 + index * 75}ms` }}
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-3xl bg-orange-500/10">
