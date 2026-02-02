@@ -11,12 +11,11 @@ export function DetailsSections() {
             Details + compliance documentation
           </p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-            Specs, QR Tracking, and What’s Included
+            Specs, QR Tracking & What's Included
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-200">
-            This page exists for the people who ask “Cool… but what exactly do I
-            get, and how does the documentation work?” Short answer: strap it
-            on, scan it, log it, export it.
+            Everything you need to know about the product, documentation system,
+            and compliance tracking.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -42,10 +41,6 @@ export function DetailsSections() {
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
             What’s Included
           </h2>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
-            Keep this list tight and real. Don’t overshare. You can always send
-            a PDF with full spec sheets after lead capture.
-          </p>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
@@ -124,11 +119,11 @@ export function DetailsSections() {
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            QR Tracking (How it actually helps)
+            QR Tracking
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
-            The goal isn’t “cool QR tech.” The goal is fewer gaps in compliance,
-            fewer forgotten inspections, and cleaner records when someone asks.
+            Fewer gaps in compliance, fewer forgotten inspections, and cleaner
+            records when auditors ask.
           </p>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -159,11 +154,11 @@ export function DetailsSections() {
           </div>
 
           <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6">
-            <h3 className="text-lg font-bold">Audit-friendly output</h3>
+            <h3 className="text-lg font-bold">Audit-ready exports</h3>
             <p className="mt-2 text-sm leading-relaxed text-slate-600">
-              If you want, this page can include a screenshot/example log table,
-              but I’d keep that behind a lead capture unless you’re
-              intentionally giving away the whole playbook.
+              Export complete inspection logs as PDF or CSV. Every scan is
+              timestamped and tied to a crew member—ready for project owners,
+              auditors, or insurance carriers.
             </p>
           </div>
         </div>
