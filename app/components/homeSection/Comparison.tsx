@@ -1,4 +1,28 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 export function Comparison() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
   type CompareCol = { title: string; items: string[]; highlight?: boolean };
 
   const comparison: CompareCol[] = [
@@ -25,17 +49,29 @@ export function Comparison() {
   ];
 
   return (
-    <section className="bg-black">
+    <section ref={sectionRef} className="bg-black">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <p className="text-center text-sm font-semibold tracking-wide text-orange-500">
+        <p
+          className="text-center text-sm font-semibold tracking-wide text-orange-500 transition-all duration-500 ease-out"
+          style={{
+            transform: isVisible ? "translateY(0)" : "translateY(-50px)",
+            opacity: isVisible ? 1 : 0,
+          }}
+        >
           Stop improvising. Start protecting.
         </p>
-        <h2 className="mt-3 text-center text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+        <h2
+          className="mt-3 text-center text-3xl font-extrabold tracking-tight text-white sm:text-4xl transition-opacity duration-500"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transitionDelay: "700ms",
+          }}
+        >
           Proof Beats Promises
         </h2>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {comparison.map((col) => (
+          {comparison.map((col, index) => (
             <div
               key={col.title}
               className={[
@@ -43,14 +79,20 @@ export function Comparison() {
                 col.highlight
                   ? "border-orange-600/30 bg-[#3D2C28]"
                   : "border-gray-700 bg-black/40",
+                isVisible ? "translate-y-0" : "translate-y-[30px]",
               ].join(" ")}
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transition: 'opacity 700ms ease-out, transform 700ms ease-out',
+                transitionDelay: `${1400 + index * 100}ms`,
+              }}
             >
               <h3 className="text-lg font-extrabold text-white">
                 {col.title}
               </h3>
               <ul className="mt-4 space-y-3 text-sm text-gray-200">
                 {col.items.map((item) => (
-                  <li key={item} className="flex gap-2">
+                  <li key={item} className="flex items-end gap-2">
                     <span
                       className={
                         col.highlight

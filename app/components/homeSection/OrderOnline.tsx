@@ -1,9 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import { FaArrowRight, FaCheckCircle, FaQrcode, FaBolt, FaShieldAlt } from "react-icons/fa";
+import { useEffect, useRef, useState } from "react";
 
 export function OrderOnline() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
   return (
-    <section className="relative" style={{ backgroundColor: "#c0652c" }}>
+    <section ref={sectionRef} className="relative" style={{ backgroundColor: "#c0652c" }}>
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-white/30 blur-3xl" />
@@ -13,8 +36,53 @@ export function OrderOnline() {
       <div className="relative mx-auto max-w-5xl px-6 py-14">
         <div className="mx-auto max-w-3xl">
           {/* Attention badge */}
-          <div className="mb-4 flex justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full border-2 border-orange-600/40 bg-black/20 px-5 py-1.5 shadow-lg backdrop-blur-sm">
+          <div
+            className="mb-4 flex justify-center transition-all duration-500 ease-out"
+            style={{
+              transform: isVisible ? "translateY(0)" : "translateY(-50px)",
+              opacity: isVisible ? 1 : 0,
+            }}
+          >
+            <div
+              className="inline-flex items-center gap-2 rounded-full border-2 border-orange-600/40 bg-black/20 px-5 py-1.5 shadow-lg backdrop-blur-sm"
+              style={{
+                animation: isVisible ? 'wiggle-grow 1s ease-in-out 0.5s' : 'none',
+              }}
+            >
+              <style jsx>{`
+                @keyframes wiggle-grow {
+                  0%, 100% {
+                    transform: scale(1) rotate(0deg);
+                  }
+                  10% {
+                    transform: scale(1.05) rotate(-2deg);
+                  }
+                  20% {
+                    transform: scale(1.1) rotate(2deg);
+                  }
+                  30% {
+                    transform: scale(1.05) rotate(-2deg);
+                  }
+                  40% {
+                    transform: scale(1.1) rotate(2deg);
+                  }
+                  50% {
+                    transform: scale(1.05) rotate(-1deg);
+                  }
+                  60% {
+                    transform: scale(1.08) rotate(1deg);
+                  }
+                  70% {
+                    transform: scale(1.05) rotate(-1deg);
+                  }
+                  80% {
+                    transform: scale(1.03) rotate(1deg);
+                  }
+                  90% {
+                    transform: scale(1.01) rotate(0deg);
+                  }
+                }
+              `}</style>
               <div className="h-2 w-2 animate-pulse rounded-full bg-orange-600" />
               <span className="text-xs font-bold tracking-wide text-black">
                 LIMITED TIME: FREE SHIPPING ON ORDERS 10+
@@ -22,7 +90,12 @@ export function OrderOnline() {
             </div>
           </div>
 
-          <div className="rounded-3xl border-2 border-orange-600/30 bg-[#3D2C28] p-8 shadow-2xl backdrop-blur-sm">
+          <div
+            className="rounded-3xl border-2 border-orange-600/30 bg-[#3D2C28] p-8 shadow-2xl backdrop-blur-sm transition-opacity duration-1000 ease-out"
+            style={{
+              opacity: isVisible ? 1 : 0,
+            }}
+          >
             <div className="text-center">
               <div className="mb-3 flex justify-center">
                 <FaShieldAlt

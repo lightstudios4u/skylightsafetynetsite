@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export function PrivacyPolicy() {
@@ -17,10 +16,10 @@ export function PrivacyPolicy() {
 					</h1>
 					<p className='mt-4 max-w-3xl text-base leading-relaxed text-gray-200'>
 						We are committed to protecting your privacy and handling your
-					personal information responsibly.
-				</p>
-				<p className='mt-2 text-base text-gray-200'>
-					<b>Last Updated:</b> January 2026
+						personal information responsibly.
+					</p>
+					<p className='mt-2 text-base text-gray-200'>
+						<b>Last Updated:</b> January 2026
 					</p>
 
 					<div className='mt-8 flex flex-wrap gap-3'>

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { FaCheckCircle, FaShieldAlt, FaBolt, FaQrcode } from "react-icons/fa";
 
@@ -11,6 +13,25 @@ type Feature = {
 };
 
 export function CoreBenefits() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
   const features: Feature[] = [
     {
       title: "Purpose-Built Sizing",
@@ -48,20 +69,39 @@ export function CoreBenefits() {
   ];
 
   return (
-		<section className="relative" style={{ backgroundColor: '#c0652c' }}>
+		<section ref={sectionRef} className="relative" style={{ backgroundColor: '#c0652c' }}>
 			<div className='relative mx-auto max-w-6xl px-6 py-16'>
-				<p className='text-center text-sm font-semibold tracking-wide text-black'>
+				<p
+					className='text-center text-sm font-semibold tracking-wide text-black transition-all duration-500 ease-out'
+					style={{
+						transform: isVisible ? "translateY(0)" : "translateY(-50px)",
+						opacity: isVisible ? 1 : 0,
+					}}
+				>
 					Built for speed, strength, and accountability
 				</p>
-				<h2 className='mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl'>
+				<h2
+					className='mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl transition-opacity duration-500'
+					style={{
+						opacity: isVisible ? 1 : 0,
+						transitionDelay: "500ms",
+					}}
+				>
 					Three Pain Points. One Kit.
 				</h2>
 
 				<div className='mt-12 grid gap-8 lg:grid-cols-3'>
-					{features.map((f) => (
+					{features.map((f, index) => (
 						<div
 							key={f.title}
-							className='overflow-hidden rounded-3xl border border-orange-600/30 bg-[#3D2C28] shadow-sm'
+							className={`overflow-hidden rounded-3xl border border-orange-600/30 bg-[#3D2C28] shadow-sm ease-out ${
+								isVisible ? "translate-y-0" : "translate-y-[30px]"
+							}`}
+							style={{
+								opacity: isVisible ? 1 : 0,
+								transition: 'opacity 700ms ease-out, transform 700ms ease-out',
+								transitionDelay: `${1400 + index * 100}ms`,
+							}}
 						>
 							<div className='p-6'>
 								<div className='flex items-center gap-2'>
