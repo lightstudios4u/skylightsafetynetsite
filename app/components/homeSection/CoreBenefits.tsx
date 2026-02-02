@@ -23,7 +23,7 @@ export function CoreBenefits() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15, rootMargin: "50px" },
     );
 
     if (sectionRef.current) {
@@ -69,89 +69,81 @@ export function CoreBenefits() {
   ];
 
   return (
-		<section ref={sectionRef} className="relative" style={{ backgroundColor: '#c0652c' }}>
-			<div className='relative mx-auto max-w-6xl px-6 py-16'>
-				<p
-					className='text-center text-sm font-semibold tracking-wide text-black transition-all duration-500 ease-out'
-					style={{
-						transform: isVisible ? "translateY(0)" : "translateY(-50px)",
-						opacity: isVisible ? 1 : 0,
-					}}
-				>
-					Built for speed, strength, and accountability
-				</p>
-				<h2
-					className='mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl transition-opacity duration-500'
-					style={{
-						opacity: isVisible ? 1 : 0,
-						transitionDelay: "500ms",
-					}}
-				>
-					Three Pain Points. One Kit.
-				</h2>
+    <section
+      ref={sectionRef}
+      className="relative"
+      style={{ backgroundColor: "#c0652c" }}
+    >
+      <div className="relative mx-auto max-w-6xl px-6 py-16">
+        <p
+          className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
+        >
+          Built for speed, strength, and accountability
+        </p>
+        <h2
+          className={`mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
+        >
+          Three Pain Points. One Kit.
+        </h2>
 
-				<div className='mt-12 grid gap-8 lg:grid-cols-3'>
-					{features.map((f, index) => (
-						<div
-							key={f.title}
-							className={`overflow-hidden rounded-3xl border border-orange-600/30 bg-[#3D2C28] shadow-sm ease-out ${
-								isVisible ? "translate-y-0" : "translate-y-[30px]"
-							}`}
-							style={{
-								opacity: isVisible ? 1 : 0,
-								transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-								transitionDelay: `${1400 + index * 100}ms`,
-							}}
-						>
-							<div className='p-6'>
-								<div className='flex items-center gap-2'>
-									<div className='flex h-9 w-9 items-center justify-center rounded-2xl bg-orange-500/20'>
-										{f.icon}
-									</div>
-									<h3 className='text-lg font-bold text-white'>{f.title}</h3>
-								</div>
+        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+          {features.map((f, index) => (
+            <div
+              key={f.title}
+              className={`overflow-hidden rounded-3xl border border-orange-600/30 bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              style={{ transitionDelay: `${300 + index * 100}ms` }}
+            >
+              <div className="p-6">
+                <div className="flex items-center gap-2">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-orange-500/20">
+                    {f.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-white">{f.title}</h3>
+                </div>
 
-								<p className='mt-3 text-sm leading-relaxed text-white/80'>
-									{f.desc}
-								</p>
+                <p className="mt-3 text-sm leading-relaxed text-white/80">
+                  {f.desc}
+                </p>
 
-								{f.bullets?.length ? (
-									<ul className='mt-4 space-y-2 text-sm text-white/80'>
-										{f.bullets.map((b) => (
-											<li key={b} className='flex gap-2'>
-												<FaCheckCircle
-													className='mt-0.5 text-orange-400'
-													size={14}
-												/>
-												<span>{b}</span>
-											</li>
-										))}
-									</ul>
-								) : null}
-							</div>
+                {f.bullets?.length ? (
+                  <ul className="mt-4 space-y-2 text-sm text-white/80">
+                    {f.bullets.map((b) => (
+                      <li key={b} className="flex gap-2">
+                        <FaCheckCircle
+                          className="mt-0.5 text-orange-400"
+                          size={14}
+                        />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
 
-							<div className='px-6 pb-6'>
-								<div className='overflow-hidden rounded-2xl bg-black'>
-									<img
-										src={f.img}
-										alt=''
-										className='h-52 w-full object-cover'
-									/>
-								</div>
-							</div>
-						</div>
-					))}
-				</div>
+              <div className="px-6 pb-6">
+                <div className="overflow-hidden rounded-2xl bg-black">
+                  <img
+                    src={f.img}
+                    alt=""
+                    className="h-52 w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
-				<div className='mt-10 flex justify-center'>
-				<Link
+        <div
+          className={`mt-10 flex justify-center animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
+        >
+          <Link
             href="/products-and-services"
-            className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-black/80"
+            className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
           >
             Specs + QR Details <span className="ml-2">→</span>
           </Link>
-				</div>
-			</div>
-		</section>
-	);
+        </div>
+      </div>
+    </section>
+  );
 }

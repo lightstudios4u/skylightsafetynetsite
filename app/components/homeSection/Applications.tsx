@@ -8,7 +8,11 @@ type Application = {
   items: string[];
 };
 
-export function Applications({ applications }: { applications: Application[] }) {
+export function Applications({
+  applications,
+}: {
+  applications: Application[];
+}) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,7 +23,7 @@ export function Applications({ applications }: { applications: Application[] }) 
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15, rootMargin: "50px" },
     );
 
     if (sectionRef.current) {
@@ -33,20 +37,12 @@ export function Applications({ applications }: { applications: Application[] }) 
     <section ref={sectionRef} style={{ backgroundColor: "#c0652c" }}>
       <div className="mx-auto max-w-6xl px-6 py-16">
         <p
-          className="text-center text-sm font-semibold tracking-wide text-black transition-all duration-500 ease-out"
-          style={{
-            transform: isVisible ? "translateY(0)" : "translateY(-50px)",
-            opacity: isVisible ? 1 : 0,
-          }}
+          className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
         >
           Who we protect
         </p>
         <h2
-          className="mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl transition-opacity duration-500"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transitionDelay: "500ms",
-          }}
+          className={`mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
         >
           Common Applications
         </h2>
@@ -55,14 +51,8 @@ export function Applications({ applications }: { applications: Application[] }) 
           {applications.map((a, index) => (
             <div
               key={a.title}
-              className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm ease-out ${
-                isVisible ? "translate-y-0" : "translate-y-[30px]"
-              }`}
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-                transitionDelay: `${1400 + index * 100}ms`,
-              }}
+              className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              style={{ transitionDelay: `${300 + index * 75}ms` }}
             >
               <h3 className="text-base font-bold text-white">{a.title}</h3>
               <ul className="mt-3 space-y-2 text-sm text-white/80">
@@ -81,11 +71,7 @@ export function Applications({ applications }: { applications: Application[] }) 
         </div>
 
         <div
-          className="mt-12 rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm transition-opacity duration-700"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transitionDelay: "1600ms",
-          }}
+          className={`mt-12 rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
           <p className="text-center text-sm font-semibold tracking-wide text-orange-500">
             From installation to audit-ready in three scans
@@ -111,14 +97,8 @@ export function Applications({ applications }: { applications: Application[] }) 
             ].map((x, stepIndex) => (
               <div
                 key={x.n}
-                className={`rounded-2xl border border-orange-600/30 bg-black/40 p-6 ${
-                  isVisible ? "translate-y-0" : "translate-y-[30px]"
-                }`}
-                style={{
-                  opacity: isVisible ? 1 : 0,
-                  transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-                  transitionDelay: `${2300 + stepIndex * 100}ms`,
-                }}
+                className={`rounded-2xl border border-orange-600/30 bg-black/40 p-6 animate-fade-up ${isVisible ? "visible" : ""}`}
+                style={{ transitionDelay: `${700 + stepIndex * 75}ms` }}
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-orange-500 text-sm font-extrabold text-white">
@@ -135,15 +115,11 @@ export function Applications({ applications }: { applications: Application[] }) 
         </div>
 
         <div
-          className="mt-10 flex justify-center transition-opacity duration-700"
-          style={{
-            opacity: isVisible ? 1 : 0,
-            transitionDelay: "2600ms",
-          }}
+          className={`mt-10 flex justify-center animate-fade-up delay-800 ${isVisible ? "visible" : ""}`}
         >
           <a
             href="#bulk"
-            className="inline-flex items-center justify-center rounded-xl bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-black/80"
+            className="inline-flex items-center justify-center rounded-xl bg-black px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
           >
             Get Bulk Pricing + Spec Sheet <span className="ml-2">→</span>
           </a>
