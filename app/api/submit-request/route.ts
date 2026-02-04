@@ -17,7 +17,6 @@ export async function POST(request: NextRequest) {
       message,
     } = body;
 
-    // Validate required fields
     if (!firstName || !lastName || !email) {
       console.log("Validation failed - missing fields");
       return NextResponse.json(
@@ -26,10 +25,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Combine first and last name
     const fullName = `${firstName} ${lastName}`;
 
-    // Prepare payload matching the Postman structure
     const payload = {
       recaptchaToken: recaptchaToken || "test_token_12345",
       name: fullName,
@@ -39,9 +36,6 @@ export async function POST(request: NextRequest) {
       message: message || "",
     };
 
-    console.log("Sending to external API:", payload);
-
-    // Send to external API
     const response = await fetch(API_URL, {
       method: "POST",
       headers: {
@@ -49,8 +43,6 @@ export async function POST(request: NextRequest) {
       },
       body: JSON.stringify(payload),
     });
-
-    console.log("External API response status:", response.status);
 
     if (!response.ok) {
       const errorText = await response.text();
@@ -70,7 +62,6 @@ export async function POST(request: NextRequest) {
     }
 
     const data = await response.json();
-    console.log("External API success response:", data);
 
     return NextResponse.json({ success: true, data }, { status: 200 });
   } catch (error) {
