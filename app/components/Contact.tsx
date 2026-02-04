@@ -4,9 +4,6 @@ import Link from "next/link";
 import { FaPhone } from "react-icons/fa";
 import { useState } from "react";
 import { useRecaptcha } from "../helpers/useRecaptcha";
-import { NextRequest, NextResponse } from "next/server";
-
-const API_URL = "https://nets-api.skylightsafety.net/api/forms/submit";
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
