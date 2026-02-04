@@ -33,7 +33,7 @@ export function Contact() {
         message: formData.get("message"),
         recaptchaToken: token,
       };
-
+      console.log("Submitting to /api/contact with token:", token);
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -41,7 +41,7 @@ export function Contact() {
         },
         body: JSON.stringify(data),
       });
-
+      console.log("Response from /api/contact:", response);
       if (!response.ok) {
         const text = await response.text();
         let parsed: unknown = null;
