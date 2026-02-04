@@ -37,20 +37,13 @@ export async function POST(request: NextRequest) {
     });
 
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("External API error response:", errorText);
-
-      let errorData;
+      const text = await response.text();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let parsed: any = null;
       try {
-        errorData = JSON.parse(errorText);
-      } catch {
-        errorData = { error: errorText };
-      }
-
-      return NextResponse.json(
-        { error: "Failed to submit contact form", details: errorData },
-        { status: response.status },
-      );
+        parsed = text ? JSON.parse(text) : null;
+      } catch {}
+      throw new Error(parsed?.error || text || "Failed to submit");
     }
 
     const data = await response.json();
