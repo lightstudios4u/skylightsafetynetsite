@@ -46,8 +46,19 @@ export function Contact() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to submit");
+        const text = await response.text();
+        let parsed: unknown = null;
+        try {
+          parsed = text ? JSON.parse(text) : null;
+        } catch {}
+        const errorMessage =
+          parsed &&
+          typeof parsed === "object" &&
+          "error" in parsed &&
+          typeof parsed.error === "string"
+            ? parsed.error
+            : text || "Failed to submit";
+        throw new Error(errorMessage);
       }
 
       alert("Message sent successfully! We'll get back to you soon.");
