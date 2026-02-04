@@ -40,9 +40,13 @@ export function Stat({ label, value }: { label: string; value: string }) {
 export function Input({
   label,
   placeholder,
+  name,
+  required,
 }: {
   label: string;
   placeholder: string;
+  name?: string;
+  required?: boolean;
 }) {
   return (
     <label className="block">
@@ -51,6 +55,8 @@ export function Input({
       </span>
       <input
         placeholder={placeholder}
+        name={name}
+        required={required}
         className="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
       />
     </label>
@@ -60,9 +66,13 @@ export function Input({
 export function Textarea({
   label,
   placeholder,
+  name,
+  required,
 }: {
   label: string;
   placeholder: string;
+  name?: string;
+  required?: boolean;
 }) {
   return (
     <label className="block">
@@ -70,9 +80,11 @@ export function Textarea({
         {label}
       </span>
       <textarea
+        name={name}
         placeholder={placeholder}
         rows={4}
-        className="w-full resize-none rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
+        required={required}
+        className="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40 resize-none"
       />
     </label>
   );
