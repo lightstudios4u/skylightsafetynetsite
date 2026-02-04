@@ -5,7 +5,6 @@ const API_URL = "https://nets-api.skylightsafety.net/api/forms/submit";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    console.log("Received body:", body);
 
     const { recaptchaToken, name, email, phone, message } = body;
 
@@ -28,8 +27,6 @@ export async function POST(request: NextRequest) {
       message: message || "",
     };
 
-    console.log("Sending to external API:", payload);
-
     // Send to external API
     const response = await fetch(API_URL, {
       method: "POST",
@@ -38,8 +35,6 @@ export async function POST(request: NextRequest) {
       },
       body: JSON.stringify(payload),
     });
-
-    console.log("External API response status:", response.status);
 
     if (!response.ok) {
       const errorText = await response.text();
@@ -59,7 +54,6 @@ export async function POST(request: NextRequest) {
     }
 
     const data = await response.json();
-    console.log("External API success response:", data);
 
     return NextResponse.json({ success: true, data }, { status: 200 });
   } catch (error) {
