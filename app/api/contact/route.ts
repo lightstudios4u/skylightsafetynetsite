@@ -26,7 +26,7 @@ export async function POST(request: Request) {
       email: email,
       message: message || "",
     };
-    return NextResponse.json({ success: true, data: payload }, { status: 200 });
+    // Send to external API
     const response = await fetch(API_URL, {
       method: "POST",
       headers: {
