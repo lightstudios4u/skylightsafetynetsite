@@ -9,6 +9,10 @@ export function RequestForm() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "idle" | "success" | "error";
+    message: string;
+  }>({ type: "idle", message: "" });
   const { executeRecaptcha } = useRecaptcha();
 
   useEffect(() => {
@@ -31,18 +35,21 @@ export function RequestForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setStatus({ type: "idle", message: "" }); // Clear previous status
 
     try {
       // Get reCAPTCHA token
       const token = await executeRecaptcha("SUBMIT_REQUEST_FORM");
 
       if (!token) {
-        alert("reCAPTCHA verification failed. Please try again.");
+        setStatus({
+          type: "error",
+          message: "reCAPTCHA verification failed. Please try again.",
+        });
         setIsSubmitting(false);
         return;
       }
 
-      // Use e.target instead of e.currentTarget and cast to HTMLFormElement
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
 
@@ -64,14 +71,28 @@ export function RequestForm() {
       });
 
       if (response.ok) {
-        alert("Request submitted successfully!");
+        setStatus({
+          type: "success",
+          message: "✓ Request submitted successfully! We'll be in touch soon.",
+        });
         form.reset();
+        
+        // Optional: Clear success message after 5 seconds
+        setTimeout(() => {
+          setStatus({ type: "idle", message: "" });
+        }, 5000);
       } else {
-        alert("Failed to submit request. Please try again.");
+        setStatus({
+          type: "error",
+          message: "Failed to submit request. Please try again.",
+        });
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      alert("An error occurred. Please try again.");
+      setStatus({
+        type: "error",
+        message: "An error occurred. Please try again.",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -160,6 +181,19 @@ export function RequestForm() {
                 {isSubmitting ? "Submitting..." : "Send Request"}{" "}
                 <span className="ml-2">→</span>
               </button>
+
+              {/* Status Message */}
+              {status.type !== "idle" && (
+                <div
+                  className={`mt-4 rounded-xl border p-4 text-sm font-medium transition-all duration-300 ${
+                    status.type === "success"
+                      ? "bg-green-500/10 text-green-400 border-green-500/20"
+                      : "bg-red-500/10 text-red-400 border-red-500/20"
+                  }`}
+                >
+                  {status.message}
+                </div>
+              )}
             </form>
           </div>
         </div>

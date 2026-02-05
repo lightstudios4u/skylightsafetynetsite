@@ -7,22 +7,29 @@ import { useRecaptcha } from "../helpers/useRecaptcha";
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "idle" | "success" | "error";
+    message: string;
+  }>({ type: "idle", message: "" });
   const { executeRecaptcha } = useRecaptcha();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setStatus({ type: "idle", message: "" }); // Clear previous status
 
     try {
       const token = await executeRecaptcha("CONTACT_FORM");
 
       if (!token) {
-        alert("reCAPTCHA verification failed. Please try again.");
+        setStatus({
+          type: "error",
+          message: "reCAPTCHA verification failed. Please try again.",
+        });
         setIsSubmitting(false);
         return;
       }
 
-      // Use e.target instead of e.currentTarget and cast to HTMLFormElement
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
 
@@ -33,6 +40,7 @@ export function Contact() {
         message: formData.get("message"),
         recaptchaToken: token,
       };
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -40,6 +48,7 @@ export function Contact() {
         },
         body: JSON.stringify(data),
       });
+
       if (!response.ok) {
         const text = await response.text();
         let parsed: unknown = null;
@@ -53,18 +62,36 @@ export function Contact() {
           typeof parsed.error === "string"
             ? parsed.error
             : text || "Failed to submit";
-        throw new Error(errorMessage);
+        
+        setStatus({
+          type: "error",
+          message: errorMessage,
+        });
+        setIsSubmitting(false);
+        return;
       }
 
-      alert("Message sent successfully! We'll get back to you soon.");
-      form.reset(); // Clear form
+      setStatus({
+        type: "success",
+        message: "✓ Message sent successfully! We'll get back to you soon.",
+      });
+      form.reset();
+
+      // Optional: Clear success message after 5 seconds
+      setTimeout(() => {
+        setStatus({ type: "idle", message: "" });
+      }, 5000);
     } catch (error) {
       console.error("Contact form error:", error);
-      alert("There was an error submitting the form. Please try again later.");
+      setStatus({
+        type: "error",
+        message: "There was an error submitting the form. Please try again later.",
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
+
   return (
     <div>
       {/* Hero Section */}
@@ -167,6 +194,19 @@ export function Contact() {
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
+
+                {/* Status Message */}
+                {status.type !== "idle" && (
+                  <div
+                    className={`rounded-lg border p-4 text-sm font-medium transition-all duration-300 ${
+                      status.type === "success"
+                        ? "bg-green-500/10 text-green-400 border-green-500/20"
+                        : "bg-red-500/10 text-red-400 border-red-500/20"
+                    }`}
+                  >
+                    {status.message}
+                  </div>
+                )}
               </form>
             </div>
 
@@ -183,10 +223,8 @@ export function Contact() {
                     <p className="mt-2 text-white/80">
                       Call us directly for immediate assistance.
                     </p>
-                    <a
-                      href="tel:888-299-3330"
-                      className="mt-3 inline-block text-orange-400 hover:text-orange-300 transition"
-                    >
+                    <a href="tel:888-299-3330"
+                      className="mt-3 inline-block text-orange-400 hover:text-orange-300 transition">
                       888.299.3330
                     </a>
                   </div>
