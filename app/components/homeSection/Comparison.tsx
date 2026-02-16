@@ -36,10 +36,10 @@ export function Comparison() {
       ],
     },
     {
-      title: "SkylightSafety.NET",
+      title: "O.S.H.A. Safety Net System",
       highlight: true,
       items: [
-        "Purpose-built for common commercial skylights",
+        "Purpose-built for common 4'×8' commercial skylights",
         "QR code system for instant documentation",
         "UV-stabilized materials rated for rooftop exposure",
         "Portable, reusable across multiple jobs",
@@ -67,7 +67,7 @@ export function Comparison() {
             <div
               key={col.title}
               className={[
-                "rounded-3xl border p-6 shadow-sm animate-fade-up",
+                "rounded-xl border p-6 shadow-sm animate-fade-up",
                 col.highlight
                   ? "border-orange-600/30 bg-[#3D2C28]"
                   : "border-gray-700 bg-black/40",
@@ -94,7 +94,7 @@ export function Comparison() {
               </ul>
 
               {col.highlight ? (
-                <div className="mt-6 rounded-2xl border border-orange-600/30 bg-orange-500/20 p-4">
+                <div className="mt-6 rounded-lg border border-orange-600/30 bg-orange-500/20 p-4">
                   <p className="text-sm font-semibold text-white">
                     Purpose-built sizing. Rapid install. Documented compliance.
                   </p>
@@ -104,7 +104,7 @@ export function Comparison() {
                   </p>
                 </div>
               ) : (
-                <div className="mt-6 rounded-2xl border border-gray-700 bg-black/60 p-4">
+                <div className="mt-6 rounded-lg border border-gray-700 bg-black/60 p-4">
                   <p className="text-sm font-semibold text-gray-200">
                     Generic solutions leave gaps in protection and
                     documentation.

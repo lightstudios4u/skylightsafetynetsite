@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { FaShieldAlt } from "react-icons/fa";
+import { FaShieldAlt, FaCheckCircle } from "react-icons/fa";
+import Link from "next/link";
 
 type KitImageKey = "net" | "strap" | "qr" | "bag";
 
@@ -13,7 +14,7 @@ const kitImages = {
 
 function KitHoverGallery({ kitActive }: { kitActive: KitImageKey }) {
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-slate-100/10 bg-slate-50 shadow-sm">
+    <div className="relative overflow-hidden rounded-xl border border-slate-100/10 bg-slate-50 shadow-sm">
       <Image
         key={kitActive}
         src={kitImages[kitActive]}
@@ -76,7 +77,7 @@ export function KitIncluded({
             <p
               className={`text-sm font-semibold tracking-wide text-orange-500 animate-fade-down ${isVisible ? "visible" : ""}`}
             >
-              The most common commercial skylight size
+              O.S.H.A. Safety Net System — What&apos;s Included
             </p>
             <div
               className={`tracking-tight animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
@@ -107,7 +108,7 @@ export function KitIncluded({
                   onMouseEnter={() => setKitActive("net")}
                   onFocus={() => setKitActive("net")}
                   className={[
-                    "w-full text-left rounded-2xl border p-5 transition-colors duration-200",
+                    "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "net"
                       ? "border-orange-600/50 bg-[#3D2C28]"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
@@ -117,7 +118,9 @@ export function KitIncluded({
                     High-Visibility Safety Net
                   </p>
                   <p className="mt-1 text-sm text-gray-300">
-                    UV-stabilized orange mesh sized for commercial skylights.
+                    UV-stabilized orange mesh net sized precisely for 4&apos; ×
+                    8&apos; skylights. Contractors can see protected areas from
+                    across the roof.
                   </p>
                 </button>
 
@@ -126,7 +129,7 @@ export function KitIncluded({
                   onMouseEnter={() => setKitActive("strap")}
                   onFocus={() => setKitActive("strap")}
                   className={[
-                    "w-full text-left rounded-2xl border p-5 transition-colors duration-200",
+                    "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "strap"
                       ? "border-orange-600/50 bg-[#3D2C28]"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
@@ -136,8 +139,9 @@ export function KitIncluded({
                     Heavy-Duty Ratchet Strap
                   </p>
                   <p className="mt-1 text-sm text-gray-300">
-                    Secure attachment to standard curb lips—no tools, no
-                    penetrations.
+                    Professional-grade stainless steel ratcheting strap system
+                    provides secure attachment to standard curb lips without
+                    tools or penetrations.
                   </p>
                 </button>
 
@@ -146,7 +150,7 @@ export function KitIncluded({
                   onMouseEnter={() => setKitActive("qr")}
                   onFocus={() => setKitActive("qr")}
                   className={[
-                    "w-full text-left rounded-2xl border p-5 transition-colors duration-200",
+                    "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "qr"
                       ? "border-orange-600/50 bg-[#3D2C28]"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
@@ -156,8 +160,8 @@ export function KitIncluded({
                     Serialized QR Label
                   </p>
                   <p className="mt-1 text-sm text-gray-300">
-                    Scan to register, log inspections, and keep documentation
-                    clean.
+                    Permanently attached to the net and storage bag. Scan to
+                    register, log inspections, and track location.
                   </p>
                 </button>
 
@@ -166,7 +170,7 @@ export function KitIncluded({
                   onMouseEnter={() => setKitActive("bag")}
                   onFocus={() => setKitActive("bag")}
                   className={[
-                    "w-full text-left rounded-2xl border p-5 transition-colors duration-200",
+                    "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "bag"
                       ? "border-orange-600/50 bg-[#3D2C28]"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
@@ -174,7 +178,9 @@ export function KitIncluded({
                 >
                   <p className="text-sm font-bold text-white">Storage Bag</p>
                   <p className="mt-1 text-sm text-gray-300">
-                    Keep kits organized between jobs and easy to transport.
+                    Durable carry bag keeps your kit organized and protected
+                    between jobs. Easy transport from truck to roof, and
+                    protects the Safety Net from damage when not in use.
                   </p>
                 </button>
               </div>
@@ -189,8 +195,90 @@ export function KitIncluded({
           </div>
         </div>
 
+        {/* Key Specifications Table */}
+        <div
+          className={`mt-10 mx-auto max-w-4xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
+        >
+          <h3 className="text-center text-lg font-extrabold text-white mb-6">
+            Key Specifications
+          </h3>
+          <div className="overflow-hidden rounded-lg border border-gray-700">
+            <div className="divide-y divide-gray-700">
+              {[
+                {
+                  label: "Net Dimensions",
+                  value:
+                    "Fits standard 4' × 8' commercial skylights — curb mounted or self-flashing",
+                },
+                {
+                  label: "Visibility Color",
+                  value: "High-visibility safety orange",
+                },
+                {
+                  label: "Material",
+                  value: "UV-stabilized synthetic polyester strapping",
+                },
+                {
+                  label: "Installation Time",
+                  value: "Under 2 minutes by a crew of two",
+                },
+                {
+                  label: "Portability",
+                  value: "Lightweight and reusable across multiple job sites",
+                },
+                {
+                  label: "Curb Requirement",
+                  value:
+                    'Minimum 1.5" metal skylight counter flashing lip for strap attachment',
+                },
+                {
+                  label: "Documentation",
+                  value:
+                    "QR code for digital inspection logs / installation instructions — printed and video / tailgate safety talk materials — available in English and Spanish",
+                },
+              ].map((spec) => (
+                <div
+                  key={spec.label}
+                  className="grid grid-cols-3 sm:grid-cols-4"
+                >
+                  <div className="col-span-1 bg-black/40 px-4 py-3 text-xs font-semibold text-gray-200">
+                    {spec.label}
+                  </div>
+                  <div className="col-span-2 sm:col-span-3 px-4 py-3 text-xs text-white/80">
+                    {spec.value}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Protect Crews CTA Banner */}
+        <div
+          className={`mt-10 mx-auto max-w-3xl rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 text-center shadow-lg animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
+        >
+          <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
+            Protect Crews and Prove It With One Scan
+          </h3>
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/80">
+            Purpose-built sizing. Rapid installation. Documented compliance. The
+            O.S.H.A. Safety Net System gives commercial contractors everything
+            they need to secure skylight openings for worker fall protection and
+            create an easily accessible and auditable safety record for job
+            after job.
+          </p>
+          <div className="mt-6">
+            <Link
+              href="/products-and-services"
+              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-8 py-3 text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-orange-600"
+            >
+              Get a Quote
+            </Link>
+          </div>
+        </div>
+
         {/* Centered Safety Notice - Outside the grid */}
-        <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-yellow-600/40 bg-yellow-900/20 p-6 shadow-lg">
+        <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-yellow-600/40 bg-yellow-900/20 p-6 shadow-lg">
           <div className="flex items-start gap-3">
             <FaShieldAlt
               className="mt-0.5 flex-shrink-0 text-yellow-400"

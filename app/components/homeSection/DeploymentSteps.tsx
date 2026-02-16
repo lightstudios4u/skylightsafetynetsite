@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import Link from "next/link";
 import { FaArrowRight, FaCheckCircle, FaPlay } from "react-icons/fa";
 
 type Step = {
@@ -8,6 +7,33 @@ type Step = {
   desc: string;
   icon?: React.ReactNode;
 };
+
+const stepColors = [
+  {
+    bg: "bg-gray-500/10",
+    shadow: "shadow-gray-500/25",
+    hoverBg: "bg-gray-500/20",
+    hoverShadow: "shadow-gray-500/40",
+    label: "text-gray-300",
+    border: "border-gray-500/40",
+  },
+  {
+    bg: "bg-gray-500/10",
+    shadow: "shadow-gray-500/25",
+    hoverBg: "bg-gray-500/20",
+    hoverShadow: "shadow-gray-500/40",
+    label: "text-gray-300",
+    border: "border-gray-500/40",
+  },
+  {
+    bg: "bg-gray-500/10",
+    shadow: "shadow-gray-500/25",
+    hoverBg: "bg-gray-500/20",
+    hoverShadow: "shadow-gray-500/40",
+    label: "text-gray-300",
+    border: "border-gray-500/40",
+  },
+];
 
 export function DeploymentSteps({ steps }: { steps: Step[] }) {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -51,18 +77,23 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
           {steps.map((s, idx) => (
             <React.Fragment key={s.num}>
               <div
-                className={`overflow-hidden group relative flex-1 rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+                className={`overflow-hidden group relative flex-1 rounded-xl border ${stepColors[idx]?.border ?? "border-orange-600/30"} bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
                 style={{ transitionDelay: `${300 + idx * 100}ms` }}
               >
                 <div className="flex items-start gap-4">
                   <div className="relative">
-                    <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-orange-500/10 shadow-lg shadow-orange-500/25 transition-all duration-200 group-hover:bg-orange-500/20 group-hover:shadow-xl group-hover:shadow-orange-500/40">
+                    <div
+                      className={`flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg ${stepColors[idx]?.bg ?? "bg-orange-500/10"} shadow-lg ${stepColors[idx]?.shadow ?? "shadow-orange-500/25"} transition-all duration-200 group-hover:${stepColors[idx]?.hoverBg ?? "bg-orange-500/20"} group-hover:shadow-xl group-hover:${stepColors[idx]?.hoverShadow ?? "shadow-orange-500/40"} ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                      style={{ animationDelay: `${500 + idx * 150}ms` }}
+                    >
                       {s.icon}
                     </div>
                   </div>
 
                   <div>
-                    <p className="text-xs font-bold tracking-widest text-orange-500">
+                    <p
+                      className={`text-xs font-bold tracking-widest ${stepColors[idx]?.label ?? "text-orange-500"}`}
+                    >
                       {s.num}
                     </p>
                     <h3 className="text-lg font-bold text-white">{s.title}</h3>
@@ -88,7 +119,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
         <div
           className={`mt-12 grid gap-6 lg:grid-cols-2 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
-          <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <h3 className="text-lg font-extrabold text-white">
               What happens after you scan
             </h3>
@@ -100,9 +131,10 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
             <ul className="mt-5 space-y-3 text-sm text-white/80">
               {[
                 "Installation documentation: who installed it, where, and when",
-                "Inspection logs: pre-use checks and periodic assessments",
-                "Location tracking: which job site or crew has the net",
-                "Audit trail: exportable history for compliance reviews (phase 2)",
+                "Inspection logs: pre-use checks and periodic condition assessments",
+                "Location tracking: which job site or crew currently has the net",
+                "Audit trail: complete history exportable for compliance reviews",
+                "Desktop access: owners and managers can log in to review inventory location, inspection logs, and history",
               ].map((x) => (
                 <li key={x} className="flex gap-2">
                   <FaCheckCircle className="mt-0.5 text-orange-400" size={14} />
@@ -110,23 +142,29 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
                 </li>
               ))}
             </ul>
+
+            <p className="mt-4 text-sm text-white/60 italic">
+              No more clipboards, lost paperwork, or questions about whether
+              protection was in place. The documentation exists in the cloud and
+              travels with the net.
+            </p>
           </div>
 
           <div
             id="video"
-            className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
+            className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
           >
             <h3 className="text-lg font-extrabold text-white">
               See it in action
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-white/80">
-              Drop your installation demo here (YouTube/Vimeo) or link out. Keep
-              it dead-simple: show the strap system and the QR workflow.
+              Watch our complete installation demonstration video to see exactly
+              how the O.S.H.A. Safety Net System works in real-world conditions.
             </p>
 
             <a
               href=""
-              className="mt-6 inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
+              className="mt-6 inline-flex items-center justify-center rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
             >
               <FaPlay className="mr-2" size={16} />
               Watch Installation Video

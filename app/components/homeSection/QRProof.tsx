@@ -51,10 +51,13 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
           {qrWays.map((x, index) => (
             <div
               key={x.title}
-              className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm card-hover cursor-pointer animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm card-hover cursor-pointer animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${300 + index * 75}ms` }}
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-orange-500/20">
+              <div
+                className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gray-500/20 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                style={{ animationDelay: `${500 + index * 120}ms` }}
+              >
                 {x.icon}
               </div>
               <h3 className="mt-4 text-base font-bold text-white">{x.title}</h3>
@@ -68,7 +71,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
         <div
           className={`mt-10 grid gap-6 lg:grid-cols-2 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
-          <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <h3 className="text-lg font-extrabold text-white">
               Sample inspection log
             </h3>
@@ -77,31 +80,66 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
               project owners, auditors, or insurance carriers ask.
             </p>
 
-            <div className="mt-5 overflow-hidden rounded-2xl border border-orange-600/30">
-              <div className="grid grid-cols-3 bg-black/40 px-4 py-3 text-xs font-semibold text-gray-200">
+            <div className="mt-5 overflow-hidden rounded-lg border border-orange-600/30">
+              <div className="grid grid-cols-5 bg-black/40 px-4 py-3 text-xs font-semibold text-gray-200">
                 <div>Date</div>
-                <div>Event</div>
-                <div>By</div>
+                <div>Site</div>
+                <div>Inspector</div>
+                <div>Condition</div>
+                <div>Notes</div>
               </div>
               {[
-                { d: "01/07", e: "Installed", b: "C. Rivera" },
-                { d: "01/09", e: "Inspection", b: "C. Rivera" },
-                { d: "01/12", e: "Inspection", b: "J. Kim" },
-                { d: "01/14", e: "Removed", b: "J. Kim" },
+                {
+                  d: "11/14/2024",
+                  s: "Warehouse Dist. A",
+                  i: "J. Martinez",
+                  c: "Good",
+                  n: "Pre-use check, straps secure",
+                },
+                {
+                  d: "11/07/2024",
+                  s: "Warehouse Dist. A",
+                  i: "J. Martinez",
+                  c: "Good",
+                  n: "Weekly inspection, no damage",
+                },
+                {
+                  d: "10/31/2024",
+                  s: "Warehouse Dist. A",
+                  i: "M. Thompson",
+                  c: "Good",
+                  n: "Initial installation, skylight 4",
+                },
+                {
+                  d: "10/23/2024",
+                  s: "Commerce Center",
+                  i: "R. Chen",
+                  c: "Good",
+                  n: "Removal after reroof completion",
+                },
+                {
+                  d: "10/16/2024",
+                  s: "Commerce Center",
+                  i: "R. Chen",
+                  c: "Good",
+                  n: "Mid-project inspection",
+                },
               ].map((r, i) => (
                 <div
                   key={i}
-                  className="grid grid-cols-3 px-4 py-3 text-xs text-white/80"
+                  className="grid grid-cols-5 px-4 py-3 text-xs text-white/80"
                 >
                   <div>{r.d}</div>
-                  <div>{r.e}</div>
-                  <div>{r.b}</div>
+                  <div>{r.s}</div>
+                  <div>{r.i}</div>
+                  <div>{r.c}</div>
+                  <div>{r.n}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <h3 className="text-lg font-extrabold text-white">
               From install to audit-ready
             </h3>
@@ -111,7 +149,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
             </p>
 
             <div className="mt-6 grid gap-4">
-              <div className="rounded-2xl border border-orange-600/30 bg-black/40 p-5">
+              <div className="rounded-lg border border-orange-600/30 bg-black/40 p-5">
                 <div className="flex items-center gap-2">
                   <FaClipboardList className="text-orange-400" />
                   <p className="text-sm font-semibold text-white">
@@ -124,7 +162,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-orange-600/30 bg-black/40 p-5">
+              <div className="rounded-lg border border-orange-600/30 bg-black/40 p-5">
                 <div className="flex items-center gap-2">
                   <FaFileExport className="text-orange-500" />
                   <p className="text-sm font-semibold text-white">
@@ -141,7 +179,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
             <div className="mt-6 flex gap-3">
               <Link
                 href="/products-and-services/#qr"
-                className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+                className="inline-flex items-center justify-center rounded-lg bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
               >
                 QR Workflow Details <span className="ml-2">→</span>
               </Link>

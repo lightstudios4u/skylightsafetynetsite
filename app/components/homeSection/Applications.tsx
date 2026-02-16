@@ -51,7 +51,7 @@ export function Applications({
           {applications.map((a, index) => (
             <div
               key={a.title}
-              className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${300 + index * 75}ms` }}
             >
               <h3 className="text-base font-bold text-white">{a.title}</h3>
@@ -71,7 +71,7 @@ export function Applications({
         </div>
 
         <div
-          className={`mt-12 rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
+          className={`mt-12 rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
           <p className="text-center text-sm font-semibold tracking-wide text-orange-500">
             From installation to audit-ready in three scans
@@ -97,11 +97,14 @@ export function Applications({
             ].map((x, stepIndex) => (
               <div
                 key={x.n}
-                className={`rounded-2xl border border-orange-600/30 bg-black/40 p-6 animate-fade-up ${isVisible ? "visible" : ""}`}
+                className={`rounded-lg border border-orange-600/30 bg-black/40 p-6 animate-fade-up ${isVisible ? "visible" : ""}`}
                 style={{ transitionDelay: `${700 + stepIndex * 75}ms` }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-orange-500 text-sm font-extrabold text-white">
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500 text-sm font-extrabold text-white ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                    style={{ animationDelay: `${700 + stepIndex * 150}ms` }}
+                  >
                     {x.n}
                   </div>
                   <p className="text-base font-bold text-white">{x.t}</p>
@@ -119,7 +122,7 @@ export function Applications({
         >
           <a
             href="#bulk"
-            className="inline-flex items-center justify-center rounded-xl bg-black px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+            className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
           >
             Get Bulk Pricing + Spec Sheet <span className="ml-2">→</span>
           </a>

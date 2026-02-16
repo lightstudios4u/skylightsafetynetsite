@@ -1,9 +1,15 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { FaHardHat, FaSolarPanel, FaWind, FaBuilding } from "react-icons/fa";
 
-type Trade = { title: string; desc: string; icon: React.ReactNode };
+type Trade = {
+  title: string;
+  desc: string;
+  icon: React.ReactNode;
+  img: string;
+};
 
 export function WhoItsFor() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -28,23 +34,27 @@ export function WhoItsFor() {
   const trades: Trade[] = [
     {
       title: "Roofers",
-      desc: "Protect crews during tearoff, installation, and maintenance on commercial properties with multiple skylight penetrations.",
-      icon: <FaHardHat size={20} className="text-orange-500" />,
+      desc: "Protect crews during tearoff, installation, and maintenance on roofs with standard polycarbonate skylights.",
+      icon: <FaHardHat size={20} className="text-gray-300" />,
+      img: "/Roofing.jpeg",
     },
     {
       title: "Solar Installers",
-      desc: "Secure skylight openings before, during, and after panel installation to maintain continuous fall protection.",
-      icon: <FaSolarPanel size={20} className="text-orange-500" />,
+      desc: "Secure skylight openings during system installation and maintenance.",
+      icon: <FaSolarPanel size={20} className="text-gray-300" />,
+      img: "/Solar.jpeg",
     },
     {
       title: "HVAC Contractors",
       desc: "Deploy rapid protection during rooftop service calls and equipment installations without lengthy setup time.",
-      icon: <FaWind size={20} className="text-orange-500" />,
+      icon: <FaWind size={20} className="text-gray-300" />,
+      img: "/HVAC.jpeg",
     },
     {
       title: "Safety Companies",
       desc: "Equip your fleet with documented, reusable protection that supports compliance and simplifies audit trails.",
-      icon: <FaBuilding size={20} className="text-orange-500" />,
+      icon: <FaBuilding size={20} className="text-gray-300" />,
+      img: "/Safety.jpeg",
     },
   ];
 
@@ -66,29 +76,44 @@ export function WhoItsFor() {
           Trusted Across the Commercial Trades
         </h2>
         <p
-          className={`mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-black/90 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
+          className={`mx-auto mt-4 max-w-4xl text-center text-base leading-relaxed text-black/90 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
         >
-          Built for crews facing elevated hazards on real rooftops—roofing,
-          solar, HVAC, and safety operations that need speed, strength, and
-          documentation.
+          Trusted by commercial roofing contractors, solar installation crews,
+          HVAC technicians, general contractors, and safety companies across the
+          country. Our Over-Skylight Human Arrest (O.S.H.A.) Safety Net System
+          is a fall-through protection system engineered specifically for crews
+          facing elevated fall-through work hazards every single day.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {trades.map((t, index) => (
             <div
               key={t.title}
-              className={`rounded-3xl bg-[#3D2C28] p-6 shadow-sm card-hover cursor-pointer animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`overflow-hidden rounded-xl bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${400 + index * 75}ms` }}
             >
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-3xl bg-orange-500/10">
-                  {t.icon}
-                </div>
-                <h3 className="text-base font-bold text-white">{t.title}</h3>
+              <div className="relative h-40 w-full">
+                <Image
+                  src={t.img}
+                  alt={t.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-white/80">
-                {t.desc}
-              </p>
+              <div className="p-5">
+                <div className="flex items-center gap-3">
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gray-500/10 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                    style={{ animationDelay: `${500 + index * 150}ms` }}
+                  >
+                    {t.icon}
+                  </div>
+                  <h3 className="text-base font-bold text-white">{t.title}</h3>
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-white/80">
+                  {t.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>

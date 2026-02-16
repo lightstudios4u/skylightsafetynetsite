@@ -1,18 +1,24 @@
 import { useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 export function TrustItem({
   icon,
   title,
   desc,
+  animationDelay,
 }: {
   icon: React.ReactNode;
   title: string;
   desc: string;
+  animationDelay?: string;
 }) {
   return (
-    <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition-all hover:border-orange-400/30 hover:bg-white/10 hover:shadow-lg hover:shadow-orange-500/10">
+    <div className="group rounded-lg border border-white/10 bg-white/5 p-5 transition-all hover:border-orange-400/30 hover:bg-white/10 hover:shadow-lg hover:shadow-orange-500/10">
       <div className="flex items-start gap-3">
-        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-orange-500/10 transition-all group-hover:bg-orange-500/20">
+        <div
+          className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-orange-500/10 transition-all group-hover:bg-orange-500/20 animate-icon-pop overflow-visible"
+          style={animationDelay ? { animationDelay } : undefined}
+        >
           {icon}
         </div>
         <div className="flex-1">
@@ -57,7 +63,7 @@ export function Input({
         placeholder={placeholder}
         name={name}
         required={required}
-        className="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
+        className="w-full rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
       />
     </label>
   );
@@ -84,7 +90,7 @@ export function Textarea({
         placeholder={placeholder}
         rows={4}
         required={required}
-        className="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40 resize-none"
+        className="w-full rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40 resize-none"
       />
     </label>
   );
@@ -102,7 +108,7 @@ export function Accordion({ items }: { items: FAQ[] }) {
         return (
           <div
             key={it.q}
-            className="rounded-2xl border border-slate-200 bg-[#3D2C28] shadow-sm transition-all hover:shadow-md"
+            className="rounded-lg border border-slate-200 bg-[#3D2C28] shadow-sm transition-all hover:shadow-md"
           >
             <button
               type="button"
@@ -110,8 +116,12 @@ export function Accordion({ items }: { items: FAQ[] }) {
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left "
             >
               <span className="text-sm font-bold text-white">{it.q}</span>
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-slate-100 ">
-                {open ? "–" : "+"}
+              <span className="grid h-8 w-8 place-items-center rounded-lg bg-gray-500/20">
+                {open ? (
+                  <FaMinus className="text-gray-300" size={14} />
+                ) : (
+                  <FaPlus className="text-gray-300" size={14} />
+                )}
               </span>
             </button>
 

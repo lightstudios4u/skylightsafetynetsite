@@ -32,7 +32,7 @@ type Application = {
 };
 export function Home() {
   const [kitActive, setKitActive] = useState<"net" | "strap" | "qr" | "bag">(
-    "net"
+    "net",
   );
 
   const steps: Step[] = useMemo(
@@ -40,49 +40,49 @@ export function Home() {
       {
         num: "01",
         title: "Strap It On",
-        desc: "Position the net over the skylight and secure it using the heavy-duty ratchet strap system. No tools. No penetrations.",
-        icon: <FaTools className="text-orange-500" size={28} />,
+        desc: 'Position the net over the skylight and secure using the included ratchet strap system. Requires minimum 1.5" metal skylight curb lip. No tools, no penetrations, no complex rigging.',
+        icon: <FaTools className="text-gray-300" size={28} />,
       },
       {
         num: "02",
         title: "Scan the QR Code",
-        desc: "Scan the unique QR label to register install location, date, and responsible crew member in seconds.",
-        icon: <FaQrcode className="text-orange-500" size={28} />,
+        desc: "Use any smartphone to scan the unique QR label on your net. Register the installation location, date, and responsible crew member in seconds.",
+        icon: <FaQrcode className="text-gray-300" size={28} />,
       },
       {
         num: "03",
         title: "Log and Redeploy",
-        desc: "Track inspections during the project, log removal, and redeploy the net at the next job site with a clean audit trail.",
-        icon: <FaRedoAlt className="text-orange-500" size={28} />,
+        desc: "Track inspections throughout the job. When the project is complete, remove the net, scan to log removal, return to inventory and redeploy it at your next site.",
+        icon: <FaRedoAlt className="text-gray-300" size={28} />,
       },
     ],
-    []
+    [],
   );
 
   const qrWays: QRWay[] = useMemo(
     () => [
       {
         title: "Register Your Net",
-        desc: "Assign each net to your company, crew, or project. Create accountability and reduce loss across job sites.",
-        icon: <FaCheckCircle className="text-orange-500" size={22} />,
+        desc: "Assign each net to your company, crew, or project. Create accountability and prevent loss of equipment across multiple job sites.",
+        icon: <FaCheckCircle className="text-gray-300" size={22} />,
       },
       {
         title: "Log Inspections",
-        desc: "Scan before each use and during periodic checks. Build an inspection history that proves due diligence.",
-        icon: <FaCheckCircle className="text-orange-500" size={22} />,
+        desc: "Scan before each use and during periodic checks. Build a complete inspection history that proves due diligence and equipment condition over the life of the job and service life of each O.S.H.A. Safety Net System in use.",
+        icon: <FaCheckCircle className="text-gray-300" size={22} />,
       },
       {
         title: "Document Installs",
-        desc: "Capture who installed protection, where, and when. Create defendable evidence protection was in place.",
-        icon: <FaCheckCircle className="text-orange-500" size={22} />,
+        desc: "Capture who installed protection, where, and when. Create irrefutable evidence that fall-through protection was in place during critical work phases.",
+        icon: <FaCheckCircle className="text-gray-300" size={22} />,
       },
       {
         title: "Track Location",
-        desc: "Know which job site or crew has each net. Simplify fleet management and keep equipment where you need it.",
-        icon: <FaCheckCircle className="text-orange-500" size={22} />,
+        desc: "Know which job site or crew has each net at any time. Simplify inventory management and ensure equipment is where you need it.",
+        icon: <FaCheckCircle className="text-gray-300" size={22} />,
       },
     ],
-    []
+    [],
   );
 
   const applications: Application[] = useMemo(
@@ -116,29 +116,29 @@ export function Home() {
         ],
       },
     ],
-    []
+    [],
   );
 
   const faqs: FAQ[] = useMemo(
     () => [
       {
         q: "How long does installation take?",
-        a: "A two-person crew can install a net in under ~5 minutes. Removal is equally fast—ideal for short-duration work and phased jobs.",
+        a: "A two-person crew can install an O.S.H.A. Safety Net System in under 2 minutes. Removal is equally fast, making it practical for short-duration work or jobs where skylights need temporary protection during specific phases.",
       },
       {
         q: "Do I need special tools?",
-        a: "No tools required. The system is designed to strap on quickly without fasteners or roof penetrations.",
+        a: "No tools required. The heavy-duty ratchet strap included with the O.S.H.A. Safety Net System is operated by hand. If you can tighten a ratchet strap, you can install the Safety Net System.",
       },
       {
         q: "Can I move it from job to job?",
-        a: "Yes. Remove it, log it, and redeploy across sites with QR-based records that keep compliance documentation consistent.",
+        a: "Absolutely. The O.S.H.A. Safety Net System is designed for repeated use across multiple sites. Simply scan to log removal at one location, transport it in the included storage bag, and scan again when you install it at the next job.",
       },
       {
         q: "Is this an anchorage / fall arrest device?",
-        a: "No. This is fall-through protection for skylight openings and is not an anchorage device. Always follow your site safety plan and applicable regulations.",
+        a: "No. This is fall-through protection for skylight openings and is not an anchorage device. Always follow your site safety plan and applicable OSHA regulations.",
       },
     ],
-    []
+    [],
   );
 
   return (

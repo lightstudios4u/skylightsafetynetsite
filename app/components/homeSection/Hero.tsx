@@ -6,8 +6,9 @@ import {
   FaArrowRight,
   FaPlay,
   FaBolt,
-  FaShieldAlt,
+  FaBan,
   FaQrcode,
+  FaSignInAlt,
 } from "react-icons/fa";
 import { TrustItem } from "../Shared";
 import { useState, useEffect } from "react";
@@ -16,7 +17,6 @@ export function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Small delay to ensure CSS is ready
     const timer = requestAnimationFrame(() => {
       setIsLoaded(true);
     });
@@ -31,79 +31,98 @@ export function Hero() {
         <div className="absolute inset-0 opacity-30 pointer-events-none [background:radial-gradient(50rem_30rem_at_20%_10%,rgba(249,115,22,0.30),transparent_60%)]" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6 py-12 lg:py-10">
-        <div className="text-center">
-          <div
-            id="logo"
-            className={`mx-auto mb-6 w-32 sm:w-40 animate-fade-down ${isLoaded ? "visible" : ""}`}
-          >
-            <img src="/logo.png" alt="Logo" className="w-full" />
-          </div>
+      <div className="relative mx-auto max-w-6xl px-6 py-12 lg:py-16">
+        {/* Row 1: Logo centered on its own */}
+        <div
+          className={`mb-10 flex justify-center animate-fade-down ${isLoaded ? "visible" : ""}`}
+        >
+          <img src="/logo.png" alt="Logo" className="w-64 sm:w-80" />
+        </div>
 
-          <div
-            className={`tracking-tight animate-fade-in delay-200 ${isLoaded ? "visible" : ""}`}
-            style={{ opacity: isLoaded ? 0.75 : 0 }}
-          >
-            <h1 className="text-4xl font-extrabold text-white sm:text-5xl">
-              Purpose-Built Skylight Fall-Through Protection
-            </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-200">
-              Installs in minutes. Moves job-to-job. Documented with one QR
-              scan.
+        {/* Row 2: Copy + Image side by side */}
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+          {/* Left: Copy */}
+          <div>
+            <div
+              className={`animate-fade-in delay-200 ${isLoaded ? "visible" : ""}`}
+              style={{ opacity: isLoaded ? 1 : 0 }}
+            >
+              <p className="text-base font-bold tracking-widest text-orange-400 italic">
+                O.S.H.A. Safety Net System*
+              </p>
+
+              <h1 className="mt-4 text-4xl font-extrabold text-white sm:text-5xl leading-tight">
+                Skylight Safety
+                <br />
+                Fall-Through Protection
+              </h1>
+            </div>
+
+            <div
+              className={`mt-8 flex flex-wrap gap-3 animate-fade-up delay-300 ${isLoaded ? "visible" : ""}`}
+            >
+              <Link
+                href="/products-and-services"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-orange-500 bg-transparent px-6 py-2.5 text-sm font-bold text-orange-400 transition-colors duration-200 hover:bg-orange-500 hover:text-white"
+              >
+                Get a Quote
+              </Link>
+
+              <a
+                href="#video"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-orange-500 bg-transparent px-6 py-2.5 text-sm font-bold text-orange-400 transition-colors duration-200 hover:bg-orange-500 hover:text-white"
+              >
+                Installation Video
+              </a>
+
+              <a
+                href="#"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-orange-500 bg-transparent px-6 py-2.5 text-sm font-bold text-orange-400 transition-colors duration-200 hover:bg-orange-500 hover:text-white"
+              >
+                Customer Login
+              </a>
+            </div>
+
+            <p
+              className={`mt-6 text-xs text-orange-400/70 italic animate-fade-in delay-400 ${isLoaded ? "visible" : ""}`}
+            >
+              *Over Skylight Human Arrest Safety Net System
             </p>
           </div>
 
+          {/* Right: Product Image */}
           <div
-            className={`mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row animate-fade-up delay-300 ${isLoaded ? "visible" : ""}`}
+            className={`animate-fade-up delay-300 ${isLoaded ? "visible" : ""}`}
           >
-            <Link
-              href="/products-and-services"
-              className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-3 text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-black"
-            >
-              <FaArrowRight className="mr-2" size={18} />
-              Order Online
-            </Link>
-
-            <a
-              href="#video"
-              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-8 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/10"
-            >
-              <FaPlay className="mr-2" size={16} />
-              Installation Video
-            </a>
+            <div className="relative overflow-hidden rounded-lg border border-white/10 shadow-2xl">
+              <Image
+                src="/wideshot.png"
+                alt="O.S.H.A. Safety Net installed on commercial skylight"
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
 
-        <div className="relative mx-auto mt-10 max-w-4xl">
-          <div className="absolute -left-6 -top-6 h-24 w-24 rounded-3xl bg-orange-500/20 blur-2xl" />
-          <div className="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
-          <div
-            className={`overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl animate-fade-up delay-400 h-[210px] sm:h-[260px] relative ${isLoaded ? "visible" : ""}`}
-          >
-            <Image
-              src="/wideshot.png"
-              alt="Workers on roof with skylight protection"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-
-        <div className="mx-auto mt-10 max-w-6xl">
+        {/* Trust indicators */}
+        <div className="mt-12 max-w-6xl">
           <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-3">
             {[
               {
-                icon: <FaBolt className="text-orange-400" size={20} />,
+                icon: <FaBolt className="text-amber-400" size={20} />,
                 title: "Fast Install",
                 desc: "Minutes, not hours.",
               },
               {
-                icon: <FaShieldAlt className="text-orange-400" size={20} />,
+                icon: <FaBan className="text-sky-400" size={20} />,
                 title: "Zero Penetration",
                 desc: "No drilling. No damage.",
               },
               {
-                icon: <FaQrcode className="text-orange-400" size={20} />,
+                icon: <FaQrcode className="text-emerald-400" size={20} />,
                 title: "QR Compliance",
                 desc: "Log installs + inspections.",
               },
@@ -117,6 +136,7 @@ export function Hero() {
                   icon={item.icon}
                   title={item.title}
                   desc={item.desc}
+                  animationDelay={`${1000 + index * 175}ms`}
                 />
               </div>
             ))}

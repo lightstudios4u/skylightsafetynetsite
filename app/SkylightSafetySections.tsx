@@ -114,7 +114,7 @@ export default function SkylightSafetySections() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href="#request"
-                  className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+                  className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-slate-950"
                 >
                   Request Information
                   <span className="ml-2">→</span>
@@ -122,7 +122,7 @@ export default function SkylightSafetySections() {
 
                 <a
                   href="#working-plan"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   How it Works
                 </a>
@@ -143,9 +143,9 @@ export default function SkylightSafetySections() {
             </div>
 
             <div className="relative">
-              <div className="absolute -left-6 -top-6 h-24 w-24 rounded-3xl bg-orange-500/20 blur-2xl" />
+              <div className="absolute -left-6 -top-6 h-24 w-24 rounded-xl bg-orange-500/20 blur-2xl" />
               <div className="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
-              <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
+              <div className="overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1400&q=80"
                   alt="Worker installing skylight protection"
@@ -171,11 +171,11 @@ export default function SkylightSafetySections() {
             {steps.map((s) => (
               <div
                 key={s.num}
-                className="group relative rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
+                className="group relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
               >
                 <div className="flex items-start gap-4">
                   <div className="relative">
-                    <div className="h-20 w-20 overflow-hidden rounded-2xl bg-slate-100">
+                    <div className="h-20 w-20 overflow-hidden rounded-lg bg-slate-100">
                       <img
                         src={s.img}
                         alt=""
@@ -215,7 +215,7 @@ export default function SkylightSafetySections() {
 
             <a
               href="#request"
-              className="inline-flex w-fit items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+              className="inline-flex w-fit items-center justify-center rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
             >
               Get a Quote <span className="ml-2">→</span>
             </a>
@@ -225,7 +225,7 @@ export default function SkylightSafetySections() {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm"
+                className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-sm"
               >
                 <div className="p-6">
                   <h3 className="text-lg font-bold">{f.title}</h3>
@@ -234,7 +234,7 @@ export default function SkylightSafetySections() {
                   </p>
                 </div>
                 <div className="px-6 pb-6">
-                  <div className="overflow-hidden rounded-2xl bg-white">
+                  <div className="overflow-hidden rounded-lg bg-white">
                     <img
                       src={f.img}
                       alt=""
@@ -259,27 +259,27 @@ export default function SkylightSafetySections() {
           </h2>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
               <Accordion items={faqs} />
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+            <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
               <div className="absolute inset-0 bg-gradient-to-tr from-orange-50 via-white to-slate-50" />
               <div className="relative grid h-full place-items-center p-8">
                 <div className="grid w-full grid-cols-2 gap-4">
                   <img
-                    className="h-64 w-full rounded-2xl object-cover"
+                    className="h-64 w-full rounded-lg object-cover"
                     src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=80"
                     alt=""
                   />
                   <img
-                    className="h-64 w-full rounded-2xl object-cover"
+                    className="h-64 w-full rounded-lg object-cover"
                     src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
                     alt=""
                   />
                 </div>
 
-                <div className="mt-6 w-full rounded-2xl border border-slate-200 bg-white/80 p-6 text-center backdrop-blur">
+                <div className="mt-6 w-full rounded-lg border border-slate-200 bg-white/80 p-6 text-center backdrop-blur">
                   <div className="text-5xl font-extrabold tracking-tight text-slate-900">
                     FAQ
                   </div>
@@ -309,7 +309,7 @@ export default function SkylightSafetySections() {
                 lead times, and compliance documentation.
               </p>
 
-              <div className="mt-8 grid grid-cols-2 gap-4 rounded-3xl border border-white/10 bg-white/5 p-6">
+              <div className="mt-8 grid grid-cols-2 gap-4 rounded-xl border border-white/10 bg-white/5 p-6">
                 <Stat label="Standard size" value="4' × 8'" />
                 <Stat label="Typical install" value="< 5 min" />
                 <Stat label="Roof penetration" value="None" />
@@ -317,7 +317,7 @@ export default function SkylightSafetySections() {
               </div>
             </div>
 
-            <form className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+            <form className="rounded-xl border border-white/10 bg-white/5 p-6 shadow-xl">
               <div className="grid gap-4 sm:grid-cols-2">
                 <Input label="First Name" placeholder="First Name" />
                 <Input label="Last Name" placeholder="Last Name" />
@@ -339,7 +339,7 @@ export default function SkylightSafetySections() {
 
               <button
                 type="button"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-slate-950"
               >
                 Send Request <span className="ml-2">→</span>
               </button>
@@ -358,7 +358,7 @@ export default function SkylightSafetySections() {
 
 function TrustItem({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+    <div className="rounded-lg border border-white/10 bg-white/5 p-4">
       <div className="text-sm font-bold text-white">{title}</div>
       <div className="mt-1 text-xs text-slate-200">{desc}</div>
     </div>
@@ -382,7 +382,7 @@ function Input({ label, placeholder }: { label: string; placeholder: string }) {
       </span>
       <input
         placeholder={placeholder}
-        className="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
+        className="w-full rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
       />
     </label>
   );
@@ -403,7 +403,7 @@ function Textarea({
       <textarea
         placeholder={placeholder}
         rows={4}
-        className="w-full resize-none rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
+        className="w-full resize-none rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
       />
     </label>
   );
@@ -419,7 +419,7 @@ function Accordion({ items }: { items: FAQ[] }) {
         return (
           <div
             key={it.q}
-            className="rounded-2xl border border-slate-200 bg-white"
+            className="rounded-lg border border-slate-200 bg-white"
           >
             <button
               type="button"

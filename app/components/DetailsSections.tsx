@@ -21,13 +21,13 @@ export function DetailsSections() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/#request"
-              className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600"
+              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600"
             >
               Request Info <span className="ml-2">→</span>
             </Link>
             <Link
               href="/"
-              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
             >
               Back to Landing
             </Link>
@@ -43,7 +43,7 @@ export function DetailsSections() {
           </h2>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
               <h3 className="text-lg font-bold">In the box</h3>
               <ul className="mt-4 space-y-2 text-sm text-slate-700">
                 <li>
@@ -55,7 +55,7 @@ export function DetailsSections() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
               <h3 className="text-lg font-bold">Core specs (example)</h3>
               <dl className="mt-4 grid grid-cols-2 gap-4 text-sm">
                 <div>
@@ -90,7 +90,7 @@ export function DetailsSections() {
           </h2>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200 bg-white p-6">
+            <div className="rounded-xl border border-slate-200 bg-white p-6">
               <h3 className="text-lg font-bold text-slate-900">
                 Typical skylight nets
               </h3>
@@ -101,7 +101,7 @@ export function DetailsSections() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-orange-200 bg-orange-50 p-6">
+            <div className="rounded-xl border border-orange-200 bg-orange-50 p-6">
               <h3 className="text-lg font-bold text-slate-900">
                 Skylight Safety Net
               </h3>
@@ -143,7 +143,7 @@ export function DetailsSections() {
             ].map((x) => (
               <div
                 key={x.title}
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-6"
+                className="rounded-xl border border-slate-200 bg-slate-50 p-6"
               >
                 <h3 className="text-lg font-bold">{x.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -153,7 +153,7 @@ export function DetailsSections() {
             ))}
           </div>
 
-          <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6">
+          <div className="mt-10 rounded-xl border border-slate-200 bg-white p-6">
             <h3 className="text-lg font-bold">Audit-ready exports</h3>
             <p className="mt-2 text-sm leading-relaxed text-slate-600">
               Export complete inspection logs as PDF or CSV. Every scan is
@@ -167,7 +167,7 @@ export function DetailsSections() {
       {/* Bottom CTA */}
       <section className="bg-slate-950">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-8">
             <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
               Want pricing or bulk availability?
             </h2>
@@ -179,13 +179,13 @@ export function DetailsSections() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/#request"
-                className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600"
+                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600"
               >
                 Request Info <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
                 Back to Landing
               </Link>
