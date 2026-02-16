@@ -91,7 +91,7 @@ export function OrderOnline() {
               </div>
 
               <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                Order Your Skylight Safety Kit
+                Order Your O.S.H.A. Safety Net System
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/80">
                 Purpose-built for 4&lsquo; × 8&lsquo; commercial skylights.

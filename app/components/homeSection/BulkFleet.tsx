@@ -45,8 +45,8 @@ export function BulkFleet() {
               className={`mt-3 max-w-xl text-sm leading-relaxed text-gray-200 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
             >
               We work with safety companies and large contractors to deploy
-              standardized protection across multiple crews and projects. Get
-              volume pricing and rollout support.
+              standardized O.S.H.A. Safety Net System protection across multiple
+              crews and projects. Get volume pricing and implementation support.
             </p>
 
             <div

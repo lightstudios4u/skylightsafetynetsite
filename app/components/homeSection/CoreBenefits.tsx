@@ -35,33 +35,33 @@ export function CoreBenefits() {
   const features: Feature[] = [
     {
       title: "Purpose-Built Sizing",
-      desc: "Engineered specifically for the most common commercial skylight footprint so coverage is obvious, consistent, and inspector-friendly.",
+      desc: "Engineered for 4'\u00d78' commercial skylights. Eliminates expensive railings that impede workflow.",
       bullets: [
         "Precise fit for standard skylights",
         "High-visibility safety orange mesh",
-        "UV-stabilized for outdoor use",
+        "UV-stabilized for extended outdoor use",
       ],
       img: "/net.png",
       icon: <FaShieldAlt size={18} className="text-orange-500" />,
     },
     {
       title: "Fast Strap-On Install",
-      desc: "Secure the net in minutes using heavy-duty ratchet straps—no tools, no penetrations, no complicated assembly required.",
+      desc: "Secure the O.S.H.A. Safety Net in minutes using heavy-duty ratchet straps. No tools, no penetrations.",
       bullets: [
-        "One-person install in ~2 minutes",
-        "Works with standard curb lip",
-        "Moves site-to-site quickly",
+        "Two-person install in under 2 minutes",
+        "Works with curb or self-flashing units",
+        "Moves from site to site quickly",
       ],
       img: "/maninstall.png",
       icon: <FaBolt size={18} className="text-orange-500" />,
     },
     {
       title: "QR Inspection Logs",
-      desc: "Each net includes a unique QR label. One scan registers installs, logs inspections, and creates an auditable record that proves compliance.",
+      desc: "Every net includes a unique QR code label. One scan logs installs, inspections, and compliance.",
       bullets: [
         "Instant digital documentation",
-        "Track by job site or crew",
-        "Exportable history (phase 2)",
+        "Track by net, job site, and crew",
+        "Real-time inventory tracking",
       ],
       img: "/qr.png",
       icon: <FaQrcode size={18} className="text-orange-500" />,
@@ -90,10 +90,10 @@ export function CoreBenefits() {
           {features.map((f, index) => (
             <div
               key={f.title}
-              className={`overflow-hidden rounded-3xl border border-orange-600/30 bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`flex flex-col overflow-hidden rounded-3xl border border-orange-600/30 bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <div className="p-6">
+              <div className="flex-1 p-6">
                 <div className="flex items-center gap-2">
                   <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-orange-500/20">
                     {f.icon}
@@ -110,7 +110,7 @@ export function CoreBenefits() {
                     {f.bullets.map((b) => (
                       <li key={b} className="flex gap-2">
                         <FaCheckCircle
-                          className="mt-0.5 text-orange-400"
+                          className="mt-0.5 shrink-0 text-orange-400"
                           size={14}
                         />
                         <span>{b}</span>

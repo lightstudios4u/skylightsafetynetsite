@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import Link from "next/link";
 import { FaArrowRight, FaCheckCircle, FaPlay } from "react-icons/fa";
 
 type Step = {
@@ -100,9 +99,10 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
             <ul className="mt-5 space-y-3 text-sm text-white/80">
               {[
                 "Installation documentation: who installed it, where, and when",
-                "Inspection logs: pre-use checks and periodic assessments",
-                "Location tracking: which job site or crew has the net",
-                "Audit trail: exportable history for compliance reviews (phase 2)",
+                "Inspection logs: pre-use checks and periodic condition assessments",
+                "Location tracking: which job site or crew currently has the net",
+                "Audit trail: complete history exportable for compliance reviews",
+                "Desktop access: owners and managers can log in to review inventory location, inspection logs, and history",
               ].map((x) => (
                 <li key={x} className="flex gap-2">
                   <FaCheckCircle className="mt-0.5 text-orange-400" size={14} />
@@ -110,6 +110,12 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
                 </li>
               ))}
             </ul>
+
+            <p className="mt-4 text-sm text-white/60 italic">
+              No more clipboards, lost paperwork, or questions about whether
+              protection was in place. The documentation exists in the cloud and
+              travels with the net.
+            </p>
           </div>
 
           <div
@@ -120,8 +126,8 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
               See it in action
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-white/80">
-              Drop your installation demo here (YouTube/Vimeo) or link out. Keep
-              it dead-simple: show the strap system and the QR workflow.
+              Watch our complete installation demonstration video to see exactly
+              how the O.S.H.A. Safety Net System works in real-world conditions.
             </p>
 
             <a

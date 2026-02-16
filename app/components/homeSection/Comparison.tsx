@@ -36,10 +36,10 @@ export function Comparison() {
       ],
     },
     {
-      title: "SkylightSafety.NET",
+      title: "O.S.H.A. Safety Net System",
       highlight: true,
       items: [
-        "Purpose-built for common commercial skylights",
+        "Purpose-built for common 4'×8' commercial skylights",
         "QR code system for instant documentation",
         "UV-stabilized materials rated for rooftop exposure",
         "Portable, reusable across multiple jobs",

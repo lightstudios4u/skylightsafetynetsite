@@ -1,63 +1,116 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-white text-slate-900">
-      {/* Simple top bar - replace with your real header/nav if you have one */}
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur hidden sm:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <div className="min-h-screen bg-black text-white">
+      {/* Desktop + Mobile Header */}
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <Link
             href="/"
-            className="flex items-center gap-3 hover:opacity-80 transition"
+            className="flex items-center gap-4 hover:opacity-80 transition"
           >
-            {/* <Image
-              src="/wings.png"
+            <Image
+              src="/logo.png"
               alt="SkylightSafety.Net"
-              width={36}
-              height={36}
-              className="h-9 w-9"
-            /> */}
+              width={64}
+              height={64}
+              className="h-16 w-16"
+            />
             <div className="leading-tight">
-              <div className="text-sm font-extrabold tracking-tight">
+              <div className="text-xl font-extrabold tracking-tight text-white">
                 SkylightSafety.Net
               </div>
-              {/* <div className="text-xs text-slate-500">Safety First</div> */}
+              <div className="text-xs font-semibold tracking-wider text-orange-400 uppercase">
+                O.S.H.A. Safety Net System
+              </div>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-6 text-sm font-semibold sm:flex">
+          {/* Desktop nav */}
+          <nav className="hidden items-center gap-8 text-base font-semibold sm:flex">
             <a
-              className="text-slate-700 hover:text-slate-900"
+              className="text-gray-300 hover:text-white transition-colors"
               href="#working-plan"
             >
               How it Works
             </a>
-            <a className="text-slate-700 hover:text-slate-900" href="#faq">
+            <a
+              className="text-gray-300 hover:text-white transition-colors"
+              href="#faq"
+            >
               FAQ
             </a>
             <a
-              className="text-slate-700 hover:text-slate-900"
+              className="text-gray-300 hover:text-white transition-colors"
               href="/contact-us"
             >
               Contact
             </a>
             <a
-              className="rounded-xl bg-orange-500 px-4 py-2 text-white hover:bg-orange-600"
+              className="rounded-xl bg-orange-500 px-6 py-3 text-base font-bold text-white shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-colors"
               href="#request"
             >
               Request Info →
             </a>
           </nav>
+
+          {/* Mobile hamburger */}
+          <button
+            type="button"
+            className="sm:hidden flex items-center justify-center h-10 w-10 rounded-xl border border-white/10 bg-white/5 text-white"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
+          </button>
         </div>
+
+        {/* Mobile nav dropdown */}
+        {mobileOpen && (
+          <div className="sm:hidden border-t border-white/10 bg-black/95 backdrop-blur-md px-6 py-4 space-y-3">
+            <a
+              className="block text-sm font-semibold text-gray-300 hover:text-white transition-colors py-2"
+              href="#working-plan"
+              onClick={() => setMobileOpen(false)}
+            >
+              How it Works
+            </a>
+            <a
+              className="block text-sm font-semibold text-gray-300 hover:text-white transition-colors py-2"
+              href="#faq"
+              onClick={() => setMobileOpen(false)}
+            >
+              FAQ
+            </a>
+            <a
+              className="block text-sm font-semibold text-gray-300 hover:text-white transition-colors py-2"
+              href="/contact-us"
+              onClick={() => setMobileOpen(false)}
+            >
+              Contact
+            </a>
+            <a
+              className="block rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-white text-center hover:bg-orange-600 transition-colors"
+              href="#request"
+              onClick={() => setMobileOpen(false)}
+            >
+              Request Info →
+            </a>
+          </div>
+        )}
       </header>
 
       <main>{children}</main>
 
-      <footer className="border-t border-slate-100 bg-slate-100">
+      <footer className="border-t border-white/10 bg-black">
         <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="flex flex-col items-center gap-6 text-center">
             {/* Logo */}
@@ -84,38 +137,35 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
 
             {/* Document Links */}
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-600">
-              <a
-                className="hover:text-slate-900 transition"
-                href="/privacy-policy"
-              >
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
+              <a className="hover:text-white transition" href="/privacy-policy">
                 Privacy Policy
               </a>
               <a
-                className="hover:text-slate-900 transition"
+                className="hover:text-white transition"
                 href="/refund-and-return-policy"
               >
                 Refund & Return Policy
               </a>
               <a
-                className="hover:text-slate-900 transition"
+                className="hover:text-white transition"
                 href="/shipping-policy"
               >
                 Shipping Policy
               </a>
               <a
-                className="hover:text-slate-900 transition"
+                className="hover:text-white transition"
                 href="/terms-and-conditions"
               >
                 Terms & Conditions
               </a>
-              <a className="hover:text-slate-900 transition" href="/contact-us">
+              <a className="hover:text-white transition" href="/contact-us">
                 Contact
               </a>
             </div>
 
             {/* Copyright */}
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} SkylightSafety.Net. All rights
               reserved.
             </p>

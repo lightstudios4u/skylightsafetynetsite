@@ -8,6 +8,7 @@ import {
   FaBolt,
   FaShieldAlt,
   FaQrcode,
+  FaSignInAlt,
 } from "react-icons/fa";
 import { TrustItem } from "../Shared";
 import { useState, useEffect } from "react";
@@ -42,14 +43,20 @@ export function Hero() {
 
           <div
             className={`tracking-tight animate-fade-in delay-200 ${isLoaded ? "visible" : ""}`}
-            style={{ opacity: isLoaded ? 0.75 : 0 }}
+            style={{ opacity: isLoaded ? 1 : 0 }}
           >
+            <p className="mb-2 text-sm font-semibold tracking-widest text-orange-400 uppercase">
+              O.S.H.A. Safety Net System*
+            </p>
             <h1 className="text-4xl font-extrabold text-white sm:text-5xl">
-              Purpose-Built Skylight Fall-Through Protection
+              Skylight Safety Fall-Through Protection
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-200">
               Installs in minutes. Moves job-to-job. Documented with one QR
               scan.
+            </p>
+            <p className="mx-auto mt-2 max-w-2xl text-xs text-gray-400 italic">
+              *Over Skylight Human Arrest Safety Net System
             </p>
           </div>
 
@@ -70,6 +77,14 @@ export function Hero() {
             >
               <FaPlay className="mr-2" size={16} />
               Installation Video
+            </a>
+
+            <a
+              href="#"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-8 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/10"
+            >
+              <FaSignInAlt className="mr-2" size={16} />
+              Customer Login
             </a>
           </div>
         </div>

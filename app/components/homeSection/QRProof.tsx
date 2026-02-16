@@ -78,27 +78,67 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
             </p>
 
             <div className="mt-5 overflow-hidden rounded-2xl border border-orange-600/30">
-              <div className="grid grid-cols-3 bg-black/40 px-4 py-3 text-xs font-semibold text-gray-200">
+              <div className="grid grid-cols-5 bg-black/40 px-4 py-3 text-xs font-semibold text-gray-200">
                 <div>Date</div>
-                <div>Event</div>
-                <div>By</div>
+                <div>Site</div>
+                <div>Inspector</div>
+                <div>Condition</div>
+                <div>Notes</div>
               </div>
               {[
-                { d: "01/07", e: "Installed", b: "C. Rivera" },
-                { d: "01/09", e: "Inspection", b: "C. Rivera" },
-                { d: "01/12", e: "Inspection", b: "J. Kim" },
-                { d: "01/14", e: "Removed", b: "J. Kim" },
+                {
+                  d: "11/14/2024",
+                  s: "Warehouse Dist. A",
+                  i: "J. Martinez",
+                  c: "Good",
+                  n: "Pre-use check, straps secure",
+                },
+                {
+                  d: "11/07/2024",
+                  s: "Warehouse Dist. A",
+                  i: "J. Martinez",
+                  c: "Good",
+                  n: "Weekly inspection, no damage",
+                },
+                {
+                  d: "10/31/2024",
+                  s: "Warehouse Dist. A",
+                  i: "M. Thompson",
+                  c: "Good",
+                  n: "Initial installation, skylight 4",
+                },
+                {
+                  d: "10/23/2024",
+                  s: "Commerce Center",
+                  i: "R. Chen",
+                  c: "Good",
+                  n: "Removal after reroof completion",
+                },
+                {
+                  d: "10/16/2024",
+                  s: "Commerce Center",
+                  i: "R. Chen",
+                  c: "Good",
+                  n: "Mid-project inspection",
+                },
               ].map((r, i) => (
                 <div
                   key={i}
-                  className="grid grid-cols-3 px-4 py-3 text-xs text-white/80"
+                  className="grid grid-cols-5 px-4 py-3 text-xs text-white/80"
                 >
                   <div>{r.d}</div>
-                  <div>{r.e}</div>
-                  <div>{r.b}</div>
+                  <div>{r.s}</div>
+                  <div>{r.i}</div>
+                  <div>{r.c}</div>
+                  <div>{r.n}</div>
                 </div>
               ))}
             </div>
+
+            <p className="mt-4 text-xs text-white/60 italic">
+              Note: Exportable and shareable record functionality (CSV, PDF
+              formats) launching in Phase 2.
+            </p>
           </div>
 
           <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
