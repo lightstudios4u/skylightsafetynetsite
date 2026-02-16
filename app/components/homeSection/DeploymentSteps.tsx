@@ -8,6 +8,33 @@ type Step = {
   icon?: React.ReactNode;
 };
 
+const stepColors = [
+  {
+    bg: "bg-gray-500/10",
+    shadow: "shadow-gray-500/25",
+    hoverBg: "bg-gray-500/20",
+    hoverShadow: "shadow-gray-500/40",
+    label: "text-gray-300",
+    border: "border-gray-500/40",
+  },
+  {
+    bg: "bg-gray-500/10",
+    shadow: "shadow-gray-500/25",
+    hoverBg: "bg-gray-500/20",
+    hoverShadow: "shadow-gray-500/40",
+    label: "text-gray-300",
+    border: "border-gray-500/40",
+  },
+  {
+    bg: "bg-gray-500/10",
+    shadow: "shadow-gray-500/25",
+    hoverBg: "bg-gray-500/20",
+    hoverShadow: "shadow-gray-500/40",
+    label: "text-gray-300",
+    border: "border-gray-500/40",
+  },
+];
+
 export function DeploymentSteps({ steps }: { steps: Step[] }) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -50,18 +77,23 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
           {steps.map((s, idx) => (
             <React.Fragment key={s.num}>
               <div
-                className={`overflow-hidden group relative flex-1 rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+                className={`overflow-hidden group relative flex-1 rounded-xl border ${stepColors[idx]?.border ?? "border-orange-600/30"} bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
                 style={{ transitionDelay: `${300 + idx * 100}ms` }}
               >
                 <div className="flex items-start gap-4">
                   <div className="relative">
-                    <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-orange-500/10 shadow-lg shadow-orange-500/25 transition-all duration-200 group-hover:bg-orange-500/20 group-hover:shadow-xl group-hover:shadow-orange-500/40">
+                    <div
+                      className={`flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg ${stepColors[idx]?.bg ?? "bg-orange-500/10"} shadow-lg ${stepColors[idx]?.shadow ?? "shadow-orange-500/25"} transition-all duration-200 group-hover:${stepColors[idx]?.hoverBg ?? "bg-orange-500/20"} group-hover:shadow-xl group-hover:${stepColors[idx]?.hoverShadow ?? "shadow-orange-500/40"} ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                      style={{ animationDelay: `${500 + idx * 150}ms` }}
+                    >
                       {s.icon}
                     </div>
                   </div>
 
                   <div>
-                    <p className="text-xs font-bold tracking-widest text-orange-500">
+                    <p
+                      className={`text-xs font-bold tracking-widest ${stepColors[idx]?.label ?? "text-orange-500"}`}
+                    >
                       {s.num}
                     </p>
                     <h3 className="text-lg font-bold text-white">{s.title}</h3>
@@ -87,7 +119,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
         <div
           className={`mt-12 grid gap-6 lg:grid-cols-2 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
-          <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <h3 className="text-lg font-extrabold text-white">
               What happens after you scan
             </h3>
@@ -120,7 +152,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
 
           <div
             id="video"
-            className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
+            className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
           >
             <h3 className="text-lg font-extrabold text-white">
               See it in action
@@ -132,7 +164,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
 
             <a
               href=""
-              className="mt-6 inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
+              className="mt-6 inline-flex items-center justify-center rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
             >
               <FaPlay className="mr-2" size={16} />
               Watch Installation Video

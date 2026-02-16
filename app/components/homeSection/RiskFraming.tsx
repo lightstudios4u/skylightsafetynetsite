@@ -107,7 +107,7 @@ export function RiskFraming() {
           <div
             className={`animate-fade-up delay-200 ${isVisible ? "visible" : ""}`}
           >
-            <div className="relative overflow-hidden rounded-3xl border border-orange-600/30 shadow-lg">
+            <div className="relative overflow-hidden rounded-xl border border-orange-600/30 shadow-lg">
               <Image
                 src="/brokenskylight.png"
                 alt="Damaged skylight showing fall-through risk"
@@ -132,9 +132,12 @@ export function RiskFraming() {
           className={`mt-12 grid gap-6 lg:grid-cols-3 animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
         >
           {/* The Human Risk */}
-          <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-red-500/20">
+              <div
+                className={`flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/20 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                style={{ animationDelay: "700ms" }}
+              >
                 <FaExclamationTriangle className="text-red-400" size={20} />
               </div>
               <h4 className="text-lg font-extrabold text-white">
@@ -157,9 +160,12 @@ export function RiskFraming() {
           </div>
 
           {/* The Financial Risk */}
-          <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-orange-500/20">
+              <div
+                className={`flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/20 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                style={{ animationDelay: "900ms" }}
+              >
                 <FaDollarSign className="text-orange-400" size={20} />
               </div>
               <h4 className="text-lg font-extrabold text-white">
@@ -206,9 +212,12 @@ export function RiskFraming() {
           </div>
 
           {/* Criminal Liability */}
-          <div className="rounded-3xl border border-red-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="rounded-xl border border-red-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-red-500/20">
+              <div
+                className={`flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/20 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                style={{ animationDelay: "1100ms" }}
+              >
                 <FaGavel className="text-red-400" size={20} />
               </div>
               <h4 className="text-lg font-extrabold text-white">
@@ -258,7 +267,7 @@ export function RiskFraming() {
         <div
           className={`mt-10 mx-auto max-w-3xl animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
-          <div className="rounded-2xl bg-[#3D2C28] p-6 shadow-lg">
+          <div className="rounded-lg bg-[#3D2C28] p-6 shadow-lg">
             <div className="flex items-start gap-3">
               <FaExclamationTriangle className="h-5 w-5 shrink-0 text-orange-400 mt-0.5" />
               <div>

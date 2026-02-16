@@ -51,10 +51,13 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
           {qrWays.map((x, index) => (
             <div
               key={x.title}
-              className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm card-hover cursor-pointer animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm card-hover cursor-pointer animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${300 + index * 75}ms` }}
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-orange-500/20">
+              <div
+                className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gray-500/20 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                style={{ animationDelay: `${500 + index * 120}ms` }}
+              >
                 {x.icon}
               </div>
               <h3 className="mt-4 text-base font-bold text-white">{x.title}</h3>
@@ -68,7 +71,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
         <div
           className={`mt-10 grid gap-6 lg:grid-cols-2 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
-          <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <h3 className="text-lg font-extrabold text-white">
               Sample inspection log
             </h3>
@@ -77,7 +80,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
               project owners, auditors, or insurance carriers ask.
             </p>
 
-            <div className="mt-5 overflow-hidden rounded-2xl border border-orange-600/30">
+            <div className="mt-5 overflow-hidden rounded-lg border border-orange-600/30">
               <div className="grid grid-cols-5 bg-black/40 px-4 py-3 text-xs font-semibold text-gray-200">
                 <div>Date</div>
                 <div>Site</div>
@@ -134,14 +137,9 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
                 </div>
               ))}
             </div>
-
-            <p className="mt-4 text-xs text-white/60 italic">
-              Note: Exportable and shareable record functionality (CSV, PDF
-              formats) launching in Phase 2.
-            </p>
           </div>
 
-          <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <h3 className="text-lg font-extrabold text-white">
               From install to audit-ready
             </h3>
@@ -151,7 +149,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
             </p>
 
             <div className="mt-6 grid gap-4">
-              <div className="rounded-2xl border border-orange-600/30 bg-black/40 p-5">
+              <div className="rounded-lg border border-orange-600/30 bg-black/40 p-5">
                 <div className="flex items-center gap-2">
                   <FaClipboardList className="text-orange-400" />
                   <p className="text-sm font-semibold text-white">
@@ -164,7 +162,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-orange-600/30 bg-black/40 p-5">
+              <div className="rounded-lg border border-orange-600/30 bg-black/40 p-5">
                 <div className="flex items-center gap-2">
                   <FaFileExport className="text-orange-500" />
                   <p className="text-sm font-semibold text-white">
@@ -181,7 +179,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
             <div className="mt-6 flex gap-3">
               <Link
                 href="/products-and-services/#qr"
-                className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+                className="inline-flex items-center justify-center rounded-lg bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
               >
                 QR Workflow Details <span className="ml-2">→</span>
               </Link>

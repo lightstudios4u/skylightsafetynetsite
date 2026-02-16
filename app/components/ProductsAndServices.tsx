@@ -24,13 +24,13 @@ export function ProductsAndServices() {
 					<div className='mt-8 flex flex-wrap gap-3'>
 						<Link
 							href='/#request'
-							className='inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
+							className='inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
 						>
 							Request Info <span className='ml-2'>→</span>
 						</Link>
 						<Link
 							href='/'
-							className='inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10'
+							className='inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10'
 						>
 							Back to Landing
 						</Link>
@@ -46,7 +46,7 @@ export function ProductsAndServices() {
 				</h2>
 
 				<div className='mt-10 grid gap-6 lg:grid-cols-2'>
-					<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
+					<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
 						<h3 className='text-lg font-bold text-white'>In the box</h3>
 						<ul className='mt-4 space-y-2 text-sm text-white/80'>
 								<li>
@@ -58,7 +58,7 @@ export function ProductsAndServices() {
 							</ul>
 						</div>
 
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
 							<h3 className='text-lg font-bold text-white'>Core specs (example)</h3>
 							<dl className='mt-4 grid grid-cols-2 gap-4 text-sm'>
 								<div>
@@ -93,7 +93,7 @@ export function ProductsAndServices() {
 					</h2>
 
 					<div className='mt-10 grid gap-6 lg:grid-cols-2'>
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
 							<h3 className='text-lg font-bold text-white'>
 								Typical skylight nets
 							</h3>
@@ -104,7 +104,7 @@ export function ProductsAndServices() {
 							</ul>
 						</div>
 
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
 							<h3 className='text-lg font-bold text-white'>
 								Skylight Safety Net
 							</h3>
@@ -146,7 +146,7 @@ export function ProductsAndServices() {
 						].map((x) => (
 							<div
 								key={x.title}
-								className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'
+								className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'
 							>
 								<h3 className='text-lg font-bold text-white'>{x.title}</h3>
 								<p className='mt-2 text-sm leading-relaxed text-white/80'>
@@ -156,7 +156,7 @@ export function ProductsAndServices() {
 						))}
 					</div>
 
-					<div className='mt-10 rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
+					<div className='mt-10 rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm'>
 						<h3 className='text-lg font-bold text-white'>Audit-friendly output</h3>
 						<p className='mt-2 text-sm leading-relaxed text-white/80'>
 							If you want, this page can include a screenshot/example log table,
@@ -170,7 +170,7 @@ export function ProductsAndServices() {
 			{/* Bottom CTA */}
 			<section className='bg-black'>
 				<div className='mx-auto max-w-6xl px-6 py-16'>
-					<div className='rounded-3xl border border-white/10 bg-white/5 p-8'>
+					<div className='rounded-xl border border-white/10 bg-white/5 p-8'>
 						<h2 className='text-2xl font-extrabold tracking-tight text-white sm:text-3xl'>
 							Want pricing or bulk availability?
 						</h2>
@@ -182,13 +182,13 @@ export function ProductsAndServices() {
 						<div className='mt-6 flex flex-wrap gap-3'>
 							<Link
 								href='/#request'
-								className='inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600'
+								className='inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600'
 							>
 								Request Info <span className='ml-2'>→</span>
 							</Link>
 							<Link
 								href='/'
-								className='inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10'
+								className='inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10'
 							>
 								Back to Landing
 							</Link>

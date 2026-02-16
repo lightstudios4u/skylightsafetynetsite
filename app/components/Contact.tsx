@@ -114,7 +114,7 @@ export function Contact() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/"
-              className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
+              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
             >
               Back to Home <span className="ml-2">→</span>
             </Link>
@@ -127,7 +127,7 @@ export function Contact() {
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Contact Form */}
-            <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 Send us a Message
               </h2>
@@ -213,7 +213,7 @@ export function Contact() {
             {/* Contact Details */}
             <div className="space-y-6">
               {/* Phone */}
-              <div className="rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+              <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-500/20">
                     <FaPhone className="text-orange-500" size={24} />
@@ -238,7 +238,7 @@ export function Contact() {
       {/* CTA Section */}
       <section className="bg-black">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-8">
             <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
               Still have questions?
             </h2>
@@ -250,13 +250,13 @@ export function Contact() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/#faq"
-                className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
+                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
               >
                 View FAQs <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 Back to Home
               </Link>

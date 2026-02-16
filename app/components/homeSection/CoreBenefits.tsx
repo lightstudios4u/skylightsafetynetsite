@@ -75,27 +75,31 @@ export function CoreBenefits() {
       style={{ backgroundColor: "#c0652c" }}
     >
       <div className="relative mx-auto max-w-6xl px-6 py-16">
-        <p
-          className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
-        >
-          Built for speed, strength, and accountability
-        </p>
         <h2
           className={`mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
         >
-          Three Pain Points. One Kit.
+          Built for speed, strength, and accountability
         </h2>
-
-        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+        <br />
+        <p
+          className={`text-center text-lg   tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
+        >
+          What makes our O.S.H.A. Safety Net System different from generic
+          skylight covers?
+        </p>
+        <div className="mt-8 grid gap-8 lg:grid-cols-3">
           {features.map((f, index) => (
             <div
               key={f.title}
-              className={`flex flex-col overflow-hidden rounded-3xl border border-orange-600/30 bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`flex flex-col overflow-hidden rounded-xl border border-orange-600/30 bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
               <div className="flex-1 p-6">
                 <div className="flex items-center gap-2">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-orange-500/20">
+                  <div
+                    className={`flex h-9 w-9 items-center justify-center rounded-lg bg-orange-500/20 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                    style={{ animationDelay: `${500 + index * 150}ms` }}
+                  >
                     {f.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white">{f.title}</h3>
@@ -121,7 +125,7 @@ export function CoreBenefits() {
               </div>
 
               <div className="px-6 pb-6">
-                <div className="overflow-hidden rounded-2xl bg-black">
+                <div className="overflow-hidden rounded-lg bg-black">
                   <img
                     src={f.img}
                     alt=""
@@ -138,7 +142,7 @@ export function CoreBenefits() {
         >
           <Link
             href="/products-and-services"
-            className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+            className="inline-flex items-center justify-center rounded-lg bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
           >
             Specs + QR Details <span className="ml-2">→</span>
           </Link>

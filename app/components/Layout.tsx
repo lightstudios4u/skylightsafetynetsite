@@ -12,26 +12,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-black text-white">
       {/* Desktop + Mobile Header */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link
             href="/"
-            className="flex items-center gap-4 hover:opacity-80 transition"
+            className="flex items-center gap-3 hover:opacity-80 transition"
           >
             <Image
               src="/logo.png"
               alt="SkylightSafety.Net"
-              width={64}
-              height={64}
-              className="h-16 w-16"
+              width={96}
+              height={96}
+              className="h-[96px] w-[96px]"
             />
-            <div className="leading-tight">
-              <div className="text-xl font-extrabold tracking-tight text-white">
-                SkylightSafety.Net
-              </div>
-              <div className="text-xs font-semibold tracking-wider text-orange-400 uppercase">
-                O.S.H.A. Safety Net System
-              </div>
-            </div>
           </Link>
 
           {/* Desktop nav */}
@@ -55,7 +47,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               Contact
             </a>
             <a
-              className="rounded-xl bg-orange-500 px-6 py-3 text-base font-bold text-white shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-colors"
+              className="rounded-lg bg-orange-500 px-6 py-3 text-base font-bold text-white shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-colors"
               href="#request"
             >
               Request Info →
@@ -65,7 +57,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           {/* Mobile hamburger */}
           <button
             type="button"
-            className="sm:hidden flex items-center justify-center h-10 w-10 rounded-xl border border-white/10 bg-white/5 text-white"
+            className="sm:hidden flex items-center justify-center h-10 w-10 rounded-lg border border-white/10 bg-white/5 text-white"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -98,7 +90,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               Contact
             </a>
             <a
-              className="block rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-white text-center hover:bg-orange-600 transition-colors"
+              className="block rounded-lg bg-orange-500 px-5 py-2.5 text-sm font-bold text-white text-center hover:bg-orange-600 transition-colors"
               href="#request"
               onClick={() => setMobileOpen(false)}
             >

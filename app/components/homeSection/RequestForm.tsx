@@ -123,7 +123,7 @@ export function RequestForm() {
               </p>
 
               <div
-                className={`mt-8 grid grid-cols-2 gap-4 rounded-3xl border border-gray-700 bg-black/40 p-6 animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
+                className={`mt-8 grid grid-cols-2 gap-4 rounded-xl border border-gray-700 bg-black/40 p-6 animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
               >
                 <Stat label="Standard size" value="4' × 8'" />
                 <Stat label="Typical install" value="< 5 min" />
@@ -133,7 +133,7 @@ export function RequestForm() {
             </div>
             <form
               onSubmit={handleSubmit}
-              className={`rounded-3xl border border-gray-700 bg-black/40 p-6 shadow-xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
+              className={`rounded-xl border border-gray-700 bg-black/40 p-6 shadow-xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
             >
               <div className="grid gap-4 sm:grid-cols-2">
                 <Input
@@ -176,7 +176,7 @@ export function RequestForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400/60 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400/60 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Submitting..." : "Send Request"}{" "}
                 <span className="ml-2">→</span>
@@ -185,7 +185,7 @@ export function RequestForm() {
               {/* Status Message */}
               {status.type !== "idle" && (
                 <div
-                  className={`mt-4 rounded-xl border p-4 text-sm font-medium transition-all duration-300 ${
+                  className={`mt-4 rounded-lg border p-4 text-sm font-medium transition-all duration-300 ${
                     status.type === "success"
                       ? "bg-green-500/10 text-green-400 border-green-500/20"
                       : "bg-red-500/10 text-red-400 border-red-500/20"

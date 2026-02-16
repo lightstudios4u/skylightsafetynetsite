@@ -26,7 +26,7 @@ export function RefundAndReturnPolicy() {
 				<div className='mt-8 flex flex-wrap gap-3'>
 						<Link
 							href='/'
-							className='inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
+							className='inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
 						>
 							Back to Home <span className='ml-2'>→</span>
 						</Link>
@@ -39,7 +39,7 @@ export function RefundAndReturnPolicy() {
 				<div className='mx-auto max-w-4xl px-6 py-16'>
 					<div className='space-y-12'>
 						{/* Section 1 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>1.</span>Return Eligibility
 							</h2>
@@ -63,7 +63,7 @@ export function RefundAndReturnPolicy() {
 						</div>
 
 						{/* Section 2 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>2.</span>Non-Returnable Items
 							</h2>
@@ -87,7 +87,7 @@ export function RefundAndReturnPolicy() {
 						</div>
 
 						{/* Section 3 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>3.</span>Return Process
 							</h2>
@@ -113,7 +113,7 @@ export function RefundAndReturnPolicy() {
 						</div>
 
 						{/* Section 4 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>4.</span>Refund Processing
 							</h2>
@@ -137,7 +137,7 @@ export function RefundAndReturnPolicy() {
 						</div>
 
 						{/* Section 5 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>5.</span>Defective Products
 							</h2>
@@ -161,7 +161,7 @@ export function RefundAndReturnPolicy() {
 						</div>
 
 						{/* Section 6 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								<span className='inline-block w-8'>6.</span>Restocking Fee
 							</h2>
@@ -177,7 +177,7 @@ export function RefundAndReturnPolicy() {
 			{/* CTA Section */}
 			<section className='bg-black'>
 				<div className='mx-auto max-w-6xl px-6 py-16'>
-					<div className='rounded-3xl border border-white/10 bg-white/5 p-8'>
+					<div className='rounded-xl border border-white/10 bg-white/5 p-8'>
 						<h2 className='text-2xl font-extrabold tracking-tight text-white sm:text-3xl'>
 							Questions about returns?
 						</h2>
@@ -189,13 +189,13 @@ export function RefundAndReturnPolicy() {
 						<div className='mt-6 flex flex-wrap gap-3'>
 							<Link
 								href='/contact-us'
-								className='inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
+								className='inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
 							>
 								Contact Us <span className='ml-2'>→</span>
 							</Link>
 							<Link
 								href='/'
-								className='inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10'
+								className='inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10'
 							>
 								Back to Home
 							</Link>

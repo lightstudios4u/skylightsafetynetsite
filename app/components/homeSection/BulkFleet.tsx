@@ -50,7 +50,7 @@ export function BulkFleet() {
             </p>
 
             <div
-              className={`mt-8 grid grid-cols-2 gap-4 rounded-3xl border border-gray-700 bg-black/40 p-6 animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
+              className={`mt-8 grid grid-cols-2 gap-4 rounded-xl border border-gray-700 bg-black/40 p-6 animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
             >
               <Stat label="Standard size" value="4' × 8'" />
               <Stat label="Typical install" value="< 5 min" />
@@ -60,7 +60,7 @@ export function BulkFleet() {
           </div>
 
           <div
-            className={`rounded-3xl border border-gray-700 bg-black/40 p-6 shadow-xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
+            className={`rounded-xl border border-gray-700 bg-black/40 p-6 shadow-xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
           >
             <h3 className="text-lg font-extrabold text-white">
               Talk to us about fleet rollouts
@@ -73,7 +73,7 @@ export function BulkFleet() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#request"
-                className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
+                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
               >
                 <FaEnvelope className="mr-2" size={16} />
                 Request Bulk Pricing
@@ -81,7 +81,7 @@ export function BulkFleet() {
 
               <Link
                 href="/products-and-specs.pdf"
-                className="inline-flex items-center justify-center rounded-xl border border-gray-700 bg-black/60 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+                className="inline-flex items-center justify-center rounded-lg border border-gray-700 bg-black/60 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
               >
                 View Spec Sheet <span className="ml-2">→</span>
               </Link>

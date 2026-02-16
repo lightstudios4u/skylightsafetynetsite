@@ -46,13 +46,13 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
           <div
-            className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-300 ${isVisible ? "visible" : ""}`}
+            className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-300 ${isVisible ? "visible" : ""}`}
           >
             <Accordion items={faqs} />
           </div>
 
           <div
-            className={`rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
+            className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
           >
             <h3 className="text-lg font-extrabold text-white">
               Need deeper details?
@@ -63,7 +63,7 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
             </p>
             <Link
               href="/products-and-services"
-              className="mt-6 inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+              className="mt-6 inline-flex items-center justify-center rounded-lg bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
             >
               View Details <span className="ml-2">→</span>
             </Link>

@@ -35,25 +35,25 @@ export function WhoItsFor() {
     {
       title: "Roofers",
       desc: "Protect crews during tearoff, installation, and maintenance on roofs with standard polycarbonate skylights.",
-      icon: <FaHardHat size={20} className="text-orange-500" />,
+      icon: <FaHardHat size={20} className="text-gray-300" />,
       img: "/Roofing.jpeg",
     },
     {
       title: "Solar Installers",
       desc: "Secure skylight openings during system installation and maintenance.",
-      icon: <FaSolarPanel size={20} className="text-orange-500" />,
+      icon: <FaSolarPanel size={20} className="text-gray-300" />,
       img: "/Solar.jpeg",
     },
     {
       title: "HVAC Contractors",
       desc: "Deploy rapid protection during rooftop service calls and equipment installations without lengthy setup time.",
-      icon: <FaWind size={20} className="text-orange-500" />,
+      icon: <FaWind size={20} className="text-gray-300" />,
       img: "/HVAC.jpeg",
     },
     {
       title: "Safety Companies",
       desc: "Equip your fleet with documented, reusable protection that supports compliance and simplifies audit trails.",
-      icon: <FaBuilding size={20} className="text-orange-500" />,
+      icon: <FaBuilding size={20} className="text-gray-300" />,
       img: "/Safety.jpeg",
     },
   ];
@@ -89,7 +89,7 @@ export function WhoItsFor() {
           {trades.map((t, index) => (
             <div
               key={t.title}
-              className={`overflow-hidden rounded-3xl bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`overflow-hidden rounded-xl bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${400 + index * 75}ms` }}
             >
               <div className="relative h-40 w-full">
@@ -102,7 +102,10 @@ export function WhoItsFor() {
               </div>
               <div className="p-5">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-3xl bg-orange-500/10">
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gray-500/10 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                    style={{ animationDelay: `${500 + index * 150}ms` }}
+                  >
                     {t.icon}
                   </div>
                   <h3 className="text-base font-bold text-white">{t.title}</h3>

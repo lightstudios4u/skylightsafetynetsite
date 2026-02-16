@@ -26,7 +26,7 @@ export function TermsAndConditions() {
 				<div className='mt-8 flex flex-wrap gap-3'>
 					<Link
 						href='/'
-						className='inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
+						className='inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
 						>
 							Back to Home <span className='ml-2'>→</span>
 						</Link>
@@ -39,7 +39,7 @@ export function TermsAndConditions() {
 				<div className='mx-auto max-w-4xl px-6 py-16'>
 					<div className='space-y-12'>
 						{/* Section 1 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>1. Use of Site</h2>
 							<p className='mt-4 text-white/80'>
 								This website and its content are provided for informational and
@@ -50,7 +50,7 @@ export function TermsAndConditions() {
 						</div>
 
 						{/* Section 2 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								2. Product Information
 							</h2>
@@ -63,7 +63,7 @@ export function TermsAndConditions() {
 						</div>
 
 						{/* Section 3 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								3. Orders and Payment
 							</h2>
@@ -76,7 +76,7 @@ export function TermsAndConditions() {
 						</div>
 
 						{/* Section 4 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								4. Intellectual Property
 							</h2>
@@ -88,7 +88,7 @@ export function TermsAndConditions() {
 						</div>
 
 						{/* Section 5 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								5. Limitation of Liability
 							</h2>
@@ -101,7 +101,7 @@ export function TermsAndConditions() {
 						</div>
 
 						{/* Section 6 */}
-						<div className='rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
+						<div className='rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm'>
 							<h2 className='text-2xl font-bold text-white'>
 								6. Modifications
 							</h2>
@@ -118,7 +118,7 @@ export function TermsAndConditions() {
 			{/* CTA Section */}
 			<section className='bg-black'>
 				<div className='mx-auto max-w-6xl px-6 py-16'>
-					<div className='rounded-3xl border border-white/10 bg-white/5 p-8'>
+					<div className='rounded-xl border border-white/10 bg-white/5 p-8'>
 						<h2 className='text-2xl font-extrabold tracking-tight text-white sm:text-3xl'>
 							Questions about our terms?
 						</h2>
@@ -130,13 +130,13 @@ export function TermsAndConditions() {
 						<div className='mt-6 flex flex-wrap gap-3'>
 							<Link
 								href='/#request'
-								className='inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
+								className='inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600'
 							>
 								Get in Touch <span className='ml-2'>→</span>
 							</Link>
 							<Link
 								href='/'
-								className='inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10'
+								className='inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10'
 							>
 								Back to Home
 							</Link>

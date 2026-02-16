@@ -14,7 +14,7 @@ const kitImages = {
 
 function KitHoverGallery({ kitActive }: { kitActive: KitImageKey }) {
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-slate-100/10 bg-slate-50 shadow-sm">
+    <div className="relative overflow-hidden rounded-xl border border-slate-100/10 bg-slate-50 shadow-sm">
       <Image
         key={kitActive}
         src={kitImages[kitActive]}
@@ -108,7 +108,7 @@ export function KitIncluded({
                   onMouseEnter={() => setKitActive("net")}
                   onFocus={() => setKitActive("net")}
                   className={[
-                    "w-full text-left rounded-2xl border p-5 transition-colors duration-200",
+                    "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "net"
                       ? "border-orange-600/50 bg-[#3D2C28]"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
@@ -129,7 +129,7 @@ export function KitIncluded({
                   onMouseEnter={() => setKitActive("strap")}
                   onFocus={() => setKitActive("strap")}
                   className={[
-                    "w-full text-left rounded-2xl border p-5 transition-colors duration-200",
+                    "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "strap"
                       ? "border-orange-600/50 bg-[#3D2C28]"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
@@ -150,7 +150,7 @@ export function KitIncluded({
                   onMouseEnter={() => setKitActive("qr")}
                   onFocus={() => setKitActive("qr")}
                   className={[
-                    "w-full text-left rounded-2xl border p-5 transition-colors duration-200",
+                    "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "qr"
                       ? "border-orange-600/50 bg-[#3D2C28]"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
@@ -170,7 +170,7 @@ export function KitIncluded({
                   onMouseEnter={() => setKitActive("bag")}
                   onFocus={() => setKitActive("bag")}
                   className={[
-                    "w-full text-left rounded-2xl border p-5 transition-colors duration-200",
+                    "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "bag"
                       ? "border-orange-600/50 bg-[#3D2C28]"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
@@ -202,7 +202,7 @@ export function KitIncluded({
           <h3 className="text-center text-lg font-extrabold text-white mb-6">
             Key Specifications
           </h3>
-          <div className="overflow-hidden rounded-2xl border border-gray-700">
+          <div className="overflow-hidden rounded-lg border border-gray-700">
             <div className="divide-y divide-gray-700">
               {[
                 {
@@ -255,7 +255,7 @@ export function KitIncluded({
 
         {/* Protect Crews CTA Banner */}
         <div
-          className={`mt-10 mx-auto max-w-3xl rounded-3xl border border-orange-600/30 bg-[#3D2C28] p-8 text-center shadow-lg animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
+          className={`mt-10 mx-auto max-w-3xl rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 text-center shadow-lg animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
           <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
             Protect Crews and Prove It With One Scan
@@ -270,7 +270,7 @@ export function KitIncluded({
           <div className="mt-6">
             <Link
               href="/products-and-services"
-              className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-3 text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-orange-600"
+              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-8 py-3 text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-orange-600"
             >
               Get a Quote
             </Link>
@@ -278,7 +278,7 @@ export function KitIncluded({
         </div>
 
         {/* Centered Safety Notice - Outside the grid */}
-        <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-yellow-600/40 bg-yellow-900/20 p-6 shadow-lg">
+        <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-yellow-600/40 bg-yellow-900/20 p-6 shadow-lg">
           <div className="flex items-start gap-3">
             <FaShieldAlt
               className="mt-0.5 flex-shrink-0 text-yellow-400"
