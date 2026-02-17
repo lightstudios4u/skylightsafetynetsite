@@ -15,7 +15,15 @@ import { BulkFleet } from "./homeSection/BulkFleet";
 import { FAQSection } from "./homeSection/FAQSection";
 import { RequestForm } from "./homeSection/RequestForm";
 import { FAQ } from "./Shared";
-import { FaTools, FaQrcode, FaRedoAlt, FaCheckCircle } from "react-icons/fa";
+import {
+  FaTools,
+  FaQrcode,
+  FaRedoAlt,
+  FaUserShield,
+  FaClipboardCheck,
+  FaFileSignature,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 type Step = {
   num: string;
@@ -41,19 +49,19 @@ export function Home() {
         num: "01",
         title: "Strap It On",
         desc: 'Position the net over the skylight and secure using the included ratchet strap system. Requires minimum 1.5" metal skylight curb lip. No tools, no penetrations, no complex rigging.',
-        icon: <FaTools className="text-gray-300" size={28} />,
+        icon: <FaTools className="text-amber-400" size={28} />,
       },
       {
         num: "02",
         title: "Scan the QR Code",
         desc: "Use any smartphone to scan the unique QR label on your net. Register the installation location, date, and responsible crew member in seconds.",
-        icon: <FaQrcode className="text-gray-300" size={28} />,
+        icon: <FaQrcode className="text-sky-400" size={28} />,
       },
       {
         num: "03",
         title: "Log and Redeploy",
         desc: "Track inspections throughout the job. When the project is complete, remove the net, scan to log removal, return to inventory and redeploy it at your next site.",
-        icon: <FaRedoAlt className="text-gray-300" size={28} />,
+        icon: <FaRedoAlt className="text-emerald-400" size={28} />,
       },
     ],
     [],
@@ -64,22 +72,22 @@ export function Home() {
       {
         title: "Register Your Net",
         desc: "Assign each net to your company, crew, or project. Create accountability and prevent loss of equipment across multiple job sites.",
-        icon: <FaCheckCircle className="text-gray-300" size={22} />,
+        icon: <FaUserShield className="text-amber-400" size={22} />,
       },
       {
         title: "Log Inspections",
         desc: "Scan before each use and during periodic checks. Build a complete inspection history that proves due diligence and equipment condition over the life of the job and service life of each O.S.H.A. Safety Net System in use.",
-        icon: <FaCheckCircle className="text-gray-300" size={22} />,
+        icon: <FaClipboardCheck className="text-amber-400" size={22} />,
       },
       {
         title: "Document Installs",
         desc: "Capture who installed protection, where, and when. Create irrefutable evidence that fall-through protection was in place during critical work phases.",
-        icon: <FaCheckCircle className="text-gray-300" size={22} />,
+        icon: <FaFileSignature className="text-amber-400" size={22} />,
       },
       {
         title: "Track Location",
         desc: "Know which job site or crew has each net at any time. Simplify inventory management and ensure equipment is where you need it.",
-        icon: <FaCheckCircle className="text-gray-300" size={22} />,
+        icon: <FaMapMarkerAlt className="text-amber-400" size={22} />,
       },
     ],
     [],
