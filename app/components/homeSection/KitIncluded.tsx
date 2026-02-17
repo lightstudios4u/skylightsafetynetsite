@@ -71,25 +71,34 @@ export function KitIncluded({
   return (
     <section ref={sectionRef} className="bg-black">
       <div className="mx-auto max-w-6xl px-6 py-16">
+        <div
+          className={`tracking-tight animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
+        >
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            4&apos; × 8&apos; Skylight Safety Net Kit
+          </h2>
+          <p className="mt-1 text-lg font-semibold text-orange-500">
+            The Most Common Commercial Skylight Size
+          </p>
+        </div>
+
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           {/* LEFT: Copy + Hover List */}
           <div>
-            {/* <p
-              className={`text-sm font-semibold tracking-wide text-orange-500 animate-fade-down ${isVisible ? "visible" : ""}`}
-            ></p> */}
             <div
-              className={`tracking-tight animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
+              className={`animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
             >
-              <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                <span className="text-orange-500">
-                  O.S.H.A. Safety Net System
-                </span>{" "}
-                — What&apos;s Included
-              </h2>
               <p className="mt-4 text-sm leading-relaxed text-gray-200">
-                Every component is selected for durability, ease of use, and
-                rapid deployment. Built to be obvious on the roof and defendable
-                in an audit.
+                Our kit is engineered for the standard 4&apos; × 8&apos;
+                skylight found on 98% of commercial rooftops nationwide. Every
+                component is selected for durability, ease of use, and rapid
+                deployment in real-world job site conditions.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-gray-200">
+                This isn&apos;t an adapted cargo net or improvised solution.
+                It&apos;s purpose-built fall-through protection designed by
+                rooftop professionals who understand the specific needs of
+                rooftop work.
               </p>
             </div>
 
@@ -200,7 +209,7 @@ export function KitIncluded({
         <div
           className={`mt-10 mx-auto max-w-4xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
         >
-          <h3 className="text-center text-lg font-extrabold text-white mb-6">
+          <h3 className="text-center text-2xl font-extrabold text-white mb-6">
             Key Specifications
           </h3>
           <div className="overflow-hidden rounded-lg border border-gray-700">
@@ -242,10 +251,10 @@ export function KitIncluded({
                   key={spec.label}
                   className="grid grid-cols-3 sm:grid-cols-4"
                 >
-                  <div className="col-span-1 bg-black/40 px-4 py-3 text-xs font-semibold text-gray-200">
+                  <div className="col-span-1 bg-black/40 px-4 py-3 text-sm font-semibold text-gray-200">
                     {spec.label}
                   </div>
-                  <div className="col-span-2 sm:col-span-3 px-4 py-3 text-xs text-white/80">
+                  <div className="col-span-2 sm:col-span-3 px-4 py-3 text-sm text-white/80">
                     {spec.value}
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaCheckCircle, FaClipboardList, FaFileExport } from "react-icons/fa";
 
 type QRWay = {
@@ -36,28 +37,56 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
       style={{ backgroundColor: "#fc8337" }}
     >
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <p
-          className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
+        {/* Hero area with image */}
+        <div
+          className={`grid gap-10 lg:grid-cols-2 lg:items-center animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
         >
-          Documentation you can defend
-        </p>
-        <h2
-          className={`mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
+          <div>
+            <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+              Documentation You Can Defend
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-black/80 sm:text-base">
+              When an inspector arrives on site or an incident occurs, &ldquo;we
+              had nets up&rdquo; isn&apos;t good enough. You need verifiable
+              records that prove what was in place, when it was installed, who
+              checked it, and what condition it was in.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-black/80 sm:text-base">
+              Our QR tracking system creates that proof automatically. One scan
+              generates a timestamped, location-tagged record that stands up to
+              scrutiny.
+            </p>
+          </div>
+
+          <div
+            className={`animate-fade-up delay-300 ${isVisible ? "visible" : ""}`}
+          >
+            <div className="relative overflow-hidden rounded-xl border border-orange-600/30 shadow-lg">
+              <Image
+                src="/qrlady.jpeg"
+                alt="Worker scanning QR code for safety documentation"
+                width={800}
+                height={500}
+                className="h-[400px] w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </div>
+          </div>
+        </div>
+
+        <h3
+          className={`mt-12 text-center text-2xl font-extrabold tracking-tight text-black animate-fade-in delay-400 ${isVisible ? "visible" : ""}`}
         >
           Four Ways QR Tracking Protects Your Business
-        </h2>
+        </h3>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {qrWays.map((x, index) => (
             <div
               key={x.title}
-              className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm card-hover cursor-pointer animate-fade-up ${isVisible ? "visible" : ""}`}
-              style={{ transitionDelay: `${300 + index * 75}ms` }}
+              className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
             >
-              <div
-                className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gray-500/20 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
-                style={{ animationDelay: `${500 + index * 120}ms` }}
-              >
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/20">
                 {x.icon}
               </div>
               <h3 className="mt-4 text-base font-bold text-white">{x.title}</h3>
@@ -69,7 +98,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
         </div>
 
         <div
-          className={`mt-10 grid gap-6 lg:grid-cols-2 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
+          className={`mt-10 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
           <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
             <h3 className="text-lg font-extrabold text-white">
@@ -136,53 +165,6 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
                   <div>{r.n}</div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
-            <h3 className="text-lg font-extrabold text-white">
-              From install to audit-ready
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/80">
-              When an inspector arrives, &ldquo;we always use protection&rdquo;
-              isn&apos;t a system. QR logs are.
-            </p>
-
-            <div className="mt-6 grid gap-4">
-              <div className="rounded-lg border border-orange-600/30 bg-black/40 p-5">
-                <div className="flex items-center gap-2">
-                  <FaClipboardList className="text-orange-400" />
-                  <p className="text-sm font-semibold text-white">
-                    Timestamped records
-                  </p>
-                </div>
-                <p className="mt-2 text-sm text-white/80">
-                  Every scan creates a time-stamped, structured record tied to
-                  that net.
-                </p>
-              </div>
-
-              <div className="rounded-lg border border-orange-600/30 bg-black/40 p-5">
-                <div className="flex items-center gap-2">
-                  <FaFileExport className="text-orange-500" />
-                  <p className="text-sm font-semibold text-white">
-                    Exportable history
-                  </p>
-                </div>
-                <p className="mt-2 text-sm text-white/80">
-                  Give safety managers and clients the documentation they ask
-                  for without scrambling.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 flex gap-3">
-              <Link
-                href="/products-and-services/#qr"
-                className="inline-flex items-center justify-center rounded-lg bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
-              >
-                QR Workflow Details <span className="ml-2">→</span>
-              </Link>
             </div>
           </div>
         </div>
