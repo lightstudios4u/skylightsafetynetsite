@@ -35,25 +35,25 @@ export function WhoItsFor() {
     {
       title: "Roofers",
       desc: "Protect crews during tearoff, installation, and maintenance on roofs with standard polycarbonate skylights.",
-      icon: <FaHardHat size={20} className="text-gray-300" />,
+      icon: <FaBuilding size={20} className="text-amber-400" />,
       img: "/Roofing.jpeg",
     },
     {
       title: "Solar Installers",
       desc: "Secure skylight openings during system installation and maintenance.",
-      icon: <FaSolarPanel size={20} className="text-gray-300" />,
+      icon: <FaSolarPanel size={20} className="text-amber-400" />,
       img: "/Solar.jpeg",
     },
     {
       title: "HVAC Contractors",
       desc: "Deploy rapid protection during rooftop service calls and equipment installations without lengthy setup time.",
-      icon: <FaWind size={20} className="text-gray-300" />,
+      icon: <FaWind size={20} className="text-amber-400" />,
       img: "/HVAC.jpeg",
     },
     {
       title: "Safety Companies",
       desc: "Equip your fleet with documented, reusable protection that supports compliance and simplifies audit trails.",
-      icon: <FaBuilding size={20} className="text-gray-300" />,
+      icon: <FaHardHat size={20} className="text-amber-400" />,
       img: "/Safety.jpeg",
     },
   ];
@@ -65,15 +65,14 @@ export function WhoItsFor() {
       style={{ backgroundColor: "#c0652c" }}
     >
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <p
+        {/* <p
           className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
         >
-          Designed for the trades that work above
-        </p>
+        </p> */}
         <h2
           className={`mt-3 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
         >
-          Trusted Across the Commercial Trades
+          Designed for the trades that work above
         </h2>
         <p
           className={`mx-auto mt-4 max-w-4xl text-center text-base leading-relaxed text-black/90 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}

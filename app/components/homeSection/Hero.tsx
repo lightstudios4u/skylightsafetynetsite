@@ -63,21 +63,21 @@ export function Hero() {
             >
               <Link
                 href="/products-and-services"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-orange-500 bg-transparent px-6 py-2.5 text-sm font-bold text-orange-400 transition-colors duration-200 hover:bg-orange-500 hover:text-white"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white/30 bg-transparent px-6 py-2.5 text-sm font-bold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:border-white/50"
               >
                 Get a Quote
               </Link>
 
               <a
                 href="#video"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-orange-500 bg-transparent px-6 py-2.5 text-sm font-bold text-orange-400 transition-colors duration-200 hover:bg-orange-500 hover:text-white"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white/30 bg-transparent px-6 py-2.5 text-sm font-bold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:border-white/50"
               >
                 Installation Video
               </a>
 
               <a
                 href="#"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-orange-500 bg-transparent px-6 py-2.5 text-sm font-bold text-orange-400 transition-colors duration-200 hover:bg-orange-500 hover:text-white"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white/30 bg-transparent px-6 py-2.5 text-sm font-bold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:border-white/50"
               >
                 Customer Login
               </a>
@@ -118,7 +118,7 @@ export function Hero() {
               },
               {
                 icon: <FaBan className="text-sky-400" size={20} />,
-                title: "Zero Penetration",
+                title: "Non-Invasive",
                 desc: "No drilling. No damage.",
               },
               {
