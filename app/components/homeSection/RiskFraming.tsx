@@ -1,6 +1,5 @@
 "use client";
 
-import { useTypewriter } from "@/app/utils/typewriter";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
@@ -32,12 +31,6 @@ export function RiskFraming() {
     return () => observer.disconnect();
   }, [isVisible]);
 
-  const typewriterText = useTypewriter(isVisible ? "The risk is real." : "", {
-    speed: 150,
-  });
-
-  const isTypewriterComplete = typewriterText === "The risk is real.";
-
   return (
     <section
       id="risk-framing"
@@ -58,20 +51,10 @@ export function RiskFraming() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left content */}
           <div>
-            <p
-              className={`text-sm font-semibold tracking-wide text-black/80 animate-fade-down ${isVisible ? "visible" : ""}`}
+            <h3
+              className={`text-3xl font-black tracking-tight text-black sm:text-4xl animate-fade-in ${isVisible ? "visible" : ""}`}
             >
               Skylights are &lsquo;open hole&rsquo; fall-through hazards
-            </p>
-
-            <h3 className="mt-3 text-3xl tracking-tight text-black sm:text-4xl">
-              <span className="font-black">{typewriterText}</span>
-              <span
-                className={`font-black animate-fade-in ${isTypewriterComplete ? "visible" : ""}`}
-              >
-                <br />
-                The fix shouldn&lsquo;t be complicated.
-              </span>
             </h3>
 
             <div
