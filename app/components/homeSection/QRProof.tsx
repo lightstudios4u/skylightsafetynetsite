@@ -63,7 +63,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
           >
             <div className="relative overflow-hidden rounded-xl border border-orange-600/30 shadow-lg">
               <Image
-                src="/QRlady.jpeg"
+                src="/QRlady.webp"
                 alt="Worker scanning QR code for safety documentation"
                 width={800}
                 height={500}

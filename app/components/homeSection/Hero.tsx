@@ -36,7 +36,7 @@ export function Hero() {
         <div
           className={`mb-10 flex justify-center animate-fade-down ${isLoaded ? "visible" : ""}`}
         >
-          <img src="/logo.png" alt="Logo" className="w-64 sm:w-80" />
+          <img src="/logo.webp" alt="Logo" className="w-64 sm:w-80" />
         </div>
 
         {/* Row 2: Copy + Image side by side */}
@@ -96,7 +96,7 @@ export function Hero() {
           >
             <div className="relative overflow-hidden rounded-lg border border-white/10 shadow-2xl">
               <Image
-                src="/wideshot.png"
+                src="/wideshot.webp"
                 alt="O.S.H.A. Safety Net installed on commercial skylight"
                 width={800}
                 height={600}

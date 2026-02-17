@@ -6,10 +6,10 @@ import Link from "next/link";
 type KitImageKey = "net" | "strap" | "qr" | "bag";
 
 const kitImages = {
-  net: "/net.png",
-  strap: "/maninstall.png",
-  qr: "/qr.png",
-  bag: "/package.png",
+  net: "/net.webp",
+  strap: "/maninstall.webp",
+  qr: "/qr.webp",
+  bag: "/package.webp",
 } as const;
 
 function KitHoverGallery({ kitActive }: { kitActive: KitImageKey }) {
