@@ -86,7 +86,7 @@ export function RiskFraming() {
           >
             <div className="relative overflow-hidden rounded-xl border border-orange-600/30 shadow-lg">
               <Image
-                src="/brokenskylight.png"
+                src="/brokenskylight.webp"
                 alt="Damaged skylight showing fall-through risk"
                 width={800}
                 height={360}

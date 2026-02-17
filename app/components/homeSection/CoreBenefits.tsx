@@ -41,7 +41,7 @@ export function CoreBenefits() {
         "High-visibility safety orange mesh",
         "UV-stabilized for extended outdoor use",
       ],
-      img: "/net.png",
+      img: "/net.webp",
       icon: <FaShieldAlt size={18} className="text-orange-500" />,
     },
     {
@@ -52,7 +52,7 @@ export function CoreBenefits() {
         "Works with curb or self-flashing units",
         "Moves from site to site quickly",
       ],
-      img: "/maninstall.png",
+      img: "/maninstall.webp",
       icon: <FaBolt size={18} className="text-orange-500" />,
     },
     {
@@ -63,7 +63,7 @@ export function CoreBenefits() {
         "Track by net, job site, and crew",
         "Real-time inventory tracking",
       ],
-      img: "/qr.png",
+      img: "/qr.webp",
       icon: <FaQrcode size={18} className="text-orange-500" />,
     },
   ];
