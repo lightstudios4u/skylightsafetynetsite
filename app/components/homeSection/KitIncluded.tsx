@@ -74,16 +74,17 @@ export function KitIncluded({
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           {/* LEFT: Copy + Hover List */}
           <div>
-            <p
+            {/* <p
               className={`text-sm font-semibold tracking-wide text-orange-500 animate-fade-down ${isVisible ? "visible" : ""}`}
-            >
-              O.S.H.A. Safety Net System — What&apos;s Included
-            </p>
+            ></p> */}
             <div
               className={`tracking-tight animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
             >
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                A Kit Built for Real Job Sites
+                <span className="text-orange-500">
+                  O.S.H.A. Safety Net System
+                </span>{" "}
+                — What&apos;s Included
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-gray-200">
                 Every component is selected for durability, ease of use, and
@@ -250,30 +251,6 @@ export function KitIncluded({
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* Protect Crews CTA Banner */}
-        <div
-          className={`mt-10 mx-auto max-w-3xl rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 text-center shadow-lg animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
-        >
-          <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
-            Protect Crews and Prove It With One Scan
-          </h3>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/80">
-            Purpose-built sizing. Rapid installation. Documented compliance. The
-            O.S.H.A. Safety Net System gives commercial contractors everything
-            they need to secure skylight openings for worker fall protection and
-            create an easily accessible and auditable safety record for job
-            after job.
-          </p>
-          <div className="mt-6">
-            <Link
-              href="/products-and-services"
-              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-8 py-3 text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-orange-600"
-            >
-              Get a Quote
-            </Link>
           </div>
         </div>
 
