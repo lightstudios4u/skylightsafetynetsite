@@ -11,7 +11,7 @@ export function DetailsSections() {
             Details + compliance documentation
           </p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-            Specs, QR Tracking & What's Included
+            Specs, QR Tracking & What&apos;s Included
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-200">
             Everything you need to know about the product, documentation system,
