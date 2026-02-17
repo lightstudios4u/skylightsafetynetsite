@@ -54,7 +54,7 @@ export function RiskFraming() {
             <h3
               className={`text-3xl font-black tracking-tight text-black sm:text-4xl animate-fade-in ${isVisible ? "visible" : ""}`}
             >
-              Skylights are &lsquo;open hole&rsquo; fall-through hazards
+              Skylights are fall-through hazards
             </h3>
 
             <div
