@@ -156,7 +156,7 @@ export function Home() {
       <RiskFraming />
       <CoreBenefits />
       <Comparison />
-      <OrderOnline />
+      {/* <OrderOnline /> */}
       <KitIncluded kitActive={kitActive} setKitActive={setKitActive} />
       <DeploymentSteps steps={steps} />
       <QRProof qrWays={qrWays} />
