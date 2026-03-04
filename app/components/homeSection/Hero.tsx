@@ -93,9 +93,9 @@ export function Hero() {
                 style={{ opacity: isLoaded ? 1 : 0 }}
               >
                 <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-white leading-[1.15] drop-shadow-lg">
-                  Skylight Fall Protection
-                  <br />
-                  <span className="text-orange-400">Made Simple</span>
+                  Skylight Safety Fall-Through Protection
+                  {/* <br />
+                  <span className="text-orange-400">Made Simple</span> */}
                 </h1>
               </div>
 
