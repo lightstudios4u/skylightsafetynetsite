@@ -36,25 +36,25 @@ export function WhoItsFor() {
       title: "Roofers",
       desc: "Protect crews during tearoff, installation, and maintenance on roofs with standard polycarbonate skylights.",
       icon: <FaBuilding size={20} className="text-amber-400" />,
-      img: "/Roofing.webp",
+      img: "/Roofing_s.webp",
     },
     {
       title: "Solar Installers",
       desc: "Secure skylight openings during system installation and maintenance.",
       icon: <FaSolarPanel size={20} className="text-amber-400" />,
-      img: "/solar2.webp",
+      img: "/solar2_s.webp",
     },
     {
       title: "HVAC Contractors",
       desc: "Deploy rapid protection during rooftop service calls and equipment installations without lengthy setup time.",
       icon: <FaWind size={20} className="text-amber-400" />,
-      img: "/HVAC2.webp",
+      img: "/HVAC2_s.webp",
     },
     {
       title: "Safety Companies",
       desc: "Equip your fleet with documented, reusable protection that supports compliance and simplifies audit trails.",
       icon: <FaHardHat size={20} className="text-amber-400" />,
-      img: "/Safety.webp",
+      img: "/Safety_s.webp",
     },
   ];
 
