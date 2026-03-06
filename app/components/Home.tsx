@@ -160,8 +160,8 @@ export function Home() {
       <KitIncluded kitActive={kitActive} setKitActive={setKitActive} />
       <DeploymentSteps steps={steps} />
       <QRProof qrWays={qrWays} />
-      <Applications applications={applications} />
-      <BulkFleet />
+      {/* <Applications applications={applications} />
+      <BulkFleet /> */}
       <FAQSection faqs={faqs} />
       <RequestForm />
     </div>

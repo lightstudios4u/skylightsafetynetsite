@@ -20,9 +20,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <Image
               src="/logo.webp"
               alt="SkylightSafety.Net"
-              width={96}
-              height={96}
-              className="h-[96px] w-[96px]"
+              width={145}
+              height={145}
+              className="h-[96px] w-[145px]"
             />
           </Link>
 

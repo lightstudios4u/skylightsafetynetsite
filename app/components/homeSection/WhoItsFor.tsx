@@ -42,13 +42,13 @@ export function WhoItsFor() {
       title: "Solar Installers",
       desc: "Secure skylight openings during system installation and maintenance.",
       icon: <FaSolarPanel size={20} className="text-amber-400" />,
-      img: "/Solar.webp",
+      img: "/solar2.webp",
     },
     {
       title: "HVAC Contractors",
       desc: "Deploy rapid protection during rooftop service calls and equipment installations without lengthy setup time.",
       icon: <FaWind size={20} className="text-amber-400" />,
-      img: "/HVAC.webp",
+      img: "/HVAC2.webp",
     },
     {
       title: "Safety Companies",
