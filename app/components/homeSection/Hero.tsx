@@ -46,7 +46,7 @@ export function Hero() {
         {/* <div
           className={`mb-10 flex justify-center animate-fade-down ${isLoaded ? "visible" : ""}`}
         >
-          <img src="/logo.webp" alt="Logo" className="w-64 sm:w-80" />
+          <Image src="/logo.webp" alt="Logo" width={320} height={160} className="w-64 sm:w-80" />
         </div> */}
 
         {/* Dramatic animated heading */}
@@ -76,10 +76,10 @@ export function Hero() {
           >
             {/* Large product image */}
             <Image
-              src="/heroproduct2.webp"
+              src="/product/net.webp"
               alt="O.S.H.A. Safety Net installed on commercial skylight"
               fill
-              className="object-cover scale-120 translate-x-21 -translate-y-8"
+              className="object-cover object-center scale-110 translate-x-4 -translate-y-3"
               priority
             />
 
@@ -109,7 +109,7 @@ export function Hero() {
                   Get a Quote
                 </Link>
 
-                <a
+                {/* <a
                   href="#video"
                   className="inline-flex items-center justify-center rounded-md border-2 border-white/40 bg-white/10 backdrop-blur-sm px-4 py-2 text-xs font-bold text-white transition-colors duration-200 hover:bg-white/20 hover:border-white/60"
                 >
@@ -121,7 +121,7 @@ export function Hero() {
                   className="inline-flex items-center justify-center rounded-md border-2 border-white/40 bg-white/10 backdrop-blur-sm px-4 py-2 text-xs font-bold text-white transition-colors duration-200 hover:bg-white/20 hover:border-white/60"
                 >
                   Customer Login
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

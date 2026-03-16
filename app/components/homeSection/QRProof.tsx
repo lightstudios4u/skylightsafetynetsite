@@ -42,19 +42,22 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
           className={`grid gap-10 lg:grid-cols-2 lg:items-center animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
         >
           <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-black/70">
+              Proof Beats Promises
+            </p>
             <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
               Documentation You Can Defend
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-black/80 sm:text-base">
-              When an inspector arrives on site or an incident occurs, &ldquo;we
-              had nets up&rdquo; isn&apos;t good enough. You need verifiable
-              records that prove what was in place, when it was installed, who
-              checked it, and what condition it was in.
+              When an OSHA or insurance inspector arrives on site or an incident
+              occurs, the O.S.H.A. Skylight Safety Net System provides
+              verifiable records that prove what was in place, when it was
+              installed, who checked it, and what condition it was in.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-black/80 sm:text-base">
-              Our QR tracking system creates that proof automatically. One scan
-              generates a timestamped, location-tagged record that stands up to
-              scrutiny.
+              Our QR tracking system creates that documented proof
+              automatically. QR scans generate timestamped, location-tagged
+              records that stand up to scrutiny.
             </p>
           </div>
 

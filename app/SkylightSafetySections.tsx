@@ -2,6 +2,7 @@
 // Drop into a Next.js/React project. Tailwind required.
 "use client";
 import React, { useMemo, useState } from "react";
+import Image from "next/image";
 
 type Step = {
   num: string;
@@ -27,23 +28,23 @@ export default function SkylightSafetySections() {
       {
         num: "01",
         title: "Strap It On",
-        desc: `Position the net over the skylight and secure it using the heavy-duty ratchet strap system. Requires a minimum 2" curb lip. No tools, no penetrations.`,
+        desc: `Position the net over the skylight and secure using the included ratchet strap system.  No tools, no penetrations, no complex rigging.`,
         img: "https://images.unsplash.com/photo-1581579185169-7b2571b6f3b0?auto=format&fit=crop&w=800&q=80",
       },
       {
         num: "02",
         title: "Scan the QR Code",
-        desc: "Scan the unique QR label to register the installation location, date, and responsible crew member.",
+        desc: "Use any smartphone to scan the unique QR label on your net. Register the installation location, date, and responsible crew member in seconds.",
         img: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?auto=format&fit=crop&w=800&q=80",
       },
       {
         num: "03",
         title: "Log and Redeploy",
-        desc: "Track inspections during the project, log removal, and redeploy the net at the next job site.",
+        desc: "Track inspections throughout the job. When the project is complete, remove the net, scan to log removal, return to inventory and redeploy it at your next site.",
         img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80",
       },
     ],
-    []
+    [],
   );
 
   const features: Feature[] = useMemo(
@@ -64,7 +65,7 @@ export default function SkylightSafetySections() {
         img: "https://images.unsplash.com/photo-1581579185169-7b2571b6f3b0?auto=format&fit=crop&w=800&q=80",
       },
     ],
-    []
+    [],
   );
 
   const faqs: FAQ[] = useMemo(
@@ -82,7 +83,7 @@ export default function SkylightSafetySections() {
         a: "Yes. The system is designed to be removed, logged, and redeployed across sites, with QR-based records to keep compliance documentation clean and consistent.",
       },
     ],
-    []
+    [],
   );
 
   return (
@@ -145,11 +146,12 @@ export default function SkylightSafetySections() {
             <div className="relative">
               <div className="absolute -left-6 -top-6 h-24 w-24 rounded-xl bg-orange-500/20 blur-2xl" />
               <div className="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
-              <div className="overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-2xl">
-                <img
+              <div className="relative h-[360px] sm:h-[420px] overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-2xl">
+                <Image
                   src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1400&q=80"
                   alt="Worker installing skylight protection"
-                  className="h-[360px] w-full object-cover sm:h-[420px]"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -175,11 +177,12 @@ export default function SkylightSafetySections() {
               >
                 <div className="flex items-start gap-4">
                   <div className="relative">
-                    <div className="h-20 w-20 overflow-hidden rounded-lg bg-slate-100">
-                      <img
+                    <div className="relative h-20 w-20 overflow-hidden rounded-lg bg-slate-100">
+                      <Image
                         src={s.img}
                         alt=""
-                        className="h-full w-full object-cover transition group-hover:scale-105"
+                        fill
+                        className="object-cover transition group-hover:scale-105"
                       />
                     </div>
                     <div className="absolute -right-2 -top-2 grid h-9 w-9 place-items-center rounded-full bg-orange-500 text-xs font-bold text-white shadow-sm">
@@ -234,12 +237,8 @@ export default function SkylightSafetySections() {
                   </p>
                 </div>
                 <div className="px-6 pb-6">
-                  <div className="overflow-hidden rounded-lg bg-white">
-                    <img
-                      src={f.img}
-                      alt=""
-                      className="h-52 w-full object-cover"
-                    />
+                  <div className="relative h-52 overflow-hidden rounded-lg bg-white">
+                    <Image src={f.img} alt="" fill className="object-cover" />
                   </div>
                 </div>
               </div>
@@ -267,16 +266,22 @@ export default function SkylightSafetySections() {
               <div className="absolute inset-0 bg-gradient-to-tr from-orange-50 via-white to-slate-50" />
               <div className="relative grid h-full place-items-center p-8">
                 <div className="grid w-full grid-cols-2 gap-4">
-                  <img
-                    className="h-64 w-full rounded-lg object-cover"
-                    src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=80"
-                    alt=""
-                  />
-                  <img
-                    className="h-64 w-full rounded-lg object-cover"
-                    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
-                    alt=""
-                  />
+                  <div className="relative h-64 w-full">
+                    <Image
+                      fill
+                      className="rounded-lg object-cover"
+                      src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div className="relative h-64 w-full">
+                    <Image
+                      fill
+                      className="rounded-lg object-cover"
+                      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+                      alt=""
+                    />
+                  </div>
                 </div>
 
                 <div className="mt-6 w-full rounded-lg border border-slate-200 bg-white/80 p-6 text-center backdrop-blur">

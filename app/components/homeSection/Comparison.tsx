@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 
 export function Comparison() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -113,29 +112,6 @@ export function Comparison() {
               )}
             </div>
           ))}
-        </div>
-
-        {/* Protect Crews CTA Banner */}
-        <div
-          className={`mt-10 mx-auto max-w-5xl rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 text-center shadow-lg animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
-        >
-          <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
-            Protect Crews and Prove It With One Scan
-          </h3>
-          <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-white/80">
-            Our O.S.H.A. Safety Net System gives commercial contractors
-            everything they need to secure skylight openings for worker fall
-            protection, and create an easily accessible and auditable safety
-            record.
-          </p>
-          <div className="mt-6">
-            <Link
-              href="/products-and-services"
-              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-8 py-3 text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-orange-600"
-            >
-              Get a Quote
-            </Link>
-          </div>
         </div>
       </div>
     </section>

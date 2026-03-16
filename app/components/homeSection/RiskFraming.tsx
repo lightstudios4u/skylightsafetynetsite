@@ -48,32 +48,42 @@ export function RiskFraming() {
             <h3
               className={`text-3xl font-black tracking-tight text-black sm:text-4xl animate-fade-in ${isVisible ? "visible" : ""}`}
             >
-              Skylights Are Fall-Through Hazards
+              Skylights Are &apos;Open Hole&apos; Fall-Through Hazards
             </h3>
-
+            <div
+              className={`mt-4 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
+            >
+              <div className="rounded-lg bg-[#3D2C28] p-6 shadow-lg">
+                <div className="flex items-start gap-3">
+                  <FaExclamationTriangle className="h-5 w-5 shrink-0 text-orange-400 mt-0.5" />
+                  <p className="text-sm font-semibold text-white">
+                    Saving a few minutes or a few dollars on skylight protection has
+                    cost contractors their businesses, their livelihoods, and in
+                    some cases, their freedom.
+                  </p>
+                </div>
+              </div>
+            </div>
             <div
               className={`animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
             >
               <p className="mt-4 text-sm leading-relaxed text-black/80 sm:text-base">
-                Under OSHA regulations, a skylight is legally defined as a{" "}
+                Under OSHA regulations, a skylight is defined as a{" "}
                 <span className="font-semibold text-black">
                   hole in a walking-working surface
                 </span>
                 . Falls through skylights are one of the leading causes of fatal
-                and disabling injuries on commercial roofs. Federal injury data
-                shows that{" "}
-                <span className="font-semibold text-black">
-                  25% of all falls through surfaces are caused by skylights
-                </span>{" "}
-                and these incidents are often fatal.
+                and disabling injuries on commercial roofs.
               </p>
 
               <p className="mt-3 text-sm leading-relaxed text-black/80 sm:text-base">
-                Plastic, polycarbonate, and fiberglass domes degrade under UV
-                exposure and become brittle. Stepping, tripping, or backing into
-                a skylight can result in a sudden fall of{" "}
+                Federal injury data shows that{" "}
                 <span className="font-semibold text-black">
-                  20, 30, or even 40+ feet to a concrete surface below
+                  25% of all falls through surfaces are caused by skylights
+                </span>{" "}
+                and in the last several years, these incidents resulted in{" "}
+                <span className="font-semibold text-black">
+                  over 75 fatalities
                 </span>
                 .
               </p>
@@ -120,67 +130,109 @@ export function RiskFraming() {
                 The Real Risks
               </h4>
             </div>
-            <ul className="space-y-4 text-sm text-white/80">
-              <li className="flex gap-2">
-                <span className="mt-0.5 text-red-400">●</span>
-                <span>
-                  <span className="font-semibold text-white">
-                    Catastrophic injury potential:
-                  </span>{" "}
-                  Falls through skylights result in severe injuries or
-                  fatalities when workers step on or near unprotected glazing
-                </span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-0.5 text-orange-400">●</span>
-                <span>
-                  <span className="font-semibold text-white">
-                    Compliance violations:
-                  </span>{" "}
-                  OSHA citations and fines for inadequate fall protection at
-                  skylight openings during commercial roofing and construction
-                  work
-                </span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-0.5 text-orange-400">●</span>
-                <span>
-                  <span className="font-semibold text-white">
-                    Documentation gaps:
-                  </span>{" "}
-                  Unable to prove protective measures were in place when
-                  inspectors arrive or incidents occur
-                </span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-0.5 text-orange-400">●</span>
-                <span>
-                  <span className="font-semibold text-white">
-                    Project delays:
-                  </span>{" "}
-                  Work stoppages when safety equipment isn&apos;t readily
-                  available or properly installed
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
 
-        {/* Bottom callout */}
-        <div
-          className={`mt-10 mx-auto max-w-4xl animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
-        >
-          <div className="rounded-lg bg-[#3D2C28] p-6 shadow-lg">
-            <div className="flex items-start gap-3">
-              <FaExclamationTriangle className="h-5 w-5 shrink-0 text-orange-400 mt-0.5" />
-              <p className="text-sm font-semibold text-white">
-                Every unprotected skylight is a liability waiting to happen. The
-                cost of proper protection is minimal compared to the
-                consequences of a fall-through incident.
+            {/* The Human Risk */}
+            <div className="mb-6">
+              <h5 className="font-bold text-white mb-2">The Human Risk</h5>
+              <ul className="space-y-3 text-sm text-white/80">
+                <li className="flex gap-2">
+                  <span className="mt-0.5 text-red-400">●</span>
+                  <span>
+                    <span className="font-semibold text-white">
+                      Catastrophic injury potential:
+                    </span>{" "}
+                    Falling through unprotected skylights causes severe employee
+                    injury or death.
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-0.5 text-red-400">●</span>
+                  <span>
+                    <span className="font-semibold text-white">
+                      Sun-damaged skylights
+                    </span>{" "}
+                    look solid but easily shatter under a worker&apos;s weight,
+                    turning a minor misstep into a catastrophic 40-foot drop
+                    onto concrete.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* The Financial Risk */}
+            <div className="mb-6">
+              <h5 className="font-bold text-white mb-2">The Financial Risk</h5>
+              <ul className="space-y-3 text-sm text-white/80">
+                <li className="flex gap-2">
+                  <span className="mt-0.5 text-orange-400">●</span>
+                  <span>
+                    <span className="font-semibold text-white">
+                      OSHA Fines Multiply Quickly:
+                    </span>{" "}
+                    OSHA issues fines per exposed worker, not per skylight. A
+                    $20,000 hazard easily becomes a $100,000 penalty for a
+                    five-person crew.
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-0.5 text-orange-400">●</span>
+                  <span>
+                    <span className="font-semibold text-white">
+                      The Burden of Proof:
+                    </span>{" "}
+                    Survive OSHA inspections by keeping strict logs for your
+                    skylight protection. Just installing protection isn&apos;t
+                    enough, you must prove that it is regularly inspected and
+                    maintained.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Criminal Liability */}
+            <div>
+              <h5 className="font-bold text-white mb-2">Criminal Liability</h5>
+              <p className="text-sm text-white/80 mb-3">
+                When a skylight fall results in a fatality or severe injury, the
+                consequences often escalate past OSHA citations.
               </p>
+              <ul className="space-y-3 text-sm text-white/80">
+                <li className="flex gap-2">
+                  <span className="mt-0.5 text-orange-400">●</span>
+                  <span>
+                    <span className="font-semibold text-white">
+                      Jail Time for Leadership:
+                    </span>{" "}
+                    Owners and site supervisors can be sentenced to prison for a
+                    willful failure to protect their workers.
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-0.5 text-orange-400">●</span>
+                  <span>
+                    <span className="font-semibold text-white">
+                      Severe Charges:
+                    </span>{" "}
+                    Repeatedly neglecting basic fall protection can lead to
+                    charges of criminal negligence or involuntary manslaughter.
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-0.5 text-orange-400">●</span>
+                  <span>
+                    <span className="font-semibold text-white">
+                      No Corporate Shield:
+                    </span>{" "}
+                    The &quot;corporate veil&quot; does not protect owners from
+                    personal liability when prosecutors prove basic,
+                    common-sense safety protocols were ignored.
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
