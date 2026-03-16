@@ -2,13 +2,24 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { FaHardHat, FaSolarPanel, FaWind, FaBuilding } from "react-icons/fa";
+import {
+  FaHardHat,
+  FaSolarPanel,
+  FaWind,
+  FaBuilding,
+  FaCheckCircle,
+} from "react-icons/fa";
 
 type Trade = {
   title: string;
   desc: string;
   icon: React.ReactNode;
   img: string;
+};
+
+type Application = {
+  title: string;
+  items: string[];
 };
 
 export function WhoItsFor() {
@@ -57,6 +68,36 @@ export function WhoItsFor() {
       img: "/Safety_s.webp",
     },
   ];
+  const applications: Application[] = [
+    {
+      title: "New Construction / Renovation",
+      items: [
+        "Protect rooftop skylight openings during construction",
+        "Maintain fall-through protection during multi-phase builds",
+      ],
+    },
+    {
+      title: "Reroof and Replacement",
+      items: [
+        "Secure skylights during tearoff and installation phases",
+        "Protect openings when replacing damaged or aged skylights",
+      ],
+    },
+    {
+      title: "Maintenance and Service",
+      items: [
+        "Deploy protection during rooftop equipment service calls",
+        "Secure skylights for inspection and repair work",
+      ],
+    },
+    {
+      title: "Multi-Trade Projects",
+      items: [
+        "Coordinate fall protection when multiple contractors are working on access roofs",
+        "Document which trade installed and removed protection",
+      ],
+    },
+  ];
 
   return (
     <section
@@ -79,7 +120,11 @@ export function WhoItsFor() {
         >
           Trusted by commercial roofing contractors, solar installation crews,
           HVAC technicians, general contractors, and safety companies across the
-          country. Our Over-Skylight Human Arrest (O.S.H.A.) Safety Net System
+          country. Our{" "}
+          <strong>
+            Over-Skylight Human Arrest (O.S.H.A.)
+            <span className="text-orange-200"> Skylight </span>Safety Net System
+          </strong>
           is a fall-through protection system engineered specifically for crews
           facing elevated fall-through work hazards every single day.
         </p>
@@ -115,6 +160,40 @@ export function WhoItsFor() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div
+          className={`mt-10 overflow-hidden rounded-2xl border border-orange-600/30 bg-[#3D2C28] shadow-sm animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
+        >
+          <div className="border-b border-orange-600/20 px-6 py-6 sm:px-8">
+            <p className="text-lg font-semibold tracking-wide text-orange-400">
+              Common Applications
+            </p>
+          </div>
+
+          <div className="grid gap-px bg-orange-600/20 md:grid-cols-2">
+            {applications.map((application) => (
+              <div
+                key={application.title}
+                className="bg-[#3D2C28] px-6 py-6 sm:px-8"
+              >
+                <h3 className="text-base font-bold text-white">
+                  {application.title}
+                </h3>
+                <ul className="mt-4 space-y-3 text-sm text-white/80">
+                  {application.items.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <FaCheckCircle
+                        className="mt-0.5 shrink-0 text-orange-400"
+                        size={14}
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

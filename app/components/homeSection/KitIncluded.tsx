@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { FaShieldAlt, FaCheckCircle } from "react-icons/fa";
-import Link from "next/link";
+import { FaShieldAlt } from "react-icons/fa";
 
 type KitImageKey = "net" | "strap" | "qr" | "bag";
 
@@ -75,17 +74,17 @@ export function KitIncluded({
           className={`tracking-tight animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
         >
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            4&apos; × 8&apos; Skylight Safety Net Kit
+            O.S.H.A. Safety Net System
           </h2>
           <p className="mt-1 text-lg font-semibold text-orange-500">
-            The Most Common Commercial Skylight Size
+            What&apos;s Included:
           </p>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           {/* LEFT: Copy + Hover List */}
           <div>
-            <div
+            {/* <div
               className={`animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
             >
               <p className="mt-4 text-sm leading-relaxed text-gray-200">
@@ -100,7 +99,7 @@ export function KitIncluded({
                 rooftop professionals who understand the specific needs of
                 rooftop work.
               </p>
-            </div>
+            </div> */}
 
             <div
               className={`animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
@@ -128,9 +127,9 @@ export function KitIncluded({
                     High-Visibility Safety Net
                   </p>
                   <p className="mt-1 text-sm text-gray-300">
-                    UV-stabilized orange mesh net sized precisely for 4&apos; ×
-                    8&apos; skylights. Contractors can see protected areas from
-                    across the roof.
+                    UV-stabilized orange mesh net sized precisely for 4&apos; x
+                    8&apos; skylights. Contractors, employees, and visitors can
+                    see protected areas from across the roof.
                   </p>
                 </button>
 
@@ -150,8 +149,8 @@ export function KitIncluded({
                   </p>
                   <p className="mt-1 text-sm text-gray-300">
                     Professional-grade stainless steel ratcheting strap system
-                    provides secure attachment to standard curb lips without
-                    tools or penetrations.
+                    provides secure attachment to standard skylight curbs
+                    without tools or penetration.
                   </p>
                 </button>
 
@@ -167,11 +166,12 @@ export function KitIncluded({
                   ].join(" ")}
                 >
                   <p className="text-sm font-bold text-white">
-                    Serialized QR Label
+                    Unique QR Code Label
                   </p>
                   <p className="mt-1 text-sm text-gray-300">
-                    Permanently attached to the net and storage bag. Scan to
-                    register, log inspections, and track location.
+                    Serialized QR code permanently attached to the net and
+                    storage bag enables instant registration, inspection, and
+                    location tracking.
                   </p>
                 </button>
 
@@ -190,7 +190,7 @@ export function KitIncluded({
                   <p className="mt-1 text-sm text-gray-300">
                     Durable carry bag keeps your kit organized and protected
                     between jobs. Easy transport from truck to roof, and
-                    protects the Safety Net from damage when not in use.
+                    protects the Safeety Net from damage when not in use.
                   </p>
                 </button>
               </div>
@@ -209,11 +209,36 @@ export function KitIncluded({
         <div
           className={`mt-10 mx-auto max-w-4xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
         >
-          <h3 className="text-center text-2xl font-extrabold text-white mb-6">
-            Key Specifications
-          </h3>
-          <div className="overflow-hidden rounded-lg border border-gray-700">
-            <div className="divide-y divide-gray-700">
+          <div className="relative overflow-hidden rounded-2xl border border-orange-600/30 bg-gradient-to-br from-[#3D2C28] via-[#251916] to-black shadow-[0_20px_70px_rgba(0,0,0,0.35)]">
+            <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-orange-500/15 blur-3xl" />
+            <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-400/60 to-transparent" />
+
+            <div className="relative border-b border-orange-600/20 px-6 py-6 sm:px-8">
+              <div className="inline-flex items-center rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-orange-300">
+                Technical Snapshot
+              </div>
+              <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
+                    Key Specifications
+                  </h3>
+                  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/70">
+                    Built for fast deployment, repeated use, and
+                    documentation-ready compliance on commercial rooftops.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-black/20 px-4 py-3">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-orange-300">
+                    Standard Fit
+                  </p>
+                  <p className="mt-1 text-lg font-extrabold text-white">
+                    4&apos; x 8&apos;
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden">
               {[
                 {
                   label: "Net Dimensions",
@@ -246,15 +271,24 @@ export function KitIncluded({
                   value:
                     "QR code for digital inspection logs / installation instructions — printed and video / tailgate safety talk materials — available in English and Spanish",
                 },
-              ].map((spec) => (
+              ].map((spec, index) => (
                 <div
                   key={spec.label}
-                  className="grid grid-cols-3 sm:grid-cols-4"
+                  className={[
+                    "grid gap-3 border-t border-white/10 px-4 py-4 sm:grid-cols-[180px_1fr] sm:px-6",
+                    index % 2 === 0 ? "bg-white/[0.045]" : "bg-black/20",
+                    index === 0 ? "border-t-0" : "",
+                  ].join(" ")}
                 >
-                  <div className="col-span-1 bg-black/40 px-4 py-3 text-sm font-semibold text-gray-200">
-                    {spec.label}
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs font-extrabold text-orange-300">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <div className="text-sm font-semibold text-white sm:pt-1">
+                      {spec.label}
+                    </div>
                   </div>
-                  <div className="col-span-2 sm:col-span-3 px-4 py-3 text-sm text-white/80">
+                  <div className="text-sm leading-relaxed text-white/75">
                     {spec.value}
                   </div>
                 </div>

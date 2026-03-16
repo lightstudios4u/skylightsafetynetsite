@@ -46,7 +46,7 @@ export function Hero() {
         {/* <div
           className={`mb-10 flex justify-center animate-fade-down ${isLoaded ? "visible" : ""}`}
         >
-          <img src="/logo.webp" alt="Logo" className="w-64 sm:w-80" />
+          <Image src="/logo.webp" alt="Logo" width={320} height={160} className="w-64 sm:w-80" />
         </div> */}
 
         {/* Dramatic animated heading */}

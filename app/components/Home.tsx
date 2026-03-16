@@ -14,6 +14,7 @@ import { Applications } from "./homeSection/Applications";
 import { BulkFleet } from "./homeSection/BulkFleet";
 import { FAQSection } from "./homeSection/FAQSection";
 import { RequestForm } from "./homeSection/RequestForm";
+import { Contact } from "./Contact";
 import { FAQ } from "./Shared";
 import {
   FaTools,
@@ -48,7 +49,7 @@ export function Home() {
       {
         num: "01",
         title: "Strap It On",
-        desc: 'Position the net over the skylight and secure using the included ratchet strap system. Requires minimum 1.5" metal skylight curb lip. No tools, no penetrations, no complex rigging.',
+        desc: "Position the net over the skylight and secure using the included ratchet strap system.  No tools, no penetrations, no complex rigging.",
         icon: <FaTools className="text-amber-400" size={28} />,
       },
       {
@@ -155,15 +156,16 @@ export function Home() {
       <WhoItsFor />
       <RiskFraming />
       <CoreBenefits />
-      <Comparison />
+      {/* <Comparison /> */}
       {/* <OrderOnline /> */}
       <KitIncluded kitActive={kitActive} setKitActive={setKitActive} />
       <DeploymentSteps steps={steps} />
       <QRProof qrWays={qrWays} />
       {/* <Applications applications={applications} />
       <BulkFleet /> */}
-      <FAQSection faqs={faqs} />
-      <RequestForm />
+      {/* <FAQSection faqs={faqs} /> */}
+      {/* <RequestForm /> */}
+      <Contact />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import { FaArrowRight, FaCheckCircle, FaPlay } from "react-icons/fa";
+import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
+import { Accordion, FAQ } from "../Shared";
 
 type Step = {
   num: string;
@@ -38,6 +39,20 @@ const stepColors = [
 export function DeploymentSteps({ steps }: { steps: Step[] }) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const commonInstallationQuestions: FAQ[] = [
+    {
+      q: "How long does installation take?",
+      a: "A two-person crew can install an O.S.H.A. Safety Net System in under 2 minutes. Removal is equally fast, making it practical for short-duration work or jobs where skylights need temporary protection during specific phases.",
+    },
+    {
+      q: "Do I need special tools?",
+      a: "No tools required. The heavy-duty ratchet strap included with the O.S.H.A. Safety Net System is operated by hand. If you can tighten a ratchet strap, you can install the Safety Net System.",
+    },
+    {
+      q: "Can I move it from job to job?",
+      a: "Absolutely. The O.S.H.A. Safety Net System is designed for repeated use across multiple sites. Simply scan to log removal at one location, transport it in the included storage bag, and scan again when you install it at the next job.",
+    },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -117,24 +132,28 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
         </div>
 
         <div
-          className={`mt-12 grid gap-6 lg:grid-cols-2 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
+          className={`mt-12 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
-          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div
+            id="faq"
+            className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
+          >
             <h3 className="text-lg font-extrabold text-white">
               What happens after you scan
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-white/80">
-              The QR code creates a digital record that follows the net through
-              its service life—timestamped, organized, and audit-ready.
+              The QR code system creates a digital record that follows your net
+              through its entire service life. Each scan captures critical
+              information that safety managers and project owners need:
             </p>
 
             <ul className="mt-5 space-y-3 text-sm text-white/80">
               {[
-                "Installation documentation: who installed it, where, and when",
-                "Inspection logs: pre-use checks and periodic condition assessments",
-                "Location tracking: which job site or crew currently has the net",
-                "Audit trail: complete history exportable for compliance reviews",
-                "Desktop access: owners and managers can log in to review inventory location, inspection logs, and history",
+                "Installation documentation: Who installed it, where, and when",
+                "Inspection logs: Confirms visual inspection at deployment, weekly while working on the job, and removal at job completion",
+                "Location tracking: Confirms job name, job address, number of nets deployed, weekly inspection compliance by crew",
+                "Audit trail: Complete history of deployment and inspections exportable for compliance reviews",
+                "Desktop access: Provides owners and managers with desktop login to review inventory location, inspection logs, compliance.",
               ].map((x) => (
                 <li key={x} className="flex gap-2">
                   <FaCheckCircle className="mt-0.5 text-orange-400" size={14} />
@@ -148,33 +167,15 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
               protection was in place. The documentation exists in the cloud and
               travels with the net.
             </p>
-          </div>
 
-          <div
-            id="video"
-            className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
-          >
-            <h3 className="text-lg font-extrabold text-white">
-              See it in action
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/80">
-              Watch our complete installation demonstration video to see exactly
-              how the O.S.H.A. Safety Net System works in real-world conditions.
-            </p>
-
-            <a
-              href=""
-              className="mt-6 inline-flex items-center justify-center rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
-            >
-              <FaPlay className="mr-2" size={16} />
-              Watch Installation Video
-            </a>
-
-            {/* <p className="mt-3 text-xs text-white/60">
-              Replace the{" "}
-              <code className="rounded bg-black/40 px-1 py-0.5">href</code> with
-              your video URL.
-            </p> */}
+            <div className="mt-8 border-t border-orange-600/20 pt-8">
+              <h3 className="text-lg font-extrabold text-white">
+                Common installation questions
+              </h3>
+              <div className="mt-4">
+                <Accordion items={commonInstallationQuestions} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { FaPhone } from "react-icons/fa";
 import { useState } from "react";
 import { useRecaptcha } from "../helpers/useRecaptcha";
@@ -62,7 +61,7 @@ export function Contact() {
           typeof parsed.error === "string"
             ? parsed.error
             : text || "Failed to submit";
-        
+
         setStatus({
           type: "error",
           message: errorMessage,
@@ -85,7 +84,8 @@ export function Contact() {
       console.error("Contact form error:", error);
       setStatus({
         type: "error",
-        message: "There was an error submitting the form. Please try again later.",
+        message:
+          "There was an error submitting the form. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
@@ -93,47 +93,52 @@ export function Contact() {
   };
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-black">
-        <div className="absolute inset-0 opacity-40 [background:radial-gradient(80rem_40rem_at_70%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
-        <div className="absolute inset-0 opacity-30 [background:radial-gradient(50rem_30rem_at_20%_10%,rgba(249,115,22,0.30),transparent_60%)]" />
-        <div className="relative mx-auto max-w-6xl px-6 py-16">
-          <p className="text-sm font-semibold tracking-wide text-orange-500">
-            Get in Touch
-          </p>
-          <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-            Contact Us
-          </h1>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-200">
-            Have questions about our products or services? We&apos;d love to
-            hear from you. Reach out to our team and we&apos;ll get back to you
-            as soon as possible.
-          </p>
+    <section id="contact" style={{ backgroundColor: "#000000" }}>
+      <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] shadow-sm overflow-hidden">
+          <div className="grid lg:grid-cols-2">
+            {/* Left: info */}
+            <div className="flex flex-col justify-between p-8 lg:border-r border-orange-600/30">
+              <div>
+                <p className="text-sm font-semibold tracking-wide text-orange-400">
+                  Get in Touch
+                </p>
+                <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                  Contact Us
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-white/80">
+                  Have questions about our products or services? We&apos;d love
+                  to hear from you. Reach out to our team and we&apos;ll get
+                  back to you as soon as possible.
+                </p>
+              </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/"
-              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
-            >
-              Back to Home <span className="ml-2">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+              <div className="mt-10 flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-orange-500/20">
+                  <FaPhone className="text-orange-500" size={20} />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">Phone</p>
+                  <p className="mt-1 text-sm text-white/70">
+                    Call us directly for immediate assistance.
+                  </p>
+                  <a
+                    href="tel:888-299-3330"
+                    className="mt-2 inline-block text-orange-400 font-semibold hover:text-orange-300 transition"
+                  >
+                    888.299.3330
+                  </a>
+                </div>
+              </div>
+            </div>
 
-      {/* Contact Content */}
-      <section style={{ backgroundColor: "#c0652c" }}>
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-12 lg:grid-cols-2">
-            {/* Contact Form */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-white">
-                Send us a Message
-              </h2>
-              <p className="mt-2 text-white/80">
-                Fill out the form below and we&apos;ll get back to you within 24
-                hours.
+            {/* Right: form */}
+            <div className="p-8">
+              <h3 className="text-xl font-bold text-white">
+                Send Us a Message
+              </h3>
+              <p className="mt-1 text-sm text-white/70">
+                We&apos;ll get back to you within 24 hours.
               </p>
               <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                 <div>
@@ -181,7 +186,7 @@ export function Contact() {
                   <textarea
                     name="message"
                     required
-                    rows={5}
+                    rows={4}
                     className="mt-2 w-full rounded-lg border border-orange-600/30 bg-black/30 px-4 py-2 text-white placeholder-white/50 transition focus:border-orange-500 focus:outline-none"
                     placeholder="Tell us how we can help..."
                   />
@@ -195,7 +200,6 @@ export function Contact() {
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
 
-                {/* Status Message */}
                 {status.type !== "idle" && (
                   <div
                     className={`rounded-lg border p-4 text-sm font-medium transition-all duration-300 ${
@@ -209,61 +213,9 @@ export function Contact() {
                 )}
               </form>
             </div>
-
-            {/* Contact Details */}
-            <div className="space-y-6">
-              {/* Phone */}
-              <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-500/20">
-                    <FaPhone className="text-orange-500" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white">Phone</h3>
-                    <p className="mt-2 text-white/80">
-                      Call us directly for immediate assistance.
-                    </p>
-                    <a href="tel:888-299-3330"
-                      className="mt-3 inline-block text-orange-400 hover:text-orange-300 transition">
-                      888.299.3330
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-black">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="rounded-xl border border-white/10 bg-white/5 p-8">
-            <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
-              Still have questions?
-            </h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-gray-200">
-              Check out our FAQs or reach out to our team directly. We&apos;re
-              here to help!
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/#faq"
-                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
-              >
-                View FAQs <span className="ml-2">→</span>
-              </Link>
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                Back to Home
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
