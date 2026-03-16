@@ -140,13 +140,13 @@ export function CoreBenefits() {
               </div>
 
               <div className="px-6 pb-6">
-                <div className="overflow-hidden rounded-lg bg-black">
+                <div className="relative h-52 w-full overflow-hidden rounded-lg bg-black">
                   <Image
                     src={f.img}
                     alt={f.title}
-                    width={400}
-                    height={208}
-                    className="h-52 w-full object-cover"
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                    className="object-cover"
                   />
                 </div>
               </div>
