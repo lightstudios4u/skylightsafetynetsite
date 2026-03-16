@@ -48,18 +48,18 @@ export function CoreBenefits() {
         "Installs above the roof on skylight curb",
         "UV-stabilized for extended outdoor use",
       ],
-      img: "/net.webp",
+      img: "/product/net.webp",
       icon: <FaRulerCombined size={18} className="text-orange-500" />,
     },
     {
       title: "Fast Install",
       desc: "Secure the O.S.H.A. Safety Net in minutes using heavy-duty ratchet straps. No tools, no penetrations, no complicated assembly required.",
       bullets: [
-        "Two man crew installation in under 2 minutes",
+        "Two person crew installation in under 2 minutes",
         "Works with standard skylight counterflashing on curb mounted or self-flashing skylight units",
         "Moves from site to site quickly",
       ],
-      img: "/maninstall.webp",
+      img: "/product/install.webp",
       icon: <FaBolt size={18} className="text-orange-500" />,
     },
     {
@@ -71,7 +71,7 @@ export function CoreBenefits() {
         "Exportable inspection history",
         "Track inventory in real time",
       ],
-      img: "/qr.webp",
+      img: "/product/qr.webp",
       icon: <FaQrcode size={18} className="text-orange-500" />,
     },
   ];

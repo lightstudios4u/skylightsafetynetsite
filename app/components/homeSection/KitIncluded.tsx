@@ -5,23 +5,25 @@ import { FaShieldAlt } from "react-icons/fa";
 type KitImageKey = "net" | "strap" | "qr" | "bag";
 
 const kitImages = {
-  net: "/net.webp",
-  strap: "/maninstall.webp",
-  qr: "/qr.webp",
-  bag: "/package.webp",
+  net: "/product/net.webp",
+  strap: "/product/ratchet.webp",
+  qr: "/product/qr.webp",
+  bag: "/product/bag.webp",
 } as const;
 
 function KitHoverGallery({ kitActive }: { kitActive: KitImageKey }) {
   return (
     <div className="relative overflow-hidden rounded-xl border border-slate-100/10 bg-slate-50 shadow-sm">
-      <Image
-        key={kitActive}
-        src={kitImages[kitActive]}
-        alt="Kit detail"
-        width={800}
-        height={420}
-        className="h-[420px] w-full object-cover"
-      />
+      <div className="relative h-[420px] w-full">
+        <Image
+          key={kitActive}
+          src={kitImages[kitActive]}
+          alt="Kit detail"
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </div>
 
       <div className="bg-black p-4">
         <p className="text-xs font-semibold text-white">
