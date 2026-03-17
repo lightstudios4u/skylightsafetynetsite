@@ -123,6 +123,23 @@ img {
   transform: translate3d(0, -2px, 0) scale(1.02);
 }
 
+/* Subtle visual lift for card titles */
+.card-title-pop {
+  letter-spacing: 0.01em;
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.4),
+    0 0 14px rgba(253, 81, 1, 0.18);
+}
+
+/* Slightly stronger accent specifically for hero overlay headline */
+.hero-title-pop {
+  letter-spacing: 0.012em;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(253, 81, 1, 0.35),
+    0 0 36px rgba(253, 81, 1, 0.18);
+}
+
 /* Subtle icon entrance animation */
 @keyframes icon-pop {
   0% {

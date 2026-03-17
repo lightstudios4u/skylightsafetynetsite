@@ -70,7 +70,9 @@ export function Comparison() {
               ].join(" ")}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <h3 className="text-lg font-extrabold text-white">{col.title}</h3>
+              <h3 className="card-title-pop text-lg font-extrabold text-white">
+                {col.title}
+              </h3>
               <ul className="mt-4 space-y-3 text-sm text-gray-200">
                 {col.items.map((item) => (
                   <li key={item} className="flex items-end gap-2">

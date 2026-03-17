@@ -38,10 +38,10 @@ export function Hero() {
       <div className="absolute inset-0 pointer-events-none">
         <div className="h-full w-full bg-black pointer-events-none" />
         <div className="absolute inset-0 opacity-40 pointer-events-none [background:radial-gradient(80rem_40rem_at_70%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
-        <div className="absolute inset-0 opacity-30 pointer-events-none [background:radial-gradient(50rem_30rem_at_20%_10%,rgba(249,115,22,0.30),transparent_60%)]" />
+        <div className="absolute inset-0 opacity-30 pointer-events-none [background:radial-gradient(50rem_30rem_at_20%_10%,rgba(253,81,1,0.30),transparent_60%)]" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6 py-12 lg:py-16">
+      <div className="relative mx-auto max-w-6xl px-6 py-6 lg:py-10">
         {/* Row 1: Logo centered on its own */}
         {/* <div
           className={`mb-10 flex justify-center animate-fade-down ${isLoaded ? "visible" : ""}`}
@@ -51,20 +51,8 @@ export function Hero() {
 
         {/* Dramatic animated heading */}
         <div className="mb-8 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-orange-500 leading-tight">
-            <span className="block">
-              {line1
-                ? line1.split(" ").map((word, i) => (
-                    <span key={i}>
-                      {i > 0 && " "}
-                      <span className="underline decoration-2 underline-offset-4">
-                        {word[0]}
-                      </span>
-                      {word.slice(1)}
-                    </span>
-                  ))
-                : "\u00A0"}
-            </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
+            <span className="block">{line1 || "\u00A0"}</span>
             <span className="block">{line2 || "\u00A0"}</span>
           </h2>
         </div>
@@ -72,58 +60,35 @@ export function Hero() {
         {/* Hero image with overlaid text */}
         <div className="w-full flex justify-center">
           <div
-            className={`relative overflow-hidden border border-white/10 shadow-2xl h-[250px] sm:h-[300px] lg:h-[320px] w-full max-w-[900px] animate-fade-up delay-200 ${isLoaded ? "visible" : ""}`}
+            className={`animate-fade-up delay-200 ${isLoaded ? "visible" : ""}`}
           >
             {/* Large product image */}
             <Image
               src="/product/net.webp"
               alt="O.S.H.A. Safety Net installed on commercial skylight"
-              fill
-              className="object-cover object-center scale-110 translate-x-4 -translate-y-3"
+              width={820}
+              height={280}
+              className="rounded-md shadow-2xl w-[32vw] max-w-[656px] h-auto"
               priority
             />
+          </div>
+        </div>
 
-            {/* Gradient overlay — narrow left strip only */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 via-30% to-transparent to-50%" />
+        <div
+          className={`mt-6 animate-fade-in delay-300 ${isLoaded ? "visible" : ""}`}
+          style={{ opacity: isLoaded ? 1 : 0 }}
+        >
+          <div className="flex w-full flex-col items-center gap-4 text-center">
+            <h1 className="hero-title-pop text-xl w-full sm:text-4xl lg:text-[2.0rem] lg:whitespace-nowrap font-extrabold text-white leading-[1.15] drop-shadow-lg">
+              Skylight Safety Fall-Through Protection
+            </h1>
 
-            {/* Text content overlaid on left edge */}
-            <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-10 lg:px-12 max-w-md lg:max-w-lg">
-              <div
-                className={`animate-fade-in delay-300 ${isLoaded ? "visible" : ""}`}
-                style={{ opacity: isLoaded ? 1 : 0 }}
-              >
-                <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-white leading-[1.15] drop-shadow-lg">
-                  Skylight Safety Fall-Through Protection
-                  {/* <br />
-                  <span className="text-orange-400">Made Simple</span> */}
-                </h1>
-              </div>
-
-              <div
-                className={`mt-5 flex flex-wrap gap-2 animate-fade-up delay-400 ${isLoaded ? "visible" : ""}`}
-              >
-                <Link
-                  href="/products-and-services"
-                  className="inline-flex items-center justify-center rounded-md bg-orange-500 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-orange-500/30 transition-colors duration-200 hover:bg-orange-600"
-                >
-                  Get a Quote
-                </Link>
-
-                {/* <a
-                  href="#video"
-                  className="inline-flex items-center justify-center rounded-md border-2 border-white/40 bg-white/10 backdrop-blur-sm px-4 py-2 text-xs font-bold text-white transition-colors duration-200 hover:bg-white/20 hover:border-white/60"
-                >
-                  Installation Video
-                </a>
-
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center rounded-md border-2 border-white/40 bg-white/10 backdrop-blur-sm px-4 py-2 text-xs font-bold text-white transition-colors duration-200 hover:bg-white/20 hover:border-white/60"
-                >
-                  Customer Login
-                </a> */}
-              </div>
-            </div>
+            <Link
+              href="#contact"
+              className="inline-flex w-fit items-center justify-center rounded-md bg-[#fd5101] px-4 py-2 text-lg font-bold text-white shadow-2xl shadow-[#fd5101]/30 transition-colors duration-200 hover:bg-[#e44901]"
+            >
+              Get a Quote
+            </Link>
           </div>
         </div>
 

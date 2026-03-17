@@ -1,6 +1,15 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { FaShieldAlt } from "react-icons/fa";
+import {
+  FaBolt,
+  FaBriefcase,
+  FaEye,
+  FaExclamationTriangle,
+  FaLink,
+  FaQrcode,
+  FaRulerCombined,
+  FaShieldAlt,
+} from "react-icons/fa";
 
 type KitImageKey = "net" | "strap" | "qr" | "bag";
 
@@ -70,7 +79,7 @@ export function KitIncluded({
     return () => observer.disconnect();
   }, [isVisible]);
   return (
-    <section ref={sectionRef} className="bg-black">
+    <section id="whats-included" ref={sectionRef} className="bg-black">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div
           className={`tracking-tight animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
@@ -216,9 +225,9 @@ export function KitIncluded({
             <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-400/60 to-transparent" />
 
             <div className="relative border-b border-orange-600/20 px-6 py-6 sm:px-8">
-              <div className="inline-flex items-center rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-orange-300">
+              {/* <div className="inline-flex items-center rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-orange-300">
                 Technical Snapshot
-              </div>
+              </div> */}
               <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
@@ -246,32 +255,39 @@ export function KitIncluded({
                   label: "Net Dimensions",
                   value:
                     "Fits standard 4' × 8' commercial skylights — curb mounted or self-flashing",
+                  icon: <FaRulerCombined size={14} />,
                 },
                 {
                   label: "Visibility Color",
                   value: "High-visibility safety orange",
+                  icon: <FaEye size={14} />,
                 },
                 {
                   label: "Material",
                   value: "UV-stabilized synthetic polyester strapping",
+                  icon: <FaShieldAlt size={14} />,
                 },
                 {
                   label: "Installation Time",
                   value: "Under 2 minutes by a crew of two",
+                  icon: <FaBolt size={14} />,
                 },
                 {
                   label: "Portability",
                   value: "Lightweight and reusable across multiple job sites",
+                  icon: <FaBriefcase size={14} />,
                 },
                 {
                   label: "Curb Requirement",
                   value:
                     'Minimum 1.5" metal skylight counter flashing lip for strap attachment',
+                  icon: <FaLink size={14} />,
                 },
                 {
                   label: "Documentation",
                   value:
                     "QR code for digital inspection logs / installation instructions — printed and video / tailgate safety talk materials — available in English and Spanish",
+                  icon: <FaQrcode size={14} />,
                 },
               ].map((spec, index) => (
                 <div
@@ -282,11 +298,11 @@ export function KitIncluded({
                     index === 0 ? "border-t-0" : "",
                   ].join(" ")}
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs font-extrabold text-orange-300">
-                      {String(index + 1).padStart(2, "0")}
+                  <div className="flex items-center gap-3">
+                    <div className="flex shrink-0 items-center justify-center text-orange-300">
+                      {spec.icon}
                     </div>
-                    <div className="text-sm font-semibold text-white sm:pt-1">
+                    <div className="text-sm font-semibold text-white">
                       {spec.label}
                     </div>
                   </div>
@@ -300,9 +316,11 @@ export function KitIncluded({
         </div>
 
         {/* Centered Safety Notice - Outside the grid */}
-        <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-yellow-600/40 bg-yellow-900/20 p-6 shadow-lg">
+        <div
+          className={`mx-auto mt-10 max-w-2xl rounded-lg border border-yellow-600/40 bg-yellow-900/20 p-6 shadow-lg animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
+        >
           <div className="flex items-start gap-3">
-            <FaShieldAlt
+            <FaExclamationTriangle
               className="mt-0.5 flex-shrink-0 text-yellow-400"
               size={20}
             />

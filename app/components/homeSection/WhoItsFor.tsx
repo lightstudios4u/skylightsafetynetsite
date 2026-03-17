@@ -152,7 +152,9 @@ export function WhoItsFor() {
                   >
                     {t.icon}
                   </div>
-                  <h3 className="text-base font-bold text-white">{t.title}</h3>
+                  <h3 className="card-title-pop text-base font-bold text-white">
+                    {t.title}
+                  </h3>
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-white/80">
                   {t.desc}
@@ -177,7 +179,7 @@ export function WhoItsFor() {
                 key={application.title}
                 className="bg-[#3D2C28] px-6 py-6 sm:px-8"
               >
-                <h3 className="text-base font-bold text-white">
+                <h3 className="card-title-pop text-base font-bold text-white">
                   {application.title}
                 </h3>
                 <ul className="mt-4 space-y-3 text-sm text-white/80">

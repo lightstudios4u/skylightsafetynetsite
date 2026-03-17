@@ -41,15 +41,16 @@ export function RiskFraming() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6 py-16">
+        <h3
+          className={`mb-4 text-3xl font-black tracking-tight text-black sm:text-4xl lg:whitespace-nowrap lg:text-[2.2rem] animate-fade-in ${isVisible ? "visible" : ""}`}
+        >
+          Skylights Are &apos;Open Hole&apos; Fall-Through Hazards
+        </h3>
+
         {/* Section intro */}
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left content */}
           <div>
-            <h3
-              className={`text-3xl font-black tracking-tight text-black sm:text-4xl animate-fade-in ${isVisible ? "visible" : ""}`}
-            >
-              Skylights Are &apos;Open Hole&apos; Fall-Through Hazards
-            </h3>
             <div
               className={`mt-4 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
             >
@@ -57,9 +58,9 @@ export function RiskFraming() {
                 <div className="flex items-start gap-3">
                   <FaExclamationTriangle className="h-5 w-5 shrink-0 text-orange-400 mt-0.5" />
                   <p className="text-sm font-semibold text-white">
-                    Saving a few minutes or a few dollars on skylight protection has
-                    cost contractors their businesses, their livelihoods, and in
-                    some cases, their freedom.
+                    Saving a few minutes or a few dollars on skylight protection
+                    has cost contractors their businesses, their livelihoods,
+                    and in some cases, their freedom.
                   </p>
                 </div>
               </div>
@@ -126,14 +127,16 @@ export function RiskFraming() {
               >
                 <FaExclamationTriangle className="text-red-400" size={20} />
               </div>
-              <h4 className="text-xl font-extrabold text-white">
+              <h4 className="card-title-pop text-xl font-extrabold text-white">
                 The Real Risks
               </h4>
             </div>
 
             {/* The Human Risk */}
             <div className="mb-6">
-              <h5 className="font-bold text-white mb-2">The Human Risk</h5>
+              <h5 className="card-title-pop font-bold text-white mb-2">
+                The Human Risk
+              </h5>
               <ul className="space-y-3 text-sm text-white/80">
                 <li className="flex gap-2">
                   <span className="mt-0.5 text-red-400">●</span>
@@ -161,7 +164,9 @@ export function RiskFraming() {
 
             {/* The Financial Risk */}
             <div className="mb-6">
-              <h5 className="font-bold text-white mb-2">The Financial Risk</h5>
+              <h5 className="card-title-pop font-bold text-white mb-2">
+                The Financial Risk
+              </h5>
               <ul className="space-y-3 text-sm text-white/80">
                 <li className="flex gap-2">
                   <span className="mt-0.5 text-orange-400">●</span>
@@ -191,7 +196,9 @@ export function RiskFraming() {
 
             {/* Criminal Liability */}
             <div>
-              <h5 className="font-bold text-white mb-2">Criminal Liability</h5>
+              <h5 className="card-title-pop font-bold text-white mb-2">
+                Criminal Liability
+              </h5>
               <p className="text-sm text-white/80 mb-3">
                 When a skylight fall results in a fatality or severe injury, the
                 consequences often escalate past OSHA citations.
@@ -232,7 +239,6 @@ export function RiskFraming() {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
