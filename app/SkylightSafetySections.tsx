@@ -217,7 +217,7 @@ export default function SkylightSafetySections() {
             </div>
 
             <a
-              href="#request"
+              href="#contact"
               className="inline-flex w-fit items-center justify-center rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
             >
               Get a Quote <span className="ml-2">→</span>

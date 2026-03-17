@@ -54,7 +54,9 @@ export function Applications({
               className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${300 + index * 75}ms` }}
             >
-              <h3 className="text-base font-bold text-white">{a.title}</h3>
+              <h3 className="card-title-pop text-base font-bold text-white">
+                {a.title}
+              </h3>
               <ul className="mt-3 space-y-2 text-sm text-white/80">
                 {a.items.map((i) => (
                   <li key={i} className="flex gap-2">
@@ -107,7 +109,9 @@ export function Applications({
                   >
                     {x.n}
                   </div>
-                  <p className="text-base font-bold text-white">{x.t}</p>
+                  <p className="card-title-pop text-base font-bold text-white">
+                    {x.t}
+                  </p>
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-white/80">
                   {x.d}

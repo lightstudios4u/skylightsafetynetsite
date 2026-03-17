@@ -36,6 +36,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </a>
             <a
               className="text-gray-300 hover:text-white transition-colors"
+              href="#whats-included"
+            >
+              What&apos;s Included
+            </a>
+            <a
+              className="text-gray-300 hover:text-white transition-colors"
               href="#faq"
             >
               FAQ

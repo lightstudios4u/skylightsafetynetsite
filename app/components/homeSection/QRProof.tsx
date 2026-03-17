@@ -87,12 +87,15 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
           {qrWays.map((x, index) => (
             <div
               key={x.title}
-              className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
+              className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              style={{ transitionDelay: `${450 + index * 80}ms` }}
             >
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/20">
                 {x.icon}
               </div>
-              <h3 className="mt-4 text-base font-bold text-white">{x.title}</h3>
+              <h3 className="card-title-pop mt-4 text-base font-bold text-white">
+                {x.title}
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-white/80">
                 {x.desc}
               </p>
@@ -104,7 +107,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
           className={`mt-10 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
           <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
-            <h3 className="text-lg font-extrabold text-white">
+            <h3 className="card-title-pop text-lg font-extrabold text-white">
               Sample inspection log
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-white/80">

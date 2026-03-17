@@ -48,7 +48,7 @@ export function CoreBenefits() {
         "Installs above the roof on skylight curb",
         "UV-stabilized for extended outdoor use",
       ],
-      img: "/product/net.webp",
+      img: "/product/lightweight.webp",
       icon: <FaRulerCombined size={18} className="text-orange-500" />,
     },
     {
@@ -71,7 +71,7 @@ export function CoreBenefits() {
         "Exportable inspection history",
         "Track inventory in real time",
       ],
-      img: "/product/qr.webp",
+      img: "/product/qrscan.webp",
       icon: <FaQrcode size={18} className="text-orange-500" />,
     },
   ];
@@ -117,7 +117,9 @@ export function CoreBenefits() {
                   >
                     {f.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-white">{f.title}</h3>
+                  <h3 className="card-title-pop text-lg font-bold text-white">
+                    {f.title}
+                  </h3>
                 </div>
 
                 <p className="mt-3 text-sm leading-relaxed text-white/80">

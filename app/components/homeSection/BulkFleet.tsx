@@ -62,7 +62,7 @@ export function BulkFleet() {
           <div
             className={`rounded-xl border border-gray-700 bg-black/40 p-6 shadow-xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
           >
-            <h3 className="text-lg font-extrabold text-white">
+            <h3 className="card-title-pop text-lg font-extrabold text-white">
               Talk to us about fleet rollouts
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-gray-200">

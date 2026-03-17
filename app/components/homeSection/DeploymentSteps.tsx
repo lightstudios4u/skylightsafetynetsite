@@ -111,7 +111,9 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
                     >
                       {s.num}
                     </p>
-                    <h3 className="text-lg font-bold text-white">{s.title}</h3>
+                    <h3 className="card-title-pop text-lg font-bold text-white">
+                      {s.title}
+                    </h3>
                     <p className="mt-2 text-sm leading-relaxed text-white/80">
                       {s.desc}
                     </p>
@@ -138,7 +140,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
             id="faq"
             className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
           >
-            <h3 className="text-lg font-extrabold text-white">
+            <h3 className="card-title-pop text-lg font-extrabold text-white">
               What happens after you scan
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-white/80">
@@ -169,7 +171,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
             </p>
 
             <div className="mt-8 border-t border-orange-600/20 pt-8">
-              <h3 className="text-lg font-extrabold text-white">
+              <h3 className="card-title-pop text-lg font-extrabold text-white">
                 Common installation questions
               </h3>
               <div className="mt-4">
