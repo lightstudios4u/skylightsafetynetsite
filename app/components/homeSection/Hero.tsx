@@ -51,9 +51,15 @@ export function Hero() {
 
         {/* Dramatic animated heading */}
         <div className="mb-8 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
-            <span className="block">{line1 || "\u00A0"}</span>
-            <span className="block">{line2 || "\u00A0"}</span>
+          <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
+            {/* Invisible full text to reserve space and prevent layout shift */}
+            <span className="block invisible" aria-hidden="true">Over Skylight Human Arrest</span>
+            <span className="block invisible" aria-hidden="true">Skylight Safety Net System</span>
+            {/* Visible typewriter text overlaid */}
+            <span className="absolute inset-0 flex flex-col">
+              <span className="block">{line1 || "\u00A0"}</span>
+              <span className="block">{line2 || "\u00A0"}</span>
+            </span>
           </h2>
         </div>
 
@@ -79,8 +85,8 @@ export function Hero() {
           style={{ opacity: isLoaded ? 1 : 0 }}
         >
           <div className="flex w-full flex-col items-center gap-4 text-center">
-            <h1 className="hero-title-pop text-xl w-full sm:text-4xl lg:text-[2.0rem] lg:whitespace-nowrap font-extrabold text-white leading-[1.15] drop-shadow-lg">
-              Skylight Safety Fall-Through Protection
+            <h1 className="hero-title-pop text-2xl w-full sm:text-4xl lg:text-[2.0rem] lg:whitespace-nowrap font-extrabold text-white leading-[1.15] drop-shadow-lg">
+              Skylight Safety<br className="sm:hidden" /> Fall-Through Protection
             </h1>
 
             <Link
