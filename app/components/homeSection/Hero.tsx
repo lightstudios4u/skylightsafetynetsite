@@ -68,7 +68,7 @@ export function Hero() {
               alt="O.S.H.A. Safety Net installed on commercial skylight"
               width={820}
               height={280}
-              className="rounded-md shadow-2xl w-[32vw] max-w-[656px] h-auto"
+              className="rounded-md shadow-2xl w-[85vw] sm:w-[60vw] lg:w-[32vw] max-w-[656px] h-auto"
               priority
             />
           </div>
