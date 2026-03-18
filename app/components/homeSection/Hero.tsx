@@ -51,7 +51,7 @@ export function Hero() {
 
         {/* Dramatic animated heading */}
         <div className="mb-8 text-center">
-          <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
+          <h2 className="relative text-[1.55rem] sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
             {/* Invisible full text to reserve space and prevent layout shift */}
             <span className="block invisible" aria-hidden="true">
               Over Skylight Human Arrest
