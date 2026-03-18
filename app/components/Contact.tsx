@@ -100,7 +100,7 @@ export function Contact() {
             {/* Left: info */}
             <div className="flex flex-col justify-between p-8 lg:border-r border-orange-600/30">
               <div>
-                <p className="text-sm font-semibold tracking-wide text-orange-400">
+                <p className="text-base font-semibold tracking-wide text-orange-400">
                   Get in Touch
                 </p>
                 <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
@@ -118,8 +118,8 @@ export function Contact() {
                   <FaPhone className="text-orange-500" size={20} />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">Phone</p>
-                  <p className="mt-1 text-sm text-white/70">
+                  <p className="text-base font-semibold text-white">Phone</p>
+                  <p className="mt-1 text-base text-white/70">
                     Call us directly for immediate assistance.
                   </p>
                   <a
@@ -137,12 +137,12 @@ export function Contact() {
               <h3 className="text-xl font-bold text-white">
                 Send Us a Message
               </h3>
-              <p className="mt-1 text-sm text-white/70">
+              <p className="mt-1 text-base text-white/70">
                 We&apos;ll get back to you within 24 hours.
               </p>
               <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                 <div>
-                  <label className="block text-sm font-semibold text-white">
+                  <label className="block text-base font-semibold text-white">
                     Name
                   </label>
                   <input
@@ -155,7 +155,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-white">
+                  <label className="block text-base font-semibold text-white">
                     Email
                   </label>
                   <input
@@ -168,7 +168,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-white">
+                  <label className="block text-base font-semibold text-white">
                     Phone (Optional)
                   </label>
                   <input
@@ -180,7 +180,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-white">
+                  <label className="block text-base font-semibold text-white">
                     Message
                   </label>
                   <textarea
@@ -202,7 +202,7 @@ export function Contact() {
 
                 {status.type !== "idle" && (
                   <div
-                    className={`rounded-lg border p-4 text-sm font-medium transition-all duration-300 ${
+                    className={`rounded-lg border p-4 text-base font-medium transition-all duration-300 ${
                       status.type === "success"
                         ? "bg-green-500/10 text-green-400 border-green-500/20"
                         : "bg-red-500/10 text-red-400 border-red-500/20"

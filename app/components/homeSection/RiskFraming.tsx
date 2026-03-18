@@ -57,7 +57,7 @@ export function RiskFraming() {
               <div className="rounded-lg bg-[#3D2C28] p-6 shadow-lg">
                 <div className="flex items-start gap-3">
                   <FaExclamationTriangle className="h-5 w-5 shrink-0 text-orange-400 mt-0.5" />
-                  <p className="text-sm font-semibold text-white">
+                  <p className="text-base font-semibold text-white">
                     Saving a few minutes or a few dollars on skylight protection
                     has cost contractors their businesses, their livelihoods,
                     and in some cases, their freedom.
@@ -68,7 +68,7 @@ export function RiskFraming() {
             <div
               className={`animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
             >
-              <p className="mt-4 text-sm leading-relaxed text-black/80 sm:text-base">
+              <p className="mt-4 text-base leading-relaxed text-black/80 sm:text-base">
                 Under OSHA regulations, a skylight is defined as a{" "}
                 <span className="font-semibold text-black">
                   hole in a walking-working surface
@@ -77,7 +77,7 @@ export function RiskFraming() {
                 and disabling injuries on commercial roofs.
               </p>
 
-              <p className="mt-3 text-sm leading-relaxed text-black/80 sm:text-base">
+              <p className="mt-3 text-base leading-relaxed text-black/80 sm:text-base">
                 Federal injury data shows that{" "}
                 <span className="font-semibold text-black">
                   25% of all falls through surfaces are caused by skylights
@@ -107,7 +107,7 @@ export function RiskFraming() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
               {/* Danger badge on image */}
-              <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-red-600/90 px-4 py-2 text-sm font-bold text-white backdrop-blur-sm shadow-lg">
+              <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-red-600/90 px-4 py-2 text-base font-bold text-white backdrop-blur-sm shadow-lg">
                 <FaExclamationTriangle className="h-4 w-4" />
                 Unprotected hazard
               </div>
@@ -137,7 +137,7 @@ export function RiskFraming() {
               <h5 className="card-title-pop font-bold text-white mb-2">
                 The Human Risk
               </h5>
-              <ul className="space-y-3 text-sm text-white/80">
+              <ul className="space-y-3 text-base text-white/80">
                 <li className="flex gap-2">
                   <span className="mt-0.5 text-red-400">●</span>
                   <span>
@@ -167,7 +167,7 @@ export function RiskFraming() {
               <h5 className="card-title-pop font-bold text-white mb-2">
                 The Financial Risk
               </h5>
-              <ul className="space-y-3 text-sm text-white/80">
+              <ul className="space-y-3 text-base text-white/80">
                 <li className="flex gap-2">
                   <span className="mt-0.5 text-orange-400">●</span>
                   <span>
@@ -199,11 +199,11 @@ export function RiskFraming() {
               <h5 className="card-title-pop font-bold text-white mb-2">
                 Criminal Liability
               </h5>
-              <p className="text-sm text-white/80 mb-3">
+              <p className="text-base text-white/80 mb-3">
                 When a skylight fall results in a fatality or severe injury, the
                 consequences often escalate past OSHA citations.
               </p>
-              <ul className="space-y-3 text-sm text-white/80">
+              <ul className="space-y-3 text-base text-white/80">
                 <li className="flex gap-2">
                   <span className="mt-0.5 text-orange-400">●</span>
                   <span>

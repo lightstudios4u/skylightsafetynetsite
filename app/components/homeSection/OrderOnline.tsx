@@ -93,7 +93,7 @@ export function OrderOnline() {
               <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                 Order Your O.S.H.A. Safety Net System
               </h2>
-              <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/80">
+              <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-white/80">
                 Purpose-built for 4&lsquo; × 8&lsquo; commercial skylights.
                 Ships ready to deploy with everything included.
               </p>
@@ -101,7 +101,7 @@ export function OrderOnline() {
               {/* Price highlight */}
               <div className="mx-auto mt-6 inline-flex items-baseline gap-3 rounded-lg border border-orange-600/50 bg-orange-500/20 px-6 py-3 shadow-lg">
                 <span className="text-2xl font-extrabold text-white">$299</span>
-                <span className="text-sm text-white/80">per kit</span>
+                <span className="text-base text-white/80">per kit</span>
                 <span className="ml-2 rounded-full bg-orange-600/30 px-2.5 py-0.5 text-xs font-bold text-white">
                   Volume discounts
                 </span>

@@ -76,7 +76,7 @@ export function RequestForm() {
           message: "✓ Request submitted successfully! We'll be in touch soon.",
         });
         form.reset();
-        
+
         // Optional: Clear success message after 5 seconds
         setTimeout(() => {
           setStatus({ type: "idle", message: "" });
@@ -106,7 +106,7 @@ export function RequestForm() {
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
               <p
-                className={`text-sm font-semibold tracking-wide text-orange-500 animate-fade-down ${isVisible ? "visible" : ""}`}
+                className={`text-base font-semibold tracking-wide text-orange-500 animate-fade-down ${isVisible ? "visible" : ""}`}
               >
                 Get details, pricing, and availability
               </p>
@@ -116,7 +116,7 @@ export function RequestForm() {
                 Request Product Information
               </h2>
               <p
-                className={`mt-3 max-w-xl text-sm leading-relaxed text-gray-200 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
+                className={`mt-3 max-w-xl text-base leading-relaxed text-gray-200 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
               >
                 Tell us about your job site and we&apos;ll follow up with
                 sizing, lead times, and compliance documentation.
@@ -176,7 +176,7 @@ export function RequestForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400/60 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400/60 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Submitting..." : "Send Request"}{" "}
                 <span className="ml-2">→</span>
@@ -185,7 +185,7 @@ export function RequestForm() {
               {/* Status Message */}
               {status.type !== "idle" && (
                 <div
-                  className={`mt-4 rounded-lg border p-4 text-sm font-medium transition-all duration-300 ${
+                  className={`mt-4 rounded-lg border p-4 text-base font-medium transition-all duration-300 ${
                     status.type === "success"
                       ? "bg-green-500/10 text-green-400 border-green-500/20"
                       : "bg-red-500/10 text-red-400 border-red-500/20"

@@ -122,12 +122,12 @@ export function CoreBenefits() {
                   </h3>
                 </div>
 
-                <p className="mt-3 text-sm leading-relaxed text-white/80">
+                <p className="mt-3 text-base leading-relaxed text-white/80">
                   {f.desc}
                 </p>
 
                 {f.bullets?.length ? (
-                  <ul className="mt-4 space-y-2 text-sm text-white/80">
+                  <ul className="mt-4 space-y-2 text-base text-white/80">
                     {f.bullets.map((b) => (
                       <li key={b} className="flex gap-2">
                         <FaCheckCircle

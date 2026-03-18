@@ -78,7 +78,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
     >
       <div className="mx-auto max-w-6xl px-6 py-16">
         <p
-          className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
+          className={`text-center text-base font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
         >
           Installation in minutes, protection for the duration
         </p>
@@ -114,7 +114,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
                     <h3 className="card-title-pop text-lg font-bold text-white">
                       {s.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-white/80">
+                    <p className="mt-2 text-base leading-relaxed text-white/80">
                       {s.desc}
                     </p>
                   </div>
@@ -143,13 +143,13 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
             <h3 className="card-title-pop text-lg font-extrabold text-white">
               What happens after you scan
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/80">
+            <p className="mt-2 text-base leading-relaxed text-white/80">
               The QR code system creates a digital record that follows your net
               through its entire service life. Each scan captures critical
               information that safety managers and project owners need:
             </p>
 
-            <ul className="mt-5 space-y-3 text-sm text-white/80">
+            <ul className="mt-5 space-y-3 text-base text-white/80">
               {[
                 "Installation documentation: Who installed it, where, and when",
                 "Inspection logs: Confirms visual inspection at deployment, weekly while working on the job, and removal at job completion",
@@ -164,7 +164,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
               ))}
             </ul>
 
-            <p className="mt-4 text-sm text-white/60 italic">
+            <p className="mt-4 text-base text-white/60 italic">
               No more clipboards, lost paperwork, or questions about whether
               protection was in place. The documentation exists in the cloud and
               travels with the net.

@@ -98,13 +98,13 @@ export function KitIncluded({
             {/* <div
               className={`animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
             >
-              <p className="mt-4 text-sm leading-relaxed text-gray-200">
+              <p className="mt-4 text-base leading-relaxed text-gray-200">
                 Our kit is engineered for the standard 4&apos; × 8&apos;
                 skylight found on 98% of commercial rooftops nationwide. Every
                 component is selected for durability, ease of use, and rapid
                 deployment in real-world job site conditions.
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-gray-200">
+              <p className="mt-3 text-base leading-relaxed text-gray-200">
                 This isn&apos;t an adapted cargo net or improvised solution.
                 It&apos;s purpose-built fall-through protection designed by
                 rooftop professionals who understand the specific needs of
@@ -134,10 +134,10 @@ export function KitIncluded({
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
                   ].join(" ")}
                 >
-                  <p className="text-sm font-bold text-white">
+                  <p className="text-base font-bold text-white">
                     High-Visibility Safety Net
                   </p>
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="mt-1 text-base text-gray-300">
                     UV-stabilized orange mesh net sized precisely for 4&apos; x
                     8&apos; skylights. Contractors, employees, and visitors can
                     see protected areas from across the roof.
@@ -155,10 +155,10 @@ export function KitIncluded({
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
                   ].join(" ")}
                 >
-                  <p className="text-sm font-bold text-white">
+                  <p className="text-base font-bold text-white">
                     Heavy-Duty Ratchet Strap
                   </p>
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="mt-1 text-base text-gray-300">
                     Professional-grade stainless steel ratcheting strap system
                     provides secure attachment to standard skylight curbs
                     without tools or penetration.
@@ -176,10 +176,10 @@ export function KitIncluded({
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
                   ].join(" ")}
                 >
-                  <p className="text-sm font-bold text-white">
+                  <p className="text-base font-bold text-white">
                     Unique QR Code Label
                   </p>
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="mt-1 text-base text-gray-300">
                     Serialized QR code permanently attached to the net and
                     storage bag enables instant registration, inspection, and
                     location tracking.
@@ -197,8 +197,8 @@ export function KitIncluded({
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
                   ].join(" ")}
                 >
-                  <p className="text-sm font-bold text-white">Storage Bag</p>
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="text-base font-bold text-white">Storage Bag</p>
+                  <p className="mt-1 text-base text-gray-300">
                     Durable carry bag keeps your kit organized and protected
                     between jobs. Easy transport from truck to roof, and
                     protects the Safeety Net from damage when not in use.
@@ -233,7 +233,7 @@ export function KitIncluded({
                   <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
                     Key Specifications
                   </h3>
-                  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/70">
+                  <p className="mt-2 max-w-2xl text-base leading-relaxed text-white/70">
                     Built for fast deployment, repeated use, and
                     documentation-ready compliance on commercial rooftops.
                   </p>
@@ -302,11 +302,11 @@ export function KitIncluded({
                     <div className="flex shrink-0 items-center justify-center text-orange-300">
                       {spec.icon}
                     </div>
-                    <div className="text-sm font-semibold text-white">
+                    <div className="text-base font-semibold text-white">
                       {spec.label}
                     </div>
                   </div>
-                  <div className="text-sm leading-relaxed text-white/75">
+                  <div className="text-base leading-relaxed text-white/75">
                     {spec.value}
                   </div>
                 </div>
@@ -325,13 +325,12 @@ export function KitIncluded({
               size={20}
             />
             <div>
-              <p className="text-sm font-bold text-white">
+              <p className="text-base font-bold text-white">
                 Important Safety Notice
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-white/90">
-                This product helps prevent fall-through incidents at skylight
-                openings. It is NOT an anchorage device and must not be used for
-                personal fall arrest systems.
+              <p className="mt-2 text-base leading-relaxed text-white/90">
+                This product is NOT an anchorage device and must not be used as
+                a personal fall arrest system anchor point.
               </p>
             </div>
           </div>
