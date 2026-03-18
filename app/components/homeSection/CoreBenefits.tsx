@@ -100,7 +100,7 @@ export function CoreBenefits() {
           is designed to fit 4&apos; x 8&apos; commercial rooftop skylights and
           eliminates the three biggest pain points contractors face: bulky or
           heavy safety systems, time-consuming installation, and missing safety
-          documentationwhen you need it most.
+          documentation when you need it most.
         </p>
         <div className="mt-8 grid gap-8 lg:grid-cols-3">
           {features.map((f, index) => (
