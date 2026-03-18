@@ -18,7 +18,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             className="flex items-center gap-3 hover:opacity-80 transition"
           >
             <Image
-              src="/logo.webp"
+              src="/logowhitetext.png"
               alt="SkylightSafety.Net"
               width={145}
               height={145}
@@ -117,7 +117,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               className="flex items-center gap-2 hover:opacity-80 transition"
             >
               <Image
-                src="/logo.webp"
+                src="/logowhitetext.png"
                 alt="SkylightSafety.Net"
                 width={100}
                 height={100}
