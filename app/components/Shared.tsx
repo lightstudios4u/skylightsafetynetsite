@@ -22,7 +22,7 @@ export function TrustItem({
           {icon}
         </div>
         <div className="flex-1">
-          <div className="text-sm font-bold leading-tight text-white">
+          <div className="text-base font-bold leading-tight text-white">
             {title}
           </div>
           <div className="mt-1.5 text-xs leading-relaxed text-slate-300">
@@ -63,7 +63,7 @@ export function Input({
         placeholder={placeholder}
         name={name}
         required={required}
-        className="w-full rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
+        className="w-full rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-base text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
       />
     </label>
   );
@@ -90,7 +90,7 @@ export function Textarea({
         placeholder={placeholder}
         rows={4}
         required={required}
-        className="w-full rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40 resize-none"
+        className="w-full rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-base text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40 resize-none"
       />
     </label>
   );
@@ -115,7 +115,7 @@ export function Accordion({ items }: { items: FAQ[] }) {
               onClick={() => setOpenIndex(open ? -1 : idx)}
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left "
             >
-              <span className="text-sm font-bold text-white">{it.q}</span>
+              <span className="text-base font-bold text-white">{it.q}</span>
               <span className="grid h-8 w-8 place-items-center rounded-lg bg-gray-500/20">
                 {open ? (
                   <FaMinus className="text-gray-300" size={14} />
@@ -126,7 +126,7 @@ export function Accordion({ items }: { items: FAQ[] }) {
             </button>
 
             {open && (
-              <div className="px-5 pb-5 text-sm leading-relaxed text-white">
+              <div className="px-5 pb-5 text-base leading-relaxed text-white">
                 {it.a}
               </div>
             )}

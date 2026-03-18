@@ -32,7 +32,7 @@ export function BulkFleet() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <p
-              className={`text-sm font-semibold tracking-wide text-orange-500 animate-fade-down ${isVisible ? "visible" : ""}`}
+              className={`text-base font-semibold tracking-wide text-orange-500 animate-fade-down ${isVisible ? "visible" : ""}`}
             >
               Outfitting your fleet?
             </p>
@@ -42,7 +42,7 @@ export function BulkFleet() {
               Standardize Protection Across Crews
             </h2>
             <p
-              className={`mt-3 max-w-xl text-sm leading-relaxed text-gray-200 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
+              className={`mt-3 max-w-xl text-base leading-relaxed text-gray-200 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
             >
               We work with safety companies and large contractors to deploy
               standardized O.S.H.A. Safety Net System protection across multiple
@@ -65,7 +65,7 @@ export function BulkFleet() {
             <h3 className="card-title-pop text-lg font-extrabold text-white">
               Talk to us about fleet rollouts
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-gray-200">
+            <p className="mt-2 text-base leading-relaxed text-gray-200">
               Send crew count + typical job types and we&lsquo;ll respond with
               pricing, lead times, and documentation details.
             </p>
@@ -73,7 +73,7 @@ export function BulkFleet() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#request"
-                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
+                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-orange-600"
               >
                 <FaEnvelope className="mr-2" size={16} />
                 Request Bulk Pricing
@@ -81,7 +81,7 @@ export function BulkFleet() {
 
               <Link
                 href="/products-and-specs.pdf"
-                className="inline-flex items-center justify-center rounded-lg border border-gray-700 bg-black/60 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+                className="inline-flex items-center justify-center rounded-lg border border-gray-700 bg-black/60 px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-black/80"
               >
                 View Spec Sheet <span className="ml-2">→</span>
               </Link>

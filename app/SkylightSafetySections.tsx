@@ -100,7 +100,7 @@ export default function SkylightSafetySections() {
         <div className="relative mx-auto max-w-6xl px-6 py-16 lg:py-24">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
-              <p className="text-sm font-semibold tracking-wide text-orange-400">
+              <p className="text-base font-semibold tracking-wide text-orange-400">
                 Safety at any height
               </p>
               <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
@@ -115,7 +115,7 @@ export default function SkylightSafetySections() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href="#request"
-                  className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+                  className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-slate-950"
                 >
                   Request Information
                   <span className="ml-2">→</span>
@@ -123,7 +123,7 @@ export default function SkylightSafetySections() {
 
                 <a
                   href="#working-plan"
-                  className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10"
                 >
                   How it Works
                 </a>
@@ -162,7 +162,7 @@ export default function SkylightSafetySections() {
       {/* WORKING PLAN */}
       <section id="working-plan" className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <p className="text-center text-sm font-semibold tracking-wide text-orange-600">
+          <p className="text-center text-base font-semibold tracking-wide text-orange-600">
             Installation in Minutes, Protection for the Duration
           </p>
           <h2 className="mt-3 text-center text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -192,7 +192,7 @@ export default function SkylightSafetySections() {
 
                   <div>
                     <h3 className="text-lg font-bold">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    <p className="mt-2 text-base leading-relaxed text-slate-600">
                       {s.desc}
                     </p>
                   </div>
@@ -208,7 +208,7 @@ export default function SkylightSafetySections() {
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-semibold tracking-wide text-orange-600">
+              <p className="text-base font-semibold tracking-wide text-orange-600">
                 Designed for compliance
               </p>
               <h2 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -218,7 +218,7 @@ export default function SkylightSafetySections() {
 
             <a
               href="#contact"
-              className="inline-flex w-fit items-center justify-center rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+              className="inline-flex w-fit items-center justify-center rounded-lg bg-slate-900 px-5 py-3 text-base font-semibold text-white transition hover:bg-slate-800"
             >
               Get a Quote <span className="ml-2">→</span>
             </a>
@@ -232,7 +232,7 @@ export default function SkylightSafetySections() {
               >
                 <div className="p-6">
                   <h3 className="text-lg font-bold">{f.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  <p className="mt-2 text-base leading-relaxed text-slate-600">
                     {f.desc}
                   </p>
                 </div>
@@ -250,7 +250,7 @@ export default function SkylightSafetySections() {
       {/* FAQ */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <p className="text-center text-sm font-semibold tracking-wide text-orange-600">
+          <p className="text-center text-base font-semibold tracking-wide text-orange-600">
             Our FAQs
           </p>
           <h2 className="mt-3 text-center text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -288,7 +288,7 @@ export default function SkylightSafetySections() {
                   <div className="text-5xl font-extrabold tracking-tight text-slate-900">
                     FAQ
                   </div>
-                  <p className="mt-2 text-sm text-slate-600">
+                  <p className="mt-2 text-base text-slate-600">
                     Quick answers for crews, inspectors, and safety managers.
                   </p>
                 </div>
@@ -303,13 +303,13 @@ export default function SkylightSafetySections() {
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-sm font-semibold tracking-wide text-orange-400">
+              <p className="text-base font-semibold tracking-wide text-orange-400">
                 Get details, pricing, and availability
               </p>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                 Request Product Information
               </h2>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-200">
+              <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-200">
                 Tell us about your job site and we’ll follow up with sizing,
                 lead times, and compliance documentation.
               </p>
@@ -344,7 +344,7 @@ export default function SkylightSafetySections() {
 
               <button
                 type="button"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-slate-950"
               >
                 Send Request <span className="ml-2">→</span>
               </button>
@@ -364,7 +364,7 @@ export default function SkylightSafetySections() {
 function TrustItem({ title, desc }: { title: string; desc: string }) {
   return (
     <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-      <div className="text-sm font-bold text-white">{title}</div>
+      <div className="text-base font-bold text-white">{title}</div>
       <div className="mt-1 text-xs text-slate-200">{desc}</div>
     </div>
   );
@@ -387,7 +387,7 @@ function Input({ label, placeholder }: { label: string; placeholder: string }) {
       </span>
       <input
         placeholder={placeholder}
-        className="w-full rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
+        className="w-full rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-base text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
       />
     </label>
   );
@@ -408,7 +408,7 @@ function Textarea({
       <textarea
         placeholder={placeholder}
         rows={4}
-        className="w-full resize-none rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
+        className="w-full resize-none rounded-lg border border-white/10 bg-white/10 px-4 py-3 text-base text-white placeholder:text-slate-300 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/40"
       />
     </label>
   );
@@ -431,14 +431,14 @@ function Accordion({ items }: { items: FAQ[] }) {
               onClick={() => setOpenIndex(open ? -1 : idx)}
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
             >
-              <span className="text-sm font-bold text-slate-900">{it.q}</span>
+              <span className="text-base font-bold text-slate-900">{it.q}</span>
               <span className="grid h-8 w-8 place-items-center rounded-lg bg-slate-100 text-slate-900">
                 {open ? "–" : "+"}
               </span>
             </button>
 
             {open && (
-              <div className="px-5 pb-5 text-sm leading-relaxed text-slate-600">
+              <div className="px-5 pb-5 text-base leading-relaxed text-slate-600">
                 {it.a}
               </div>
             )}

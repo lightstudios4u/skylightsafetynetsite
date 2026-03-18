@@ -107,7 +107,7 @@ export function WhoItsFor() {
     >
       <div className="mx-auto max-w-6xl px-6 py-16">
         {/* <p
-          className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
+          className={`text-center text-base font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
         >
         </p> */}
         <h2
@@ -156,7 +156,7 @@ export function WhoItsFor() {
                     {t.title}
                   </h3>
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-white/80">
+                <p className="mt-3 text-base leading-relaxed text-white/80">
                   {t.desc}
                 </p>
               </div>
@@ -164,7 +164,7 @@ export function WhoItsFor() {
           ))}
         </div>
 
-        <div
+        {/* <div
           className={`mt-10 overflow-hidden rounded-2xl border border-orange-600/30 bg-[#3D2C28] shadow-sm animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
         >
           <div className="border-b border-orange-600/20 px-6 py-6 sm:px-8">
@@ -182,7 +182,7 @@ export function WhoItsFor() {
                 <h3 className="card-title-pop text-base font-bold text-white">
                   {application.title}
                 </h3>
-                <ul className="mt-4 space-y-3 text-sm text-white/80">
+                <ul className="mt-4 space-y-3 text-base text-white/80">
                   {application.items.map((item) => (
                     <li key={item} className="flex gap-2">
                       <FaCheckCircle
@@ -196,7 +196,7 @@ export function WhoItsFor() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
 import { Home } from "./components/Home";
 
 export const metadata = {
-  title: "Skylight Safety — Skylight Safety Net System",
+  title: "Skylight Safety Nets",
   description:
     "A purpose-built skylight safety net designed for fast installs and audit-ready compliance with QR inspection logs.",
 };

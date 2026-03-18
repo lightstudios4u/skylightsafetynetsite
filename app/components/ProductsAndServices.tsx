@@ -9,7 +9,7 @@ export function ProductsAndServices() {
         <div className="absolute inset-0 opacity-40 [background:radial-gradient(80rem_40rem_at_70%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
         <div className="absolute inset-0 opacity-30 [background:radial-gradient(50rem_30rem_at_20%_10%,rgba(249,115,22,0.30),transparent_60%)]" />
         <div className="relative mx-auto max-w-6xl px-6 py-16">
-          <p className="text-sm font-semibold tracking-wide text-orange-500">
+          <p className="text-base font-semibold tracking-wide text-orange-500">
             Products & Services
           </p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
@@ -24,13 +24,13 @@ export function ProductsAndServices() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/#request"
-              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
+              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-600"
             >
               Request Info <span className="ml-2">→</span>
             </Link>
             <Link
               href="/"
-              className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10"
             >
               Back to Landing
             </Link>
@@ -48,7 +48,7 @@ export function ProductsAndServices() {
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
               <h3 className="text-lg font-bold text-white">In the box</h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/80">
+              <ul className="mt-4 space-y-2 text-base text-white/80">
                 <li>
                   • Skylight safety net (standard 4&apos; × 8&apos; footprint)
                 </li>
@@ -62,7 +62,7 @@ export function ProductsAndServices() {
               <h3 className="text-lg font-bold text-white">
                 Core specs (example)
               </h3>
-              <dl className="mt-4 grid grid-cols-2 gap-4 text-sm">
+              <dl className="mt-4 grid grid-cols-2 gap-4 text-base">
                 <div>
                   <dt className="text-white/60">Typical install</dt>
                   <dd className="font-semibold text-white">&lt; 5 minutes</dd>
@@ -97,7 +97,7 @@ export function ProductsAndServices() {
               <h3 className="text-lg font-bold text-white">
                 Typical skylight nets
               </h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/80">
+              <ul className="mt-4 space-y-2 text-base text-white/80">
                 <li>• Slower setup or awkward fit</li>
                 <li>• Documentation is manual (or nonexistent)</li>
                 <li>• Hard to prove compliance after the fact</li>
@@ -108,7 +108,7 @@ export function ProductsAndServices() {
               <h3 className="text-lg font-bold text-white">
                 Skylight Safety Net
               </h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/80">
+              <ul className="mt-4 space-y-2 text-base text-white/80">
                 <li>• Installs in minutes with straps</li>
                 <li>• QR scan ties the net to a job + crew</li>
                 <li>• Inspection logs are audit-ready</li>
@@ -124,7 +124,7 @@ export function ProductsAndServices() {
           <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
             QR Tracking (How it actually helps)
           </h2>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-black/80">
+          <p className="mt-3 max-w-3xl text-base leading-relaxed text-black/80">
             The goal isn’t “cool QR tech.” The goal is fewer gaps in compliance,
             fewer forgotten inspections, and cleaner records when someone asks.
           </p>
@@ -149,7 +149,7 @@ export function ProductsAndServices() {
                 className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
               >
                 <h3 className="text-lg font-bold text-white">{x.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/80">
+                <p className="mt-2 text-base leading-relaxed text-white/80">
                   {x.desc}
                 </p>
               </div>
@@ -160,7 +160,7 @@ export function ProductsAndServices() {
             <h3 className="text-lg font-bold text-white">
               Audit-friendly output
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/80">
+            <p className="mt-2 text-base leading-relaxed text-white/80">
               If you want, this page can include a screenshot/example log table,
               but I’d keep that behind a lead capture unless you’re
               intentionally giving away the whole playbook.
@@ -176,7 +176,7 @@ export function ProductsAndServices() {
             <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
               Want pricing or bulk availability?
             </h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-gray-200">
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-gray-200">
               We’ll follow up with lead times, documentation, and whether a
               fleet program makes sense for your crews.
             </p>
@@ -184,13 +184,13 @@ export function ProductsAndServices() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/#request"
-                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600"
+                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white hover:bg-orange-600"
               >
                 Request Info <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-white hover:bg-white/10"
               >
                 Back to Landing
               </Link>

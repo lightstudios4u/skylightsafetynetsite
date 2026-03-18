@@ -73,7 +73,7 @@ export function Comparison() {
               <h3 className="card-title-pop text-lg font-extrabold text-white">
                 {col.title}
               </h3>
-              <ul className="mt-4 space-y-3 text-sm text-gray-200">
+              <ul className="mt-4 space-y-3 text-base text-gray-200">
                 {col.items.map((item) => (
                   <li key={item} className="flex items-end gap-2">
                     <span
@@ -92,7 +92,7 @@ export function Comparison() {
 
               {col.highlight ? (
                 <div className="mt-6 rounded-lg border border-orange-600/30 bg-orange-500/20 p-4">
-                  <p className="text-sm font-semibold text-white">
+                  <p className="text-base font-semibold text-white">
                     Purpose-built sizing. Rapid install. Documented compliance.
                   </p>
                   <p className="mt-1 text-xs text-white/70">
@@ -102,7 +102,7 @@ export function Comparison() {
                 </div>
               ) : (
                 <div className="mt-6 rounded-lg border border-gray-700 bg-black/60 p-4">
-                  <p className="text-sm font-semibold text-gray-200">
+                  <p className="text-base font-semibold text-gray-200">
                     Generic solutions leave gaps in protection and
                     documentation.
                   </p>
