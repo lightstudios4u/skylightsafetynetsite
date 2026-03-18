@@ -85,7 +85,7 @@ export function KitIncluded({
           className={`tracking-tight animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
         >
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            O.S.H.A. Safety Net System
+            Over Skylight Human Arrest - Skylight Safety Net System
           </h2>
           <p className="mt-1 text-lg font-semibold text-orange-500">
             What&apos;s Included:
