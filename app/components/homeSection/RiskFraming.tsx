@@ -134,7 +134,7 @@ export function RiskFraming() {
 
             {/* The Human Risk */}
             <div className="mb-6">
-              <h5 className="card-title-pop font-bold text-white mb-2">
+              <h5 className="card-title-pop font-bold text-white mb-3 border-l-2 border-red-400 pl-3">
                 The Human Risk
               </h5>
               <ul className="space-y-3 text-base text-white/80">
@@ -163,8 +163,8 @@ export function RiskFraming() {
             </div>
 
             {/* The Financial Risk */}
-            <div className="mb-6">
-              <h5 className="card-title-pop font-bold text-white mb-2">
+            <div className="mb-6 pt-6 border-t border-white/10">
+              <h5 className="card-title-pop font-bold text-white mb-3 border-l-2 border-orange-400 pl-3">
                 The Financial Risk
               </h5>
               <ul className="space-y-3 text-base text-white/80">
@@ -195,8 +195,8 @@ export function RiskFraming() {
             </div>
 
             {/* Criminal Liability */}
-            <div>
-              <h5 className="card-title-pop font-bold text-white mb-2">
+            <div className="pt-6 border-t border-white/10">
+              <h5 className="card-title-pop font-bold text-white mb-3 border-l-2 border-orange-400 pl-3">
                 Criminal Liability
               </h5>
               <p className="text-base text-white/80 mb-3">
