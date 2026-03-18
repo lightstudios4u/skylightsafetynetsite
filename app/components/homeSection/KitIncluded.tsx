@@ -117,7 +117,8 @@ export function KitIncluded({
             >
               <div className="mt-6 flex items-center gap-2 text-xs font-semibold text-gray-400">
                 <span className="inline-flex h-6 items-center rounded-full border border-gray-700 bg-black/40 px-3">
-                  Hover to see more →
+                  <span className="hidden sm:inline">Hover to see more →</span>
+                  <span className="sm:hidden">Click to see more →</span>
                 </span>
               </div>
 

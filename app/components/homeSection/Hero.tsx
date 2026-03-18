@@ -74,11 +74,11 @@ export function Hero() {
           >
             {/* Large product image */}
             <Image
-              src="/product/net.webp"
+              src="/heroimagevignette.webp"
               alt="O.S.H.A. Safety Net installed on commercial skylight"
-              width={820}
-              height={280}
-              className="rounded-md shadow-2xl w-[85vw] sm:w-[60vw] lg:w-[32vw] max-w-[656px] h-auto"
+              width={1200}
+              height={400}
+              className="rounded-md shadow-2xl w-[92vw] sm:w-[75vw] lg:w-[50vw] max-w-[900px] h-auto"
               priority
             />
           </div>
