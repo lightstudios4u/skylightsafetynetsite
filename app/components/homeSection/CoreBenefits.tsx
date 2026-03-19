@@ -148,7 +148,7 @@ export function CoreBenefits() {
                     alt={f.title}
                     fill
                     sizes="(min-width: 1024px) 33vw, 100vw"
-                    className="object-cover"
+                    className={`object-cover ${f.img === "/product/lightweight.webp" ? "object-[50%_35%]" : ""}`}
                   />
                 </div>
               </div>

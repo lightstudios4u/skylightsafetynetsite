@@ -116,7 +116,7 @@ export function WhoItsFor() {
           Designed for the trades that work above
         </h2>
         <p
-          className={`mx-auto mt-4 max-w-4xl text-center text-base leading-relaxed text-black/90 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
+          className={`mx-auto mt-4 max-w-4xl text-center text-base leading-relaxed text-black/90 animate-fade-in delay-300 px-0 sm:px-4 ${isVisible ? "visible" : ""}`}
         >
           Trusted by commercial roofing contractors, solar installation crews,
           HVAC technicians, general contractors, and safety companies across the
