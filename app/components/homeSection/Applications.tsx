@@ -37,7 +37,7 @@ export function Applications({
     <section ref={sectionRef} style={{ backgroundColor: "#c0652c" }}>
       <div className="mx-auto max-w-6xl px-6 py-16">
         <p
-          className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
+          className={`text-center text-base font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
         >
           Who we protect
         </p>
@@ -57,7 +57,7 @@ export function Applications({
               <h3 className="card-title-pop text-base font-bold text-white">
                 {a.title}
               </h3>
-              <ul className="mt-3 space-y-2 text-sm text-white/80">
+              <ul className="mt-3 space-y-2 text-base text-white/80">
                 {a.items.map((i) => (
                   <li key={i} className="flex gap-2">
                     <FaCheckCircle
@@ -75,7 +75,7 @@ export function Applications({
         <div
           className={`mt-12 rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
-          <p className="text-center text-sm font-semibold tracking-wide text-orange-500">
+          <p className="text-center text-base font-semibold tracking-wide text-orange-500">
             From installation to audit-ready in three scans
           </p>
 
@@ -104,7 +104,7 @@ export function Applications({
               >
                 <div className="flex items-center gap-3">
                   <div
-                    className={`flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500 text-sm font-extrabold text-white ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
+                    className={`flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500 text-base font-extrabold text-white ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
                     style={{ animationDelay: `${700 + stepIndex * 150}ms` }}
                   >
                     {x.n}
@@ -113,7 +113,7 @@ export function Applications({
                     {x.t}
                   </p>
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-white/80">
+                <p className="mt-3 text-base leading-relaxed text-white/80">
                   {x.d}
                 </p>
               </div>
@@ -126,7 +126,7 @@ export function Applications({
         >
           <a
             href="#bulk"
-            className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+            className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-black/80"
           >
             Get Bulk Pricing + Spec Sheet <span className="ml-2">→</span>
           </a>

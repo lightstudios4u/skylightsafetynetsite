@@ -7,7 +7,7 @@ export function DetailsSections() {
       {/* Top hero */}
       <section className="bg-slate-950">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <p className="text-sm font-semibold tracking-wide text-orange-400">
+          <p className="text-base font-semibold tracking-wide text-orange-400">
             Details + compliance documentation
           </p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
@@ -21,13 +21,13 @@ export function DetailsSections() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/#request"
-              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600"
+              className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white hover:bg-orange-600"
             >
               Request Info <span className="ml-2">→</span>
             </Link>
             <Link
               href="/"
-              className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-white hover:bg-white/10"
             >
               Back to Landing
             </Link>
@@ -45,7 +45,7 @@ export function DetailsSections() {
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
               <h3 className="text-lg font-bold">In the box</h3>
-              <ul className="mt-4 space-y-2 text-sm text-slate-700">
+              <ul className="mt-4 space-y-2 text-base text-slate-700">
                 <li>
                   • Skylight safety net (standard 4&apos; × 8&apos; footprint)
                 </li>
@@ -57,7 +57,7 @@ export function DetailsSections() {
 
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
               <h3 className="text-lg font-bold">Core specs (example)</h3>
-              <dl className="mt-4 grid grid-cols-2 gap-4 text-sm">
+              <dl className="mt-4 grid grid-cols-2 gap-4 text-base">
                 <div>
                   <dt className="text-slate-500">Typical install</dt>
                   <dd className="font-semibold text-slate-900">
@@ -94,7 +94,7 @@ export function DetailsSections() {
               <h3 className="text-lg font-bold text-slate-900">
                 Typical skylight nets
               </h3>
-              <ul className="mt-4 space-y-2 text-sm text-slate-700">
+              <ul className="mt-4 space-y-2 text-base text-slate-700">
                 <li>• Slower setup or awkward fit</li>
                 <li>• Documentation is manual (or nonexistent)</li>
                 <li>• Hard to prove compliance after the fact</li>
@@ -105,7 +105,7 @@ export function DetailsSections() {
               <h3 className="text-lg font-bold text-slate-900">
                 Skylight Safety Net
               </h3>
-              <ul className="mt-4 space-y-2 text-sm text-slate-800">
+              <ul className="mt-4 space-y-2 text-base text-slate-800">
                 <li>• Installs in minutes with straps</li>
                 <li>• QR scan ties the net to a job + crew</li>
                 <li>• Inspection logs are audit-ready</li>
@@ -121,7 +121,7 @@ export function DetailsSections() {
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
             QR Tracking
           </h2>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
+          <p className="mt-3 max-w-3xl text-base leading-relaxed text-slate-600">
             Fewer gaps in compliance, fewer forgotten inspections, and cleaner
             records when auditors ask.
           </p>
@@ -146,7 +146,7 @@ export function DetailsSections() {
                 className="rounded-xl border border-slate-200 bg-slate-50 p-6"
               >
                 <h3 className="text-lg font-bold">{x.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 text-base leading-relaxed text-slate-600">
                   {x.desc}
                 </p>
               </div>
@@ -155,7 +155,7 @@ export function DetailsSections() {
 
           <div className="mt-10 rounded-xl border border-slate-200 bg-white p-6">
             <h3 className="text-lg font-bold">Audit-ready exports</h3>
-            <p className="mt-2 text-sm leading-relaxed text-slate-600">
+            <p className="mt-2 text-base leading-relaxed text-slate-600">
               Export complete inspection logs as PDF or CSV. Every scan is
               timestamped and tied to a crew member—ready for project owners,
               auditors, or insurance carriers.
@@ -171,7 +171,7 @@ export function DetailsSections() {
             <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
               Want pricing or bulk availability?
             </h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-200">
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-slate-200">
               We’ll follow up with lead times, documentation, and whether a
               fleet program makes sense for your crews.
             </p>
@@ -179,13 +179,13 @@ export function DetailsSections() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/#request"
-                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600"
+                className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white hover:bg-orange-600"
               >
                 Request Info <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-white hover:bg-white/10"
               >
                 Back to Landing
               </Link>

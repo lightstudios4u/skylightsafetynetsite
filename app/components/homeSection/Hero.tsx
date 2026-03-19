@@ -51,7 +51,7 @@ export function Hero() {
 
         {/* Dramatic animated heading */}
         <div className="mb-8 text-center">
-          <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
+          <h2 className="relative text-[1.55rem] sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
             {/* Invisible full text to reserve space and prevent layout shift */}
             <span className="block invisible" aria-hidden="true">
               Over Skylight Human Arrest
@@ -74,11 +74,11 @@ export function Hero() {
           >
             {/* Large product image */}
             <Image
-              src="/product/net.webp"
+              src="/heroimagevignette.webp"
               alt="O.S.H.A. Safety Net installed on commercial skylight"
-              width={820}
-              height={280}
-              className="rounded-md shadow-2xl w-[85vw] sm:w-[60vw] lg:w-[32vw] max-w-[656px] h-auto"
+              width={1200}
+              height={400}
+              className="rounded-md shadow-2xl w-[92vw] sm:w-[75vw] lg:w-[50vw] max-w-[900px] h-auto"
               priority
             />
           </div>

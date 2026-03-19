@@ -34,7 +34,7 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
     >
       <div className="mx-auto max-w-6xl px-6 py-16">
         <p
-          className={`text-center text-sm font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
+          className={`text-center text-base font-semibold tracking-wide text-black animate-fade-down ${isVisible ? "visible" : ""}`}
         >
           Common installation questions
         </p>
@@ -57,13 +57,13 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
             <h3 className="text-lg font-extrabold text-white">
               Need deeper details?
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/80">
+            <p className="mt-2 text-base leading-relaxed text-white/80">
               The detailed page includes what&#39;s included, QR logging
               workflows, and a simple comparison for safety managers and audits.
             </p>
             <Link
               href="/products-and-services"
-              className="mt-6 inline-flex items-center justify-center rounded-lg bg-black px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+              className="mt-6 inline-flex items-center justify-center rounded-lg bg-black px-5 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-black/80"
             >
               View Details <span className="ml-2">→</span>
             </Link>

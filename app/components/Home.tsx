@@ -33,7 +33,13 @@ type Step = {
   icon?: React.ReactNode;
 };
 
-type QRWay = { title: string; desc: string; icon: React.ReactNode };
+type QRWay = {
+  title: string;
+  desc: string;
+  icon: React.ReactNode;
+  image: string;
+  imageStyle?: React.CSSProperties;
+};
 
 type Application = {
   title: string;
@@ -74,21 +80,27 @@ export function Home() {
         title: "Register Your Net",
         desc: "Assign each net to your company, crew, or project. Create accountability and prevent loss of equipment across multiple job sites.",
         icon: <FaUserShield className="text-amber-400" size={22} />,
+        image: "/register.webp",
+        imageStyle: { objectPosition: "center 22%", transform: "scale(1.1)" },
       },
       {
         title: "Log Inspections",
         desc: "Scan before each use and during periodic checks. Build a complete inspection history that proves due diligence and equipment condition over the life of the job and service life of each O.S.H.A. Safety Net System in use.",
         icon: <FaClipboardCheck className="text-amber-400" size={22} />,
+        image: "/inspectionqr3.webp",
+        imageStyle: { objectPosition: "center 32%", transform: "scale(1)" },
       },
       {
         title: "Document Installs",
         desc: "Capture who installed protection, where, and when. Create irrefutable evidence that fall-through protection was in place during critical work phases.",
         icon: <FaFileSignature className="text-amber-400" size={22} />,
+        image: "/installQR.webp",
       },
       {
         title: "Track Location",
         desc: "Know which job site or crew has each net at any time. Simplify inventory management and ensure equipment is where you need it.",
         icon: <FaMapMarkerAlt className="text-amber-400" size={22} />,
+        image: "/qrlocation.webp",
       },
     ],
     [],

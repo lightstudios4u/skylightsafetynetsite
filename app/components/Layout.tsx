@@ -18,7 +18,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             className="flex items-center gap-3 hover:opacity-80 transition"
           >
             <Image
-              src="/logo.webp"
+              src="/logowhitetext.png"
               alt="SkylightSafety.Net"
               width={145}
               height={145}
@@ -75,28 +75,28 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {mobileOpen && (
           <div className="sm:hidden border-t border-white/10 bg-black/95 backdrop-blur-md px-6 py-4 space-y-3">
             <a
-              className="block text-sm font-semibold text-gray-300 hover:text-white transition-colors py-2"
+              className="block text-base font-semibold text-gray-300 hover:text-white transition-colors py-2"
               href="#working-plan"
               onClick={() => setMobileOpen(false)}
             >
               How it Works
             </a>
             <a
-              className="block text-sm font-semibold text-gray-300 hover:text-white transition-colors py-2"
+              className="block text-base font-semibold text-gray-300 hover:text-white transition-colors py-2"
               href="#faq"
               onClick={() => setMobileOpen(false)}
             >
               FAQ
             </a>
             <a
-              className="block text-sm font-semibold text-gray-300 hover:text-white transition-colors py-2"
+              className="block text-base font-semibold text-gray-300 hover:text-white transition-colors py-2"
               href="/contact-us"
               onClick={() => setMobileOpen(false)}
             >
               Contact
             </a>
             <a
-              className="block rounded-lg bg-orange-500 px-5 py-2.5 text-sm font-bold text-white text-center hover:bg-orange-600 transition-colors"
+              className="block rounded-lg bg-orange-500 px-5 py-2.5 text-base font-bold text-white text-center hover:bg-orange-600 transition-colors"
               href="#request"
               onClick={() => setMobileOpen(false)}
             >
@@ -117,7 +117,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               className="flex items-center gap-2 hover:opacity-80 transition"
             >
               <Image
-                src="/logo.webp"
+                src="/logowhitetext.png"
                 alt="SkylightSafety.Net"
                 width={100}
                 height={100}
@@ -135,7 +135,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
 
             {/* Document Links */}
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-base text-gray-400">
               <a className="hover:text-white transition" href="/privacy-policy">
                 Privacy Policy
               </a>
@@ -163,7 +163,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
 
             {/* Copyright */}
-            <p className="text-sm text-gray-500">
+            <p className="text-base text-gray-500">
               © {new Date().getFullYear()} SkylightSafety.Net. All rights
               reserved.
             </p>
