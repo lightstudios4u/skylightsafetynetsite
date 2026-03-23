@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { scrollToContact } from "@/app/utils/scrollToContact";
 
 export function ProductsAndServices() {
   return (
@@ -23,8 +26,9 @@ export function ProductsAndServices() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="/#request"
+              href="/#contact"
               className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-600"
+              onClick={scrollToContact}
             >
               Request Info <span className="ml-2">→</span>
             </Link>
@@ -183,8 +187,9 @@ export function ProductsAndServices() {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/#request"
+                href="/#contact"
                 className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white hover:bg-orange-600"
+                onClick={scrollToContact}
               >
                 Request Info <span className="ml-2">→</span>
               </Link>

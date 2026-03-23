@@ -1,7 +1,7 @@
 "use client";
 
 import { FaPhone } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRecaptcha } from "../helpers/useRecaptcha";
 
 export function Contact() {
@@ -91,6 +91,20 @@ export function Contact() {
       setIsSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    if (window.location.hash === "#contact") {
+      const el = document.getElementById("contact");
+      if (el) {
+        const headerHeight =
+          document.querySelector("header")?.offsetHeight ?? 0;
+        const top =
+          el.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({ top, behavior: "smooth" });
+        history.replaceState(null, "", window.location.pathname);
+      }
+    }
+  }, []);
 
   return (
     <section id="contact" style={{ backgroundColor: "#000000" }}>

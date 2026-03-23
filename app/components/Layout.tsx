@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { scrollToContact } from "@/app/utils/scrollToContact";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -28,36 +29,31 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-8 text-base font-semibold sm:flex">
-            <a
+            <Link
               className="text-gray-300 hover:text-white transition-colors"
-              href="#working-plan"
+              href="/#working-plan"
             >
               How it Works
-            </a>
-            <a
+            </Link>
+            <Link
               className="text-gray-300 hover:text-white transition-colors"
-              href="#whats-included"
+              href="/#whats-included"
             >
               What&apos;s Included
-            </a>
-            <a
+            </Link>
+            <Link
               className="text-gray-300 hover:text-white transition-colors"
-              href="#faq"
+              href="/#faq"
             >
               FAQ
-            </a>
-            {/* <a
-              className="text-gray-300 hover:text-white transition-colors"
-              href="#contact"
-            >
-              Contact
-            </a> */}
-            <a
+            </Link>
+            <Link
               className="rounded-lg bg-orange-500 px-6 py-3 text-base font-bold text-white shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-colors"
-              href="#contact"
+              href="/#contact"
+              onClick={scrollToContact}
             >
               Request Info →
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile hamburger */}
@@ -74,34 +70,30 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {/* Mobile nav dropdown */}
         {mobileOpen && (
           <div className="sm:hidden border-t border-white/10 bg-black/95 backdrop-blur-md px-6 py-4 space-y-3">
-            <a
+            <Link
               className="block text-base font-semibold text-gray-300 hover:text-white transition-colors py-2"
-              href="#working-plan"
+              href="/#working-plan"
               onClick={() => setMobileOpen(false)}
             >
               How it Works
-            </a>
-            <a
+            </Link>
+            <Link
               className="block text-base font-semibold text-gray-300 hover:text-white transition-colors py-2"
-              href="#faq"
+              href="/#faq"
               onClick={() => setMobileOpen(false)}
             >
               FAQ
-            </a>
-            <a
-              className="block text-base font-semibold text-gray-300 hover:text-white transition-colors py-2"
-              href="/contact-us"
-              onClick={() => setMobileOpen(false)}
-            >
-              Contact
-            </a>
-            <a
+            </Link>
+            <Link
               className="block rounded-lg bg-orange-500 px-5 py-2.5 text-base font-bold text-white text-center hover:bg-orange-600 transition-colors"
-              href="#request"
-              onClick={() => setMobileOpen(false)}
+              href="/#contact"
+              onClick={(e) => {
+                setMobileOpen(false);
+                scrollToContact(e);
+              }}
             >
               Request Info →
-            </a>
+            </Link>
           </div>
         )}
       </header>
@@ -157,9 +149,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
               >
                 Terms & Conditions
               </a>
-              <a className="hover:text-white transition" href="/contact-us">
+              <Link
+                className="hover:text-white transition"
+                href="/#contact"
+                onClick={scrollToContact}
+              >
                 Contact
-              </a>
+              </Link>
             </div>
 
             {/* Copyright */}
