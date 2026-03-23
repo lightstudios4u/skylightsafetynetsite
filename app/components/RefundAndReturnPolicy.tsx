@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { scrollToContact } from "@/app/utils/scrollToContact";
 
 export function RefundAndReturnPolicy() {
   return (
@@ -8,14 +11,14 @@ export function RefundAndReturnPolicy() {
       <section className="relative overflow-hidden bg-black">
         <div className="absolute inset-0 opacity-40 [background:radial-gradient(80rem_40rem_at_70%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
         <div className="absolute inset-0 opacity-30 [background:radial-gradient(50rem_30rem_at_20%_10%,rgba(249,115,22,0.30),transparent_60%)]" />
-        <div className="relative mx-auto max-w-6xl px-6 py-16">
+        <div className="relative mx-auto max-w-6xl px-6 py-16 text-center">
           <p className="text-base font-semibold tracking-wide text-orange-500">
             Return Information
           </p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
             Refund/Return Policy
           </h1>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-200">
+          <p className="mt-4 mx-auto max-w-3xl text-base leading-relaxed text-gray-200">
             We stand behind the quality of our products and want you to be
             satisfied with your purchase.
           </p>
@@ -23,7 +26,7 @@ export function RefundAndReturnPolicy() {
             <b>Last Updated:</b> January 2026
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               href="/"
               className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-600"
@@ -189,10 +192,11 @@ export function RefundAndReturnPolicy() {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/contact-us"
+                href="/#contact"
                 className="inline-flex items-center justify-center rounded-lg bg-orange-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-600"
+                onClick={scrollToContact}
               >
-                Contact Us <span className="ml-2">→</span>
+                Get in Touch <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/"
