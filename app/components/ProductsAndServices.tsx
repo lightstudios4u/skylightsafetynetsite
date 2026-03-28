@@ -50,7 +50,7 @@ export function ProductsAndServices() {
           </h2>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm">
               <h3 className="text-lg font-bold text-white">In the box</h3>
               <ul className="mt-4 space-y-2 text-base text-white/80">
                 <li>
@@ -62,7 +62,7 @@ export function ProductsAndServices() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm">
               <h3 className="text-lg font-bold text-white">
                 Core specs (example)
               </h3>
@@ -97,7 +97,7 @@ export function ProductsAndServices() {
           </h2>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm">
               <h3 className="text-lg font-bold text-white">
                 Typical skylight nets
               </h3>
@@ -108,7 +108,7 @@ export function ProductsAndServices() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm">
               <h3 className="text-lg font-bold text-white">
                 Skylight Safety Net
               </h3>
@@ -150,7 +150,7 @@ export function ProductsAndServices() {
             ].map((x) => (
               <div
                 key={x.title}
-                className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
+                className="rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm"
               >
                 <h3 className="text-lg font-bold text-white">{x.title}</h3>
                 <p className="mt-2 text-base leading-relaxed text-white/80">
@@ -160,7 +160,7 @@ export function ProductsAndServices() {
             ))}
           </div>
 
-          <div className="mt-10 rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm">
+          <div className="mt-10 rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm">
             <h3 className="text-lg font-bold text-white">
               Audit-friendly output
             </h3>

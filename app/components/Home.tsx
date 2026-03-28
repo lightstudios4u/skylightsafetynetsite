@@ -170,9 +170,9 @@ export function Home() {
       <CoreBenefits />
       {/* <Comparison /> */}
       {/* <OrderOnline /> */}
+      <QRProof qrWays={qrWays} />
       <KitIncluded kitActive={kitActive} setKitActive={setKitActive} />
       <DeploymentSteps steps={steps} />
-      <QRProof qrWays={qrWays} />
       {/* <Applications applications={applications} />
       <BulkFleet /> */}
       {/* <FAQSection faqs={faqs} /> */}

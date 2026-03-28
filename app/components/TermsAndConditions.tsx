@@ -42,7 +42,7 @@ export function TermsAndConditions() {
         <div className="mx-auto max-w-4xl px-6 py-16">
           <div className="space-y-12">
             {/* Section 1 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">1. Use of Site</h2>
               <p className="mt-4 text-white/80">
                 This website and its content are provided for informational and
@@ -53,7 +53,7 @@ export function TermsAndConditions() {
             </div>
 
             {/* Section 2 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 2. Product Information
               </h2>
@@ -66,7 +66,7 @@ export function TermsAndConditions() {
             </div>
 
             {/* Section 3 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 3. Orders and Payment
               </h2>
@@ -79,7 +79,7 @@ export function TermsAndConditions() {
             </div>
 
             {/* Section 4 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 4. Intellectual Property
               </h2>
@@ -91,7 +91,7 @@ export function TermsAndConditions() {
             </div>
 
             {/* Section 5 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 5. Limitation of Liability
               </h2>
@@ -104,7 +104,7 @@ export function TermsAndConditions() {
             </div>
 
             {/* Section 6 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 6. Modifications
               </h2>

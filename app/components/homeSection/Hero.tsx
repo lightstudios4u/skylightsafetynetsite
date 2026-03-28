@@ -51,7 +51,7 @@ export function Hero() {
 
         {/* Dramatic animated heading */}
         <div className="mb-8 text-center">
-          <h2 className="relative text-[1.55rem] sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
+          <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
             {/* Invisible full text to reserve space and prevent layout shift */}
             <span className="block invisible" aria-hidden="true">
               Over Skylight Human Arrest
@@ -74,11 +74,11 @@ export function Hero() {
           >
             {/* Large product image */}
             <Image
-              src="/heroimagevignette.webp"
+              src="/heronew.webp"
               alt="O.S.H.A. Safety Net installed on commercial skylight"
-              width={1200}
-              height={400}
-              className="rounded-md shadow-2xl w-[92vw] sm:w-[75vw] lg:w-[50vw] max-w-[900px] h-auto"
+              width={820}
+              height={280}
+              className="rounded-md shadow-2xl w-[85vw] sm:w-[60vw] lg:w-[32vw] max-w-[656px] h-auto"
               priority
             />
           </div>
@@ -100,6 +100,28 @@ export function Hero() {
             >
               Get a Quote
             </Link>
+
+            {/* Video Links */}
+            <div className="mt-2 flex flex-wrap justify-center gap-3">
+              <a
+                href="https://vimeo.com/1175542695/ad89473178?fl=ip&fe=ec"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
+              >
+                <FaPlay size={12} />
+                Reinstall Video
+              </a>
+              <a
+                href="https://vimeo.com/1177125518/c6aeac5192?fl=ip&fe=ec"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
+              >
+                <FaPlay size={12} />
+                Drop Test Video
+              </a>
+            </div>
           </div>
         </div>
 

@@ -64,7 +64,7 @@ export function Comparison() {
               className={[
                 "rounded-xl border p-6 shadow-sm animate-fade-up",
                 col.highlight
-                  ? "border-orange-600/30 bg-[#3D2C28]"
+                  ? "border-orange-600/30 bg-black"
                   : "border-gray-700 bg-black/40",
                 isVisible ? "visible" : "",
               ].join(" ")}

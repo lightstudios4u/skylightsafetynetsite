@@ -51,7 +51,7 @@ export function Applications({
           {applications.map((a, index) => (
             <div
               key={a.title}
-              className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${300 + index * 75}ms` }}
             >
               <h3 className="card-title-pop text-base font-bold text-white">
@@ -73,7 +73,7 @@ export function Applications({
         </div>
 
         <div
-          className={`mt-12 rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
+          className={`mt-12 rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
           <p className="text-center text-base font-semibold tracking-wide text-orange-500">
             From installation to audit-ready in three scans

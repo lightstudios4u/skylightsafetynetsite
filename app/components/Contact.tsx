@@ -109,7 +109,7 @@ export function Contact() {
   return (
     <section id="contact" style={{ backgroundColor: "#000000" }}>
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] shadow-sm overflow-hidden">
+        <div className="rounded-xl border border-orange-600/30 bg-black shadow-sm overflow-hidden">
           <div className="grid lg:grid-cols-2">
             {/* Left: info */}
             <div className="flex flex-col justify-between p-8 lg:border-r border-orange-600/30">
@@ -137,10 +137,10 @@ export function Contact() {
                     Call us directly for immediate assistance.
                   </p>
                   <a
-                    href="tel:888-299-3330"
+                    href="tel:833-433-1010"
                     className="mt-2 inline-block text-orange-400 font-semibold hover:text-orange-300 transition"
                   >
-                    888.299.3330
+                    833.433.1010
                   </a>
                 </div>
               </div>

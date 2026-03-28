@@ -46,13 +46,13 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
           <div
-            className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-300 ${isVisible ? "visible" : ""}`}
+            className={`rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm animate-fade-up delay-300 ${isVisible ? "visible" : ""}`}
           >
             <Accordion items={faqs} />
           </div>
 
           <div
-            className={`rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
+            className={`rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
           >
             <h3 className="text-lg font-extrabold text-white">
               Need deeper details?

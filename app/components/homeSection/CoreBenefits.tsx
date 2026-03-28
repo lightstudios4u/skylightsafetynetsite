@@ -106,7 +106,7 @@ export function CoreBenefits() {
           {features.map((f, index) => (
             <div
               key={f.title}
-              className={`flex flex-col overflow-hidden rounded-xl border border-orange-600/30 bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`flex flex-col overflow-hidden rounded-xl border border-orange-600/30 bg-black shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
               <div className="flex-1 p-6">
@@ -157,7 +157,7 @@ export function CoreBenefits() {
         </div>
         {/* Protect Crews CTA Banner */}
         <div
-          className={`mt-10 mx-auto max-w-5xl rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 text-center shadow-lg animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
+          className={`mt-10 mx-auto max-w-5xl rounded-xl border border-orange-600/30 bg-black p-8 text-center shadow-lg animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
         >
           <h3 className="flex items-center justify-center gap-3 text-2xl font-extrabold text-white sm:text-3xl">
             <FaShieldAlt className="shrink-0 text-orange-400" size={28} />

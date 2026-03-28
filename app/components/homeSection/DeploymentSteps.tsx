@@ -92,7 +92,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
           {steps.map((s, idx) => (
             <React.Fragment key={s.num}>
               <div
-                className={`overflow-hidden group relative flex-1 rounded-xl border ${stepColors[idx]?.border ?? "border-orange-600/30"} bg-[#3D2C28] p-6 shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+                className={`overflow-hidden group relative flex-1 rounded-xl border ${stepColors[idx]?.border ?? "border-orange-600/30"} bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-6 shadow-lg shadow-black/20 animate-fade-up ${isVisible ? "visible" : ""}`}
                 style={{ transitionDelay: `${300 + idx * 100}ms` }}
               >
                 <div className="flex items-start gap-4">
@@ -138,7 +138,7 @@ export function DeploymentSteps({ steps }: { steps: Step[] }) {
         >
           <div
             id="faq"
-            className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-6 shadow-sm"
+            className="rounded-xl border border-orange-600/30 bg-black p-6 shadow-sm"
           >
             <h3 className="card-title-pop text-lg font-extrabold text-white">
               What happens after you scan
