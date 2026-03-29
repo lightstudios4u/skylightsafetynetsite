@@ -93,7 +93,8 @@ export function Contact() {
   };
 
   useEffect(() => {
-    if (window.location.hash === "#contact") {
+    const hash = window.location.hash;
+    if (hash === "#contact" || hash === "#request") {
       const el = document.getElementById("contact");
       if (el) {
         const headerHeight =
@@ -108,6 +109,7 @@ export function Contact() {
 
   return (
     <section id="contact" style={{ backgroundColor: "#000000" }}>
+      <div id="request" />
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="rounded-xl border border-orange-600/30 bg-black shadow-sm overflow-hidden">
           <div className="grid lg:grid-cols-2">

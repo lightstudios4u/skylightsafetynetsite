@@ -1,0 +1,21 @@
+export default function InstallVideoPage() {
+  return (
+    <div className="flex min-h-[70vh] items-center justify-center bg-black px-4 py-12">
+      <div className="w-full max-w-4xl">
+        <h1 className="mb-6 text-center text-2xl font-extrabold text-white sm:text-3xl">
+          Install Video
+        </h1>
+        <div className="relative w-full overflow-hidden rounded-xl shadow-2xl" style={{ paddingBottom: "56.25%" }}>
+          <iframe
+            title="Skylight Safety Net Install Video"
+            src="https://player.vimeo.com/video/1175542695?h=ad89473178"
+            className="absolute inset-0 h-full w-full"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
