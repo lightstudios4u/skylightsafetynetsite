@@ -108,10 +108,10 @@ export function Contact() {
   }, []);
 
   return (
-    <section id="contact" style={{ backgroundColor: "#000000" }}>
+    <section id="contact" style={{ backgroundColor: "#111111" }}>
       <div id="request" />
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="rounded-xl border border-orange-600/30 bg-black shadow-sm overflow-hidden">
+        <div className="rounded-xl border border-orange-600/30 bg-gray-900 shadow-sm overflow-hidden">
           <div className="grid lg:grid-cols-2">
             {/* Left: info */}
             <div className="flex flex-col justify-between p-8 lg:border-r border-orange-600/30">
