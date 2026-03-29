@@ -119,10 +119,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
             {/* Phone Number */}
             <div>
               <a
-                href="tel:888-299-3330"
+                href="tel:833-433-1010"
                 className="text-2xl font-bold text-orange-500 hover:text-orange-600 transition"
               >
-                888.299.3330
+                833.433.1010
               </a>
             </div>
 

@@ -41,7 +41,7 @@ export function PrivacyPolicy() {
         <div className="mx-auto max-w-4xl px-6 py-16">
           <div className="space-y-12">
             {/* Section 1 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">1.</span>Information We
                 Collect
@@ -72,7 +72,7 @@ export function PrivacyPolicy() {
             </div>
 
             {/* Section 2 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">2.</span>How We Use Your
                 Information
@@ -109,7 +109,7 @@ export function PrivacyPolicy() {
             </div>
 
             {/* Section 3 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">3.</span>Information Sharing
               </h2>
@@ -135,7 +135,7 @@ export function PrivacyPolicy() {
             </div>
 
             {/* Section 4 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">4.</span>Data Security
               </h2>
@@ -147,7 +147,7 @@ export function PrivacyPolicy() {
             </div>
 
             {/* Section 5 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">5.</span>Your Rights
               </h2>
@@ -158,7 +158,7 @@ export function PrivacyPolicy() {
             </div>
 
             {/* Section 6 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">6.</span>Cookies
               </h2>

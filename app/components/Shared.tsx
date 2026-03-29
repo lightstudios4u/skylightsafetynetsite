@@ -108,7 +108,7 @@ export function Accordion({ items }: { items: FAQ[] }) {
         return (
           <div
             key={it.q}
-            className="rounded-lg border border-slate-200 bg-[#3D2C28] shadow-sm transition-all hover:shadow-md"
+            className="rounded-lg border border-slate-200 bg-black shadow-sm transition-all hover:shadow-md"
           >
             <button
               type="button"

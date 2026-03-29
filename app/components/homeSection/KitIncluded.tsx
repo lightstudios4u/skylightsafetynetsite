@@ -131,7 +131,7 @@ export function KitIncluded({
                   className={[
                     "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "net"
-                      ? "border-orange-600/50 bg-[#3D2C28]"
+                      ? "border-orange-600/50 bg-black"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
                   ].join(" ")}
                 >
@@ -152,7 +152,7 @@ export function KitIncluded({
                   className={[
                     "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "strap"
-                      ? "border-orange-600/50 bg-[#3D2C28]"
+                      ? "border-orange-600/50 bg-black"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
                   ].join(" ")}
                 >
@@ -173,7 +173,7 @@ export function KitIncluded({
                   className={[
                     "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "qr"
-                      ? "border-orange-600/50 bg-[#3D2C28]"
+                      ? "border-orange-600/50 bg-black"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
                   ].join(" ")}
                 >
@@ -194,7 +194,7 @@ export function KitIncluded({
                   className={[
                     "w-full text-left rounded-lg border p-5 transition-colors duration-200",
                     kitActive === "bag"
-                      ? "border-orange-600/50 bg-[#3D2C28]"
+                      ? "border-orange-600/50 bg-black"
                       : "border-gray-700 bg-black/40 hover:bg-black/60",
                   ].join(" ")}
                 >
@@ -221,7 +221,7 @@ export function KitIncluded({
         <div
           className={`mt-10 mx-auto max-w-4xl animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
         >
-          <div className="relative overflow-hidden rounded-2xl border border-orange-600/30 bg-gradient-to-br from-[#3D2C28] via-[#251916] to-black shadow-[0_20px_70px_rgba(0,0,0,0.35)]">
+          <div className="relative overflow-hidden rounded-2xl border border-orange-600/30 bg-gradient-to-br from-black via-[#111111] to-black shadow-[0_20px_70px_rgba(0,0,0,0.35)]">
             <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-orange-500/15 blur-3xl" />
             <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-400/60 to-transparent" />
 
@@ -281,8 +281,20 @@ export function KitIncluded({
                 {
                   label: "Curb Requirement",
                   value:
-                    'Minimum 1.5" metal skylight counter flashing lip for strap attachment',
+                    'Minimum 2" metal skylight counter flashing lip for strap attachment',
                   icon: <FaLink size={14} />,
+                },
+                {
+                  label: "Service Life",
+                  value:
+                    "To maintain full OSHA compliance and guaranteed protection, nets require replacement three years from first in-service date.",
+                  icon: <FaShieldAlt size={14} />,
+                },
+                {
+                  label: "Impact Strength",
+                  value:
+                    "Tested to absorb over 3,500 foot-pounds of impact energy.",
+                  icon: <FaExclamationTriangle size={14} />,
                 },
                 {
                   label: "Documentation",

@@ -80,7 +80,7 @@ export function OrderOnline() {
           </div>
 
           <div
-            className={`rounded-xl border-2 border-orange-600/30 bg-[#3D2C28] p-8 shadow-2xl backdrop-blur-sm animate-fade-up delay-200 ${isVisible ? "visible" : ""}`}
+            className={`rounded-xl border-2 border-orange-600/30 bg-black p-8 shadow-2xl backdrop-blur-sm animate-fade-up delay-200 ${isVisible ? "visible" : ""}`}
           >
             <div className="text-center">
               <div className="mb-3 flex justify-center">

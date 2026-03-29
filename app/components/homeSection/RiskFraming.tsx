@@ -54,13 +54,13 @@ export function RiskFraming() {
             <div
               className={`mt-4 animate-fade-in delay-300 ${isVisible ? "visible" : ""}`}
             >
-              <div className="rounded-lg bg-[#3D2C28] p-6 shadow-lg">
+              <div className="rounded-lg bg-black p-6 shadow-lg">
                 <div className="flex items-start gap-3">
                   <FaExclamationTriangle className="h-5 w-5 shrink-0 text-orange-400 mt-0.5" />
                   <p className="text-base font-semibold text-white">
-                    Saving a few minutes or a few dollars on skylight protection
-                    has cost contractors their businesses, their livelihoods,
-                    and in some cases, their freedom.
+                    Skimping on skylight safety fall protection for rooftop
+                    workers has cost contractors their businesses, their
+                    livelihoods, and in some cases their freedom.
                   </p>
                 </div>
               </div>
@@ -80,13 +80,10 @@ export function RiskFraming() {
               <p className="mt-3 text-base leading-relaxed text-black/80 sm:text-base">
                 Federal injury data shows that{" "}
                 <span className="font-semibold text-black">
-                  25% of all falls through surfaces are caused by skylights
+                  32% of all commercial job-site roof top falls are attributed
+                  to unprotected skylights
                 </span>{" "}
-                and in the last several years, these incidents resulted in{" "}
-                <span className="font-semibold text-black">
-                  over 75 fatalities
-                </span>
-                .
+                &mdash; &ldquo;open hole&rdquo; conditions.
               </p>
             </div>
           </div>
@@ -119,7 +116,7 @@ export function RiskFraming() {
         <div
           className={`mt-12 mx-auto max-w-4xl animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
         >
-          <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+          <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <div
                 className={`flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/20 ${isVisible ? "animate-icon-pop" : "opacity-0"}`}
@@ -210,8 +207,8 @@ export function RiskFraming() {
                     <span className="font-semibold text-white">
                       Jail Time for Leadership:
                     </span>{" "}
-                    Owners and site supervisors can be sentenced to prison for a
-                    willful failure to protect their workers.
+                    Managers and site supervisors can be sentenced to prison for
+                    a willful failure to protect their workers.
                   </span>
                 </li>
                 <li className="flex gap-2">

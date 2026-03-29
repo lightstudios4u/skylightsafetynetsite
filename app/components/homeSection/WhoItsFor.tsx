@@ -122,18 +122,17 @@ export function WhoItsFor() {
           HVAC technicians, general contractors, and safety companies across the
           country. Our{" "}
           <strong>
-            Over-Skylight Human Arrest (O.S.H.A.)
-            <span className="text-orange-200"> Skylight </span>Safety Net System
-          </strong>
-          is a fall-through protection system engineered specifically for crews
-          facing elevated fall-through work hazards every single day.
+            Over-Skylight Human Arrest (O.S.H.A.) Skylight Safety Net System
+          </strong>{" "}
+          is a skylight fall-through protection system engineered specifically
+          for crews facing elevated fall-through work hazards every single day.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {trades.map((t, index) => (
             <div
               key={t.title}
-              className={`overflow-hidden rounded-xl bg-[#3D2C28] shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 shadow-lg shadow-black/20 animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${400 + index * 75}ms` }}
             >
               <div className="relative h-40 w-full">
@@ -165,7 +164,7 @@ export function WhoItsFor() {
         </div>
 
         {/* <div
-          className={`mt-10 overflow-hidden rounded-2xl border border-orange-600/30 bg-[#3D2C28] shadow-sm animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
+          className={`mt-10 overflow-hidden rounded-2xl border border-orange-600/30 bg-black shadow-sm animate-fade-up delay-500 ${isVisible ? "visible" : ""}`}
         >
           <div className="border-b border-orange-600/20 px-6 py-6 sm:px-8">
             <p className="text-lg font-semibold tracking-wide text-orange-400">
@@ -177,7 +176,7 @@ export function WhoItsFor() {
             {applications.map((application) => (
               <div
                 key={application.title}
-                className="bg-[#3D2C28] px-6 py-6 sm:px-8"
+                className="bg-black px-6 py-6 sm:px-8"
               >
                 <h3 className="card-title-pop text-base font-bold text-white">
                   {application.title}

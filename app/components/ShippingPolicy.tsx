@@ -41,7 +41,7 @@ export function ShippingPolicy() {
         <div className="mx-auto max-w-4xl px-6 py-16">
           <div className="space-y-12">
             {/* Section 1 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">1.</span>Shipping Methods
               </h2>
@@ -65,7 +65,7 @@ export function ShippingPolicy() {
             </div>
 
             {/* Section 2 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">2.</span>Shipping Costs
               </h2>
@@ -92,7 +92,7 @@ export function ShippingPolicy() {
             </div>
 
             {/* Section 3 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">3.</span>Processing Time
               </h2>
@@ -104,7 +104,7 @@ export function ShippingPolicy() {
             </div>
 
             {/* Section 4 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">4.</span>Delivery Locations
               </h2>
@@ -115,7 +115,7 @@ export function ShippingPolicy() {
             </div>
 
             {/* Section 5 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">5.</span>Order Tracking
               </h2>
@@ -141,7 +141,7 @@ export function ShippingPolicy() {
             </div>
 
             {/* Section 6 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">6.</span>Delivery Issues
               </h2>
@@ -165,7 +165,7 @@ export function ShippingPolicy() {
             </div>
 
             {/* Section 7 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">7.</span>International
                 Shipping
@@ -178,7 +178,7 @@ export function ShippingPolicy() {
             </div>
 
             {/* Section 8 */}
-            <div className="rounded-xl border border-orange-600/30 bg-[#3D2C28] p-8 shadow-sm">
+            <div className="rounded-xl border border-orange-600/30 bg-black p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-white">
                 <span className="inline-block w-8">8.</span>Large or Bulk Orders
               </h2>
