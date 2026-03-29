@@ -76,11 +76,13 @@ export function Hero() {
             <Image
               src="/heronew.webp"
               alt="O.S.H.A. Safety Net installed on commercial skylight"
-              width={820}
-              height={280}
-              className="rounded-md shadow-2xl w-[85vw] sm:w-[60vw] lg:w-[32vw] max-w-[656px] h-auto"
+              width={1200}
+              height={400}
+              className="rounded-md shadow-2xl w-[92vw] sm:w-[80vw] lg:w-[55vw] max-w-[960px] max-h-[45vh] object-cover h-auto"
               priority
+              style={{objectPosition: "center 60%"}}
             />
+
           </div>
         </div>
 
@@ -110,7 +112,7 @@ export function Hero() {
                 className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
               >
                 <FaPlay size={12} />
-                Reinstall Video
+                Install Video
               </a>
               <a
                 href="https://vimeo.com/1177125518/c6aeac5192?fl=ip&fe=ec"

@@ -132,7 +132,7 @@ export function WhoItsFor() {
           {trades.map((t, index) => (
             <div
               key={t.title}
-              className={`overflow-hidden rounded-xl bg-black shadow-sm animate-fade-up ${isVisible ? "visible" : ""}`}
+              className={`overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 shadow-lg shadow-black/20 animate-fade-up ${isVisible ? "visible" : ""}`}
               style={{ transitionDelay: `${400 + index * 75}ms` }}
             >
               <div className="relative h-40 w-full">
