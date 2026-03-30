@@ -133,33 +133,35 @@ export function Hero() {
               Skylight Safety
               <br className="sm:hidden" /> Fall-Through Protection
             </h1>
-            {/* Video Links */}
-            <div className="mt-2 flex flex-wrap justify-center gap-3">
-                      <Link
-              href="#contact"
-              className="inline-flex w-fit items-center justify-center rounded-md bg-[#fd5101] px-4 py-2 text-lg font-bold text-white shadow-2xl shadow-[#fd5101]/30 transition-colors duration-200 hover:bg-[#e44901]"
-            >
-              Get a Quote
-            </Link>
+            {/* CTA + Video Links */}
+            <div className="mt-2 flex flex-col items-center gap-3">
+              <Link
+                href="#contact"
+                className="inline-flex w-fit items-center justify-center rounded-md bg-[#fd5101] px-4 py-2 text-lg font-bold text-white shadow-2xl shadow-[#fd5101]/30 transition-colors duration-200 hover:bg-[#e44901]"
+              >
+                Get a Quote
+              </Link>
 
-              <a
-                href="https://vimeo.com/1175542695/ad89473178?fl=ip&fe=ec"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
-              >
-                <FaPlay size={12} />
-                Install Video
-              </a>
-              <a
-                href="https://vimeo.com/1177125518/c6aeac5192?fl=ip&fe=ec"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
-              >
-                <FaPlay size={12} />
-                Drop Test Video
-              </a>
+              <div className="flex flex-wrap justify-center gap-3">
+                <a
+                  href="https://vimeo.com/1175542695/ad89473178?fl=ip&fe=ec"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
+                >
+                  <FaPlay size={12} />
+                  Install Video
+                </a>
+                <a
+                  href="https://vimeo.com/1177125518/c6aeac5192?fl=ip&fe=ec"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
+                >
+                  <FaPlay size={12} />
+                  Drop Test Video
+                </a>
+              </div>
             </div>
           </div>
         </div>
