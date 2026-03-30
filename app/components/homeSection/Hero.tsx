@@ -51,7 +51,7 @@ export function Hero() {
 
         {/* Dramatic animated heading */}
         <div className="mb-4 sm:mb-8 text-center">
-          <h2 className="relative text-[1.35rem] sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
+          <h2 className="relative text-[1.55rem] sm:text-4xl lg:text-5xl font-extrabold text-[#fd5101] leading-tight [-webkit-text-stroke:0.6px_rgba(255,255,255,0.45)]">
             {/* Invisible full text to reserve space and prevent layout shift */}
             <span className="block invisible" aria-hidden="true">
               Over Skylight Human Arrest
@@ -84,51 +84,11 @@ export function Hero() {
             />
 
           </div>
+          
         </div>
-
-        <div
-          className={`mt-6 animate-fade-in delay-300 ${isLoaded ? "visible" : ""}`}
-          style={{ opacity: isLoaded ? 1 : 0 }}
-        >
-          <div className="flex w-full flex-col items-center gap-4 text-center">
-            <h1 className="hero-title-pop text-2xl w-full sm:text-4xl lg:text-[2.0rem] lg:whitespace-nowrap font-extrabold text-white leading-[1.15] drop-shadow-lg">
-              Skylight Safety
-              <br className="sm:hidden" /> Fall-Through Protection
-            </h1>
-
-            <Link
-              href="#contact"
-              className="inline-flex w-fit items-center justify-center rounded-md bg-[#fd5101] px-4 py-2 text-lg font-bold text-white shadow-2xl shadow-[#fd5101]/30 transition-colors duration-200 hover:bg-[#e44901]"
-            >
-              Get a Quote
-            </Link>
-
-            {/* Video Links */}
-            <div className="mt-2 flex flex-wrap justify-center gap-3">
-              <a
-                href="https://vimeo.com/1175542695/ad89473178?fl=ip&fe=ec"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
-              >
-                <FaPlay size={12} />
-                Install Video
-              </a>
-              <a
-                href="https://vimeo.com/1177125518/c6aeac5192?fl=ip&fe=ec"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
-              >
-                <FaPlay size={12} />
-                Drop Test Video
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Trust indicators */}
-        <div className="mt-12 max-w-6xl">
+        
+ <div className="mt-6 max-w-6xl">
+  
           <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-3">
             {[
               {
@@ -162,6 +122,50 @@ export function Hero() {
             ))}
           </div>
         </div>
+        <div
+          className={`mt-6 animate-fade-in delay-300 ${isLoaded ? "visible" : ""}`}
+          style={{ opacity: isLoaded ? 1 : 0 }}
+        >
+          <div className="flex w-full flex-col items-center gap-4 text-center">
+        
+
+        <h1 className="hero-title-pop text-2xl w-full sm:text-4xl lg:text-[1.6rem] lg:whitespace-nowrap font-extrabold text-white leading-[1.15] drop-shadow-lg">
+              Skylight Safety
+              <br className="sm:hidden" /> Fall-Through Protection
+            </h1>
+            {/* Video Links */}
+            <div className="mt-2 flex flex-wrap justify-center gap-3">
+                      <Link
+              href="#contact"
+              className="inline-flex w-fit items-center justify-center rounded-md bg-[#fd5101] px-4 py-2 text-lg font-bold text-white shadow-2xl shadow-[#fd5101]/30 transition-colors duration-200 hover:bg-[#e44901]"
+            >
+              Get a Quote
+            </Link>
+
+              <a
+                href="https://vimeo.com/1175542695/ad89473178?fl=ip&fe=ec"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
+              >
+                <FaPlay size={12} />
+                Install Video
+              </a>
+              <a
+                href="https://vimeo.com/1177125518/c6aeac5192?fl=ip&fe=ec"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
+              >
+                <FaPlay size={12} />
+                Drop Test Video
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust indicators */}
+       
       </div>
     </section>
   );

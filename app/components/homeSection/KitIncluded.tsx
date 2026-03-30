@@ -14,7 +14,7 @@ import {
 type KitImageKey = "net" | "strap" | "qr" | "bag";
 
 const kitImages = {
-  net: "/product/net.webp",
+  net: "/heronew.webp",
   strap: "/product/ratchet.webp",
   qr: "/product/qr.webp",
   bag: "/product/bag.webp",
@@ -93,6 +93,13 @@ export function KitIncluded({
         </div>
 
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+          {/* Image - shows first on mobile, right on desktop */}
+          <div
+            className={`order-first lg:order-last animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
+          >
+            <KitHoverGallery kitActive={kitActive} />
+          </div>
+
           {/* LEFT: Copy + Hover List */}
           <div>
             {/* <div
@@ -207,13 +214,6 @@ export function KitIncluded({
                 </button>
               </div>
             </div>
-          </div>
-
-          {/* RIGHT: Image that changes on hover */}
-          <div
-            className={`animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
-          >
-            <KitHoverGallery kitActive={kitActive} />
           </div>
         </div>
 
