@@ -221,7 +221,7 @@ export function QRProof() {
 
         {/* Bottom tagline */}
         <div
-          className={`pb-10 border-b border-white/10 pt-10 text-center animate-fade-in delay-600 ${isVisible ? "visible" : ""}`}
+          className={` border-white/10 pt-10 text-center animate-fade-in delay-600 ${isVisible ? "visible" : ""}`}
         >
           <p className="text-2xl font-black uppercase tracking-wide text-white sm:text-3xl">
             Protect Your Crew.{" "}
