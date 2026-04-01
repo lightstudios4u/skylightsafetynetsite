@@ -1,17 +1,63 @@
 import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { FaCheckCircle, FaClipboardList, FaFileExport } from "react-icons/fa";
+import {
+  FaQrcode,
+  FaClipboardCheck,
+  FaFileAlt,
+  FaFingerprint,
+  FaBroadcastTower,
+  FaExclamationTriangle,
+  FaProjectDiagram,
+  FaHandPointer,
+} from "react-icons/fa";
 
-type QRWay = {
-  title: string;
-  desc: string;
-  icon: React.ReactNode;
-  image: string;
-  imageStyle?: React.CSSProperties;
-};
+const fieldFeatures = [
+  {
+    icon: <FaQrcode className="text-orange-500" size={22} />,
+    title: "Scan & Go",
+    desc: "Every net has a QR code providing a unique identifier and allows workers to easily access instructions for proper net use.",
+  },
+  {
+    icon: <FaClipboardCheck className="text-orange-500" size={22} />,
+    title: "Rapid Inspections",
+    desc: "Complete digital checklists for OSHA required in-place weekly net inspections.",
+  },
+  {
+    icon: <FaFileAlt className="text-orange-500" size={22} />,
+    title: "Instant Reporting",
+    desc: "Log installations, damage, or fall arrest events with a single tap.",
+  },
+  {
+    icon: <FaFingerprint className="text-orange-500" size={22} />,
+    title: "Digital Audit Trail",
+    desc: "Every scan is timestamped and signed, creating a permanent record.",
+  },
+];
 
-export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
+const officeFeatures = [
+  {
+    icon: <FaBroadcastTower className="text-orange-500" size={22} />,
+    title: "Live Inventory",
+    desc: 'Track total nets, active projects, and gear "Out of Service" at a glance.',
+  },
+  {
+    icon: <FaExclamationTriangle className="text-orange-500" size={22} />,
+    title: "Compliance Alerts",
+    desc: "Automated warnings for overdue inspections and expiring equipment.",
+  },
+  {
+    icon: <FaProjectDiagram className="text-orange-500" size={22} />,
+    title: "Project Tracking",
+    desc: "View specific site data — know exactly what is installed and where.",
+  },
+  {
+    icon: <FaHandPointer className="text-orange-500" size={22} />,
+    title: "Audit-Ready Reports",
+    desc: "One-click CSV exports to prove compliance during safety inspections.",
+  },
+];
+
+export function QRProof() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -22,7 +68,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.15, rootMargin: "50px" },
+      { threshold: 0.1, rootMargin: "50px" },
     );
 
     if (sectionRef.current) {
@@ -33,106 +79,157 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
   }, [isVisible]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative"
-      style={{ backgroundColor: "#fc8337" }}
-    >
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        {/* Hero area with image */}
-        <div
-          className={`grid gap-10 lg:grid-cols-2 lg:items-center animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
-        >
-          <div>
-            <p className="text-base font-semibold uppercase tracking-[0.2em] text-black/70">
-              Proof Beats Promises
-            </p>
-            <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
-              Documentation You Can Defend
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-black/80 sm:text-base">
-              When an OSHA or insurance inspector arrives on site or an incident
-              occurs, the O.S.H.A. Skylight Safety Net System provides
-              verifiable records that prove what was in place, when it was
-              installed, who checked it, and what condition it was in.
-            </p>
-            <p className="mt-3 text-base leading-relaxed text-black/80 sm:text-base">
-              Our QR tracking system creates that documented proof
-              automatically. QR scans generate timestamped, location-tagged
-              records that stand up to scrutiny.
-            </p>
-          </div>
-
+    <section ref={sectionRef} className="relative bg-black">
+      {/* Hero area */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
+        <div className="relative mx-auto max-w-6xl px-6 pt-20 pb-12 text-center">
           <div
-            className={`animate-fade-up delay-300 ${isVisible ? "visible" : ""}`}
+            className={`animate-fade-in delay-200 ${isVisible ? "visible" : ""}`}
           >
-            <div className="relative overflow-hidden rounded-xl border border-orange-600/30 shadow-lg">
-              <Image
-                src="/QRlady_s.webp"
-                alt="Worker scanning QR code for safety documentation"
-                width={800}
-                height={500}
-                className="h-[400px] w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            </div>
+            <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <span className="block">SMART COMPLIANCE.</span>
+              <span className="block text-orange-500">ZERO PAPERWORK.</span>
+            </h2>
+            <p className="mx-auto mt-4 text-2xl font-bold uppercase tracking-[0.2em] text-orange-500/80">
+              The SkylightSafety.net Management Platform
+            </p>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg">
+              OSHA regulations require regular safety net inspections, we make
+              this record keeping effortless. Our integrated QR-code system
+              bridges the gap between your field crew and the front office,
+              ensuring your site stays compliant and your team stays safe.
+            </p>
           </div>
-        </div>
 
-        <h3
-          className={`mt-12 text-center text-2xl font-extrabold tracking-tight text-black animate-fade-in delay-400 ${isVisible ? "visible" : ""}`}
-        >
-          Four Ways QR Tracking Protects Your Business
-        </h3>
-
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {qrWays.map((x, index) => (
-            <div
-              key={x.title}
-              className={`rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 shadow-lg shadow-black/20 animate-fade-up overflow-hidden flex flex-col ${isVisible ? "visible" : ""}`}
-              style={{ transitionDelay: `${450 + index * 80}ms` }}
-            >
-              <div className="px-6 pt-6 pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-500/20">
-                    {x.icon}
-                  </div>
-                  <h3 className="card-title-pop text-lg font-bold text-white">
-                    {x.title}
-                  </h3>
-                </div>
-                <p className="mt-2 text-base leading-relaxed text-white/75">
-                  {x.desc}
-                </p>
-              </div>
-              <div className="relative mt-auto mx-4 mb-4 overflow-hidden rounded-xl h-52 sm:h-64">
-                <Image
-                  src={x.image}
-                  alt={x.title}
-                  fill
-                  className="object-cover"
-                  style={x.imageStyle}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div
-          className={`mt-10 animate-fade-up delay-600 ${isVisible ? "visible" : ""}`}
-        >
-          <h3 className=" mb-4 text-lg font-extrabold text-black">
-            Sample Inspection Log
-          </h3>
-          <div className="overflow-hidden rounded-xl border border-orange-600/30 shadow-sm">
+          {/* Devices image */}
+          <div
+            className={`mx-auto mt-10 max-w-2xl animate-fade-up delay-300 ${isVisible ? "visible" : ""}`}
+          >
             <Image
-              src="/inspectionlog.png"
-              alt="Sample inspection log showing documented safety records"
-              width={1200}
-              height={600}
+              src="/devices.png"
+              alt="SkylightSafety.net platform shown on phone and desktop"
+              width={800}
+              height={467}
               className="w-full h-auto"
+              priority
             />
           </div>
+        </div>
+      </div>
+
+      {/* Two-column feature grid */}
+      <div className="mx-auto max-w-6xl px-6 pb-16">
+        <div
+          className={`grid gap-8 lg:grid-cols-2 animate-fade-up delay-400 ${isVisible ? "visible" : ""}`}
+        >
+          {/* In the Field */}
+          <div className="rounded-2xl border border-white/10 bg-neutral-900 shadow-lg shadow-black/20 overflow-hidden flex flex-col">
+            <div className="p-8 pb-0">
+              <h3 className="text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">
+                In the Field:
+              </h3>
+              <p className="text-xl font-black tracking-tight text-orange-500 sm:text-2xl">
+                Mobile Efficiency
+              </p>
+              <p className="mt-2 text-base leading-relaxed text-white/60">
+                Empower your crew to document safety in seconds using our
+                intuitive mobile app.
+              </p>
+            </div>
+            <div className="relative h-56 sm:h-72 w-full mt-6">
+              <Image
+                src="/manscan.webp"
+                alt="Worker scanning QR code in the field"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "center 30%" }}
+              />
+            </div>
+            <div className="px-8 pt-8 pb-8">
+              <div className="space-y-6">
+                {fieldFeatures.map((f, i) => (
+                  <div
+                    key={f.title}
+                    className={`flex items-start gap-4 animate-fade-up ${isVisible ? "visible" : ""}`}
+                    style={{ transitionDelay: `${500 + i * 80}ms` }}
+                  >
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-orange-500/15">
+                      {f.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-extrabold uppercase tracking-wide text-orange-500">
+                        {f.title}
+                      </h4>
+                      <p className="mt-1 text-base leading-relaxed text-white/65">
+                        {f.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* In the Office */}
+          <div className="rounded-2xl border border-white/10 bg-neutral-900 shadow-lg shadow-black/20 overflow-hidden flex flex-col">
+            <div className="p-8 pb-0">
+              <h3 className="text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">
+                In the Office:
+              </h3>
+              <p className="text-xl font-black tracking-tight text-orange-500 sm:text-2xl">
+                Total Oversight
+              </p>
+              <p className="mt-2 text-base leading-relaxed text-white/60">
+                Manage your inventory and liability from a single, real-time
+                desktop dashboard.
+              </p>
+            </div>
+            <div className="relative h-56 sm:h-72 w-full mt-6">
+              <Image
+                src="/installQR.webp"
+                alt="Installation QR tracking on desktop"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="px-8 pt-8 pb-8">
+              <div className="space-y-6">
+                {officeFeatures.map((f, i) => (
+                  <div
+                    key={f.title}
+                    className={`flex items-start gap-4 animate-fade-up ${isVisible ? "visible" : ""}`}
+                    style={{ transitionDelay: `${500 + i * 80}ms` }}
+                  >
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-orange-500/15">
+                      {f.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-extrabold uppercase tracking-wide text-orange-500">
+                        {f.title}
+                      </h4>
+                      <p className="mt-1 text-base leading-relaxed text-white/65">
+                        {f.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom tagline */}
+        <div
+          className={`pb-10 border-b border-white/10 pt-10 text-center animate-fade-in delay-600 ${isVisible ? "visible" : ""}`}
+        >
+          <p className="text-2xl font-black uppercase tracking-wide text-white sm:text-3xl">
+            Protect Your Crew.{" "}
+            <span className="text-orange-500">Prove Your Compliance.</span>
+          </p>
+          <p className="mt-1 text-2xl font-black uppercase tracking-wide text-white sm:text-3xl">
+            Manage Your Investment.
+          </p>
         </div>
       </div>
     </section>
