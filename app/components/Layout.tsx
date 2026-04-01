@@ -48,6 +48,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
               FAQ
             </Link>
             <Link
+              className="text-gray-300 hover:text-white transition-colors"
+              href="/resources"
+            >
+              Resources
+            </Link>
+            <Link
               className="rounded-lg bg-orange-500 px-6 py-3 text-base font-bold text-white shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-colors"
               href="/#contact"
               onClick={scrollToContact}
@@ -83,6 +89,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
               onClick={() => setMobileOpen(false)}
             >
               FAQ
+            </Link>
+            <Link
+              className="block text-base font-semibold text-gray-300 hover:text-white transition-colors py-2"
+              href="/resources"
+              onClick={() => setMobileOpen(false)}
+            >
+              Resources
             </Link>
             <Link
               className="block rounded-lg bg-orange-500 px-5 py-2.5 text-base font-bold text-white text-center hover:bg-orange-600 transition-colors"
@@ -149,6 +162,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
               >
                 Terms & Conditions
               </a>
+              <Link
+                className="hover:text-white transition"
+                href="/resources"
+              >
+                Resources
+              </Link>
               <Link
                 className="hover:text-white transition"
                 href="/#contact"
