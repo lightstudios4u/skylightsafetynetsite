@@ -118,11 +118,11 @@ export function Home() {
     <div>
       <Hero />
       <WhoItsFor />
+      <QRProof />
       <RiskFraming />
       <CoreBenefits />
       {/* <Comparison /> */}
       {/* <OrderOnline /> */}
-      <QRProof />
       <KitIncluded kitActive={kitActive} setKitActive={setKitActive} />
       <DeploymentSteps steps={steps} />
       {/* <Applications applications={applications} />

@@ -162,10 +162,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               >
                 Terms & Conditions
               </a>
-              <Link
-                className="hover:text-white transition"
-                href="/resources"
-              >
+              <Link className="hover:text-white transition" href="/resources">
                 Resources
               </Link>
               <Link

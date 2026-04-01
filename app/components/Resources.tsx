@@ -118,9 +118,7 @@ export function Resources() {
         {/* Contact CTA */}
         <div className="mt-14 rounded-xl border border-white/10 bg-neutral-900 p-8 text-center">
           <FaEnvelope className="mx-auto text-orange-500" size={28} />
-          <h2 className="mt-4 text-xl font-bold text-white">
-            Have Questions?
-          </h2>
+          <h2 className="mt-4 text-xl font-bold text-white">Have Questions?</h2>
           <p className="mt-2 text-sm text-white/50">
             Reach out to our team for product info, quotes, or support.
           </p>
